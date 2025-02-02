@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0upk0u+m3Yk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting\\Contracting.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CARLOS\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
