@@ -24,7 +24,19 @@ public class PatientController : ControllerBase
         try
         {
             var id = await _mediator.Send(command);
-            return Ok(id);
+            var createdPatient = await _mediator.Send(new GetPatientByIdQuery(id));
+
+            var response = new
+            {
+                Patient = new
+                {
+                    Id = id,
+                    Name = createdPatient.PatientName,
+                    Phone = createdPatient.PatientPhone,
+                },
+                Message = "Patient created successfully"
+            };
+            return Created("", response);
         }
         catch (Exception ex)
         {

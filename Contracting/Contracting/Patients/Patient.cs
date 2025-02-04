@@ -10,8 +10,8 @@ namespace Contracting.Domain.Patients;
 
 public class Patient : AggregateRoot
 {
-    public string Name { get; set; }
-    public string Phone { get; set; }
+    public FullNameValue Name { get; private set; }
+    public PhoneNumberValue Phone { get; private set; }
 
     public Patient(string name, string phone) : base(Guid.NewGuid())
     {

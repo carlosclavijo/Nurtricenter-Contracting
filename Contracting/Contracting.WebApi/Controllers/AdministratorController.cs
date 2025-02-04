@@ -3,6 +3,7 @@ using Contracting.Application.Administrators.GetAdministratorById;
 using Contracting.Application.Administrators.GetAdministrators;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contracting.WebApi.Controllers;
@@ -24,11 +25,24 @@ public class AdministratorController : ControllerBase
         try
         {
             var id = await _mediator.Send(command);
-            return Ok(id);
+            var createdAdministrator = await _mediator.Send(new GetAdministratorByIdQuery(id));
+
+            var response = new
+            {
+                Administrator = new
+                {
+                    Id = id,
+                    Name = createdAdministrator.AdministratorName,
+                    Phone = createdAdministrator.AdministratorPhone,
+                }, 
+                Message = "Administrator created successfully"
+            };
+
+            return Created("", response);
         }
         catch (Exception ex)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            return StatusCode(StatusCodes.Status500InternalServerError, new { Error = ex.Message });
         }
     }
 
