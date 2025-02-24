@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Contracting.Domain.Shared;
 
@@ -15,6 +11,10 @@ public record CostValue
         if (value < 0)
         {
             throw new ArgumentException("Cost value cannot be negative", nameof(value));
+        } 
+        else if (value == null)
+        {
+            throw new ArgumentNullException("Cost value cannot be null", nameof(value));
         }
         Value = value;
     }

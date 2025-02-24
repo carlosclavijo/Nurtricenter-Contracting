@@ -2,8 +2,6 @@
 using Contracting.Application.Administrators.GetAdministratorById;
 using Contracting.Application.Administrators.GetAdministrators;
 using MediatR;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contracting.WebApi.Controllers;
@@ -29,12 +27,7 @@ public class AdministratorController : ControllerBase
 
             var response = new
             {
-                Administrator = new
-                {
-                    Id = id,
-                    Name = createdAdministrator.AdministratorName,
-                    Phone = createdAdministrator.AdministratorPhone,
-                }, 
+                Administrator = createdAdministrator,
                 Message = "Administrator created successfully"
             };
 
@@ -42,7 +35,7 @@ public class AdministratorController : ControllerBase
         }
         catch (Exception ex)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, new { Error = ex.Message });
+            return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
         }
     }
 
@@ -52,7 +45,12 @@ public class AdministratorController : ControllerBase
         try
         {
             var result = await _mediator.Send(new GetAdministratorsQuery(""));
-            return Ok(result);
+            var response = new
+            {
+                Total = result.Count(),
+                Administrators = result
+            };
+            return Ok(response);
         }
         catch (Exception ex)
         {
@@ -67,7 +65,13 @@ public class AdministratorController : ControllerBase
         try
         {
             var result = await _mediator.Send(new GetAdministratorByIdQuery(id));
-            return Ok(result);
+            var response = new
+            {
+                Administrator = result,
+                Message = "Administrator details retrieved successfully"
+            };
+
+            return Ok(response);
         }
         catch (Exception ex)
         {

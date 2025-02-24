@@ -2,7 +2,6 @@
 using Contracting.Application.Patients.GetPatientById;
 using Contracting.Application.Patients.GetPatients;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contracting.WebApi.Controllers;
@@ -50,7 +49,12 @@ public class PatientController : ControllerBase
         try
         {
             var result = await _mediator.Send(new GetPatientsQuery(""));
-            return Ok(result);
+            var response = new
+            {
+                Total = result.Count(),
+                Patients = result
+            };
+            return Ok(response);
         }
         catch (Exception ex)
         {
@@ -65,7 +69,13 @@ public class PatientController : ControllerBase
         try
         {
             var result = await _mediator.Send(new GetPatientByIdQuery(id));
-            return Ok(result);
+            var response = new
+            {
+                Patient = result,
+                Message = "Patient details retrieved successfully"
+            };
+
+            return Ok(response);
         }
         catch (Exception ex)
         {

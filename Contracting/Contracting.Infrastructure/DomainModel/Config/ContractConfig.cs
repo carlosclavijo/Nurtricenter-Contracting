@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Domain.Contracts;
 using Contracting.Domain.Delivery;
 using Contracting.Domain.Shared;
@@ -71,7 +67,10 @@ internal class ContractConfig : IEntityTypeConfiguration<Contract>, IEntityTypeC
         builder.Property(x => x.Id).HasColumnName("deliveryDayId");
         builder.Property(x => x.ContractId).HasColumnName("contractId");
 
-        builder.Property(x => x.Date).HasColumnName("date");
+        builder.Property(x => x.Date).HasColumnName("date").HasConversion(
+           v => v.ToUniversalTime(),
+           v => DateTime.SpecifyKind(v, DateTimeKind.Utc)
+       );
 
         builder.Property(x => x.Street).HasColumnName("street");
         builder.Property(x => x.Number).HasColumnName("number");
@@ -80,7 +79,7 @@ internal class ContractConfig : IEntityTypeConfiguration<Contract>, IEntityTypeC
 
         builder.Property(x => x.Latitude).HasColumnName("latitude");
 
-        builder.HasOne(c => c.Contract)  // Asegúrate de tener esta relación configurada en DeliveryDay
+        builder.HasOne(c => c.Contract)
                .WithMany(c => c.DeliveryDays)
                .HasForeignKey(d => d.ContractId)
                .OnDelete(DeleteBehavior.Cascade);

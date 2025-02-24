@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Domain.Abstractions;
 
 namespace Contracting.Test.Domain.Abstractions;
@@ -20,20 +16,23 @@ public class EntityTest
     }
 
     [Fact]
-    public void EntityWhenIdIsEmpty()
+    public void EntityWithEmptyId()
     {
         var exception = Assert.Throws<ArgumentException>(() => new TestEntity(Guid.Empty));
+
+        Assert.NotNull(exception);
         Assert.Equal("Id cannot be empty (Parameter 'id')", exception.Message);
     }
 
-    public void EntityIdIsValid()
+    [Fact]
+    public void EntityWithValidId()
     {
         Guid validId = Guid.NewGuid();
         List<DomainEvent> domainEvents = new List<DomainEvent>();
 
         var entity = new TestEntity(validId);
    
-
+        Assert.NotNull(entity);
         Assert.Equal(validId, entity.Id);
     }
 
@@ -45,6 +44,8 @@ public class EntityTest
 
         entity.AddDomainEvent(domainEvent);
 
+        Assert.NotNull(entity);
+        Assert.NotNull(domainEvent);
         Assert.Contains(domainEvent, entity.DomainEvents);
     }
 

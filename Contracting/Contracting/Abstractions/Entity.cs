@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Contracting.Domain.Abstractions;
 
@@ -10,6 +6,13 @@ public abstract class Entity
 {
     public Guid Id { get; protected set; }
     public List<DomainEvent> _domainEvents;
+    public ICollection<DomainEvent> DomainEvents
+    {
+        get
+        {
+            return _domainEvents;
+        }
+    }
 
     public Entity(Guid id)
     {
@@ -19,14 +22,6 @@ public abstract class Entity
         }
         Id = id;
         _domainEvents = new List<DomainEvent>();
-    }
-
-    public ICollection<DomainEvent> DomainEvents
-    {
-        get
-        {
-            return _domainEvents;
-        }
     }
 
     public void AddDomainEvent(DomainEvent domainEvent)

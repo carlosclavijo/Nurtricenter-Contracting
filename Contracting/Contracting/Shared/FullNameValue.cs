@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Contracting.Domain.Shared;
 
@@ -19,10 +15,8 @@ public record FullNameValue
     {
         if (string.IsNullOrEmpty(name))
         {
-            throw new ArgumentException("Full name cannot be empty", nameof(name));
+            throw new ArgumentNullException("Full name cannot be empty", nameof(name));
         }
-
-        name = Regex.Replace(name.Trim(), @"\s+", " ");
 
         if (name.Length > MaxLength)
         {
@@ -34,7 +28,7 @@ public record FullNameValue
             throw new ArgumentException("Full name can only contain letters and spaces", nameof(name));
         }
 
-        Name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name.ToLower());
+        Name = NormalizeName(name);
     }
 
     public static implicit operator string(FullNameValue name)
@@ -45,5 +39,14 @@ public record FullNameValue
     public static implicit operator FullNameValue(string name)
     {
         return new FullNameValue(name);
+    }
+
+    public string NormalizeName(string name)
+    {
+        name = Regex.Replace(name.Trim(), @"\s+", " ");
+
+        name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name.ToLower());
+
+        return name;
     }
 }

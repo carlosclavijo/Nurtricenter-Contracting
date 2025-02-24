@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Domain.Abstractions;
 using Contracting.Domain.Administrators;
 using Contracting.Domain.Contracts;
@@ -11,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Infrastructure.DomainModel;
 
-internal class DomainDbContext : DbContext
+public class DomainDbContext : DbContext
 {
 
     public DbSet<Administrator> Administrator { get; set; }

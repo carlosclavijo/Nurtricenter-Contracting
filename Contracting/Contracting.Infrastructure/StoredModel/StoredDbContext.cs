@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Infrastructure.StoredModel.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Infrastructure.StoredModel;
 
-internal class StoredDbContext : DbContext
+public class StoredDbContext : DbContext
 {
     public DbSet<AdministratorStoredModel> Administrator { get; set; }
     public DbSet<PatientStoredModel> Patient { get; set; }

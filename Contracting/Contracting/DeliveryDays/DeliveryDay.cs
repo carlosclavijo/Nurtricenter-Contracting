@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Domain.Abstractions;
 using Contracting.Domain.Contracts;
-using Contracting.Domain.Shared;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Contracting.Domain.Delivery;
 
@@ -29,7 +23,7 @@ public class DeliveryDay : Entity
     public DeliveryDay(Guid contractId, DateTime date, string street, int number, double longitude, double latitude) : base(Guid.NewGuid())
     {
         ContractId = contractId;
-        Date = date;
+        Date = date.Kind == DateTimeKind.Unspecified ? DateTime.SpecifyKind(date, DateTimeKind.Utc) : date.ToUniversalTime();
         Street = street;
         Number = number;
         Longitude = longitude;

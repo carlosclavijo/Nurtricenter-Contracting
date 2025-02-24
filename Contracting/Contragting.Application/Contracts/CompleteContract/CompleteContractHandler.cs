@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Domain.Abstractions;
 using Contracting.Domain.Contracts;
 using MediatR;
 
 namespace Contracting.Application.Contracts.CompleteContract;
 
-internal class CompleteContractHandler : IRequestHandler<CompleteContractCommand, bool>
+public class CompleteContractHandler : IRequestHandler<CompleteContractCommand, bool>
 {
-    private readonly IContractFactory _contractFactory;
     private readonly IContractRepository _contractRepository;
     private readonly IUnitOfWork _unitOfWork;
 

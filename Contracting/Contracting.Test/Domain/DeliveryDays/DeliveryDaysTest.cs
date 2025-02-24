@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Domain.Delivery;
 
 namespace Contracting.Test.Domain.DeliveryDays;
@@ -23,6 +18,7 @@ public class DeliveryDaysTest
 
         var deliveryDay = new DeliveryDay(contractId, date, street, number, longitude, latitude);
 
+        Assert.NotNull(deliveryDay);
         Assert.Equal(contractId, deliveryDay.ContractId);
         Assert.Equal(date, deliveryDay.Date);
         Assert.Equal(street, deliveryDay.Street);
@@ -43,6 +39,7 @@ public class DeliveryDaysTest
 
         var deliveryDay = new DeliveryDay(contractId, date, street, number, longitude, latitude);
 
+        Assert.NotNull(deliveryDay);
         Assert.Equal(contractId, deliveryDay.ContractId);
         Assert.Equal(date, deliveryDay.Date);
         Assert.Equal(street, deliveryDay.Street);
@@ -51,11 +48,10 @@ public class DeliveryDaysTest
 
         string newStreet = "New Street";
         int newNumber = 20;
-        rand = new Random();
         double newLongitude = rand.NextDouble() * 180 - 90;
         double newLatitude = rand.NextDouble() * 360 - 180;
 
-        deliveryDay.Update(street, number, longitude, latitude);
+        deliveryDay.Update(newStreet, newNumber, newLongitude, newLatitude);
 
         Assert.Equal(newStreet, deliveryDay.Street);
         Assert.Equal(newNumber, deliveryDay.Number);

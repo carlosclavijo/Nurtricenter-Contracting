@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Domain.Abstractions;
 using Contracting.Domain.Contracts;
-using Contracting.Domain.Contracts.Exceptions;
 using MediatR;
 
 namespace Contracting.Application.Contracts.InProgressContract;
 
-internal class InProgressContractHandler : IRequestHandler<InProgressContractCommand, bool>
+public class InProgressContractHandler : IRequestHandler<InProgressContractCommand, bool>
 {
     private readonly IContractFactory _contractFactory;
     private readonly IContractRepository _contractRepository;

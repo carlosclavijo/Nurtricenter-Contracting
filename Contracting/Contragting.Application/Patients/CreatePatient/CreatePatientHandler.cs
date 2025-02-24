@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Domain.Abstractions;
 using Contracting.Domain.Patients;
 using MediatR;
 
 namespace Contracting.Application.Patients.CreatePatient;
 
-internal class CreatePatientHandler : IRequestHandler<CreatePatientCommand, Guid>
+public class CreatePatientHandler : IRequestHandler<CreatePatientCommand, Guid>
 {
     private readonly IPatienteFactory _patientFactory;
     private readonly IPatientRepository _patientRepository;

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Domain.Abstractions;
 using Contracting.Domain.Delivery;
 using Contracting.Domain.Shared;
@@ -11,19 +7,29 @@ namespace Contracting.Domain.Contracts;
 
 public class Contract : AggregateRoot
 {
-    public Guid AdministratorId { get; private set; }
-    public Guid PatientId { get; private set; }
+    public Guid AdministratorId { get; set; }
+    public Guid PatientId { get; set; }
     public ContractType Type { get; set; }
     public ContractStatus Status { get; set; }
-    private DateTime _date;
+    private DateTime _creationDate;
     public DateTime CreationDate
     {
-        get => _date;
-        set => _date = value.Kind == DateTimeKind.Utc ? value : value.ToUniversalTime();
+        get => _creationDate;
+        set => _creationDate = value.Kind == DateTimeKind.Utc ? value : value.ToUniversalTime();
     }
-    public DateTime StartDate { get; set; }
-    public DateTime? CompletedDate { get; set; }
-    public CostValue Cost { get; private set; }
+    private DateTime _startDate;
+    public DateTime StartDate
+    {
+        get => _startDate;
+        set => _startDate = value.Kind == DateTimeKind.Utc ? value : value.ToUniversalTime();
+    }
+    private DateTime _completedDate;
+    public DateTime? CompletedDate
+    {
+        get => _completedDate;
+        set => _completedDate = (DateTime)(value.HasValue && value.Value.Kind != DateTimeKind.Utc ? value.Value.ToUniversalTime() : value);
+    }
+    public CostValue Cost { get; set; }
     private List<DeliveryDay> _deliveryDays;
     public ICollection<DeliveryDay> DeliveryDays
     {
@@ -45,17 +51,13 @@ public class Contract : AggregateRoot
         _deliveryDays = new List<DeliveryDay>();
     }
 
-    private decimal CalculateTotalCost(ContractType type)
+    public decimal CalculateTotalCost(ContractType type)
     {
         if (type == ContractType.FullMonth)
         {
             return 1000;
         }
-        else if (type == ContractType.HalfMonth)
-        {
-            return 500;
-        }
-        return 0;
+        return 500;
     }
 
     public void CreateCalendar(List<DeliveryDay> days)
@@ -67,8 +69,10 @@ public class Contract : AggregateRoot
         _deliveryDays = days;
     }
 
-    public void UpdateAddresByDays(DateTime fromDate, DateTime toDate, string street, int number, double latitude, double longitude)
+    public void UpdateAddressByDays(DateTime fromDate, DateTime toDate, string street, int number, double latitude, double longitude)
     {
+        fromDate = fromDate.Kind == DateTimeKind.Unspecified ? DateTime.SpecifyKind(fromDate, DateTimeKind.Utc) : fromDate.ToUniversalTime();
+        toDate = toDate.Kind == DateTimeKind.Unspecified ? DateTime.SpecifyKind(toDate, DateTimeKind.Utc) : toDate.ToUniversalTime();
         if (fromDate < DateTime.Today.AddDays(1))
         {
             throw new ArgumentException("Date has to be day after tomorrow at least", nameof(fromDate));
@@ -114,7 +118,7 @@ public class Contract : AggregateRoot
     {
         if (Status != ContractStatus.InPropgress)
         {
-            throw new InvalidOperationException("Cannot complete without creating a contract");
+            throw new InvalidOperationException("Cannot complete without contract beign in progress contract");
         }
         Status = ContractStatus.Completed;
         CompletedDate = DateTime.Now;

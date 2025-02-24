@@ -1,11 +1,11 @@
-﻿using Contracting.Application.Contracts.CompleteContract;
+﻿using Contracting.Application.Administrators.GetAdministratorById;
+using Contracting.Application.Contracts.CompleteContract;
 using Contracting.Application.Contracts.CreateContract;
 using Contracting.Application.Contracts.GetContractById;
 using Contracting.Application.Contracts.GetContracts;
 using Contracting.Application.Contracts.InProgressContract;
 using Contracting.Application.Contracts.UpdateAddressById;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Contracting.WebApi.Controllers;
@@ -27,7 +27,8 @@ public class ContractController : ControllerBase
         try
         {
             var id = await _mediator.Send(command);
-            return Ok(id);
+            var createdContract = await _mediator.Send(new GetAdministratorByIdQuery(id));
+            return Ok(createdContract);
         }
         catch (Exception ex)
         {
@@ -42,7 +43,13 @@ public class ContractController : ControllerBase
         try
         {
             var result = await _mediator.Send(new GetContractByIdQuery(id));
-            return Ok(result);
+            var response = new
+            {
+                Contract = result,
+                Message = "Contract details retrieved successfully"
+            };
+
+            return Ok(response);
         }
         catch (Exception ex)
         {
@@ -56,7 +63,12 @@ public class ContractController : ControllerBase
         try
         {
             var result = await _mediator.Send(new GetContractsQuery(""));
-            return Ok(result);
+            var response = new
+            {
+                Total = result.Count(),
+                Contracts = result
+            };
+            return Ok(response);
         }
         catch (Exception ex)
         {

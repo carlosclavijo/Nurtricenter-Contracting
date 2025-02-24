@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0E14F6D-80ED-44DF-8E50-F5678659EA4F}|Contracting\\Contracting.Domain.csproj|c:\\users\\carlos\\desktop\\aprendizaje\\csharp\\nurtricenter-contratacting\\contracting\\contracting\\shared\\phonenumbervalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0E14F6D-80ED-44DF-8E50-F5678659EA4F}|Contracting\\Contracting.Domain.csproj|solutionrelative:contracting\\shared\\phonenumbervalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A37CE9C0-DF4E-4BB4-AA0C-077AFDFF019B}|Contracting.WebApi\\Contracting.WebApi.csproj|c:\\users\\carlos\\desktop\\aprendizaje\\csharp\\nurtricenter-contratacting\\contracting\\contracting.webapi\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A37CE9C0-DF4E-4BB4-AA0C-077AFDFF019B}|Contracting.WebApi\\Contracting.WebApi.csproj|solutionrelative:contracting.webapi\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36B04D0A-BF65-451E-9E17-87AD68D805DC}|Contracting.Infrastructure\\Contracting.Infrastructure.csproj|c:\\users\\carlos\\desktop\\aprendizaje\\csharp\\nurtricenter-contratacting\\contracting\\contracting.infrastructure\\domainmodel\\config\\administratorconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36B04D0A-BF65-451E-9E17-87AD68D805DC}|Contracting.Infrastructure\\Contracting.Infrastructure.csproj|solutionrelative:contracting.infrastructure\\domainmodel\\config\\administratorconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0E14F6D-80ED-44DF-8E50-F5678659EA4F}|Contracting\\Contracting.Domain.csproj|c:\\users\\carlos\\desktop\\aprendizaje\\csharp\\nurtricenter-contratacting\\contracting\\contracting\\patients\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0E14F6D-80ED-44DF-8E50-F5678659EA4F}|Contracting\\Contracting.Domain.csproj|solutionrelative:contracting\\patients\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36B04D0A-BF65-451E-9E17-87AD68D805DC}|Contracting.Infrastructure\\Contracting.Infrastructure.csproj|c:\\users\\carlos\\desktop\\aprendizaje\\csharp\\nurtricenter-contratacting\\contracting\\contracting.infrastructure\\domainmodel\\config\\patientconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36B04D0A-BF65-451E-9E17-87AD68D805DC}|Contracting.Infrastructure\\Contracting.Infrastructure.csproj|solutionrelative:contracting.infrastructure\\domainmodel\\config\\patientconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0E14F6D-80ED-44DF-8E50-F5678659EA4F}|Contracting\\Contracting.Domain.csproj|c:\\users\\carlos\\desktop\\aprendizaje\\csharp\\nurtricenter-contratacting\\contracting\\contracting\\shared\\fullnamevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0E14F6D-80ED-44DF-8E50-F5678659EA4F}|Contracting\\Contracting.Domain.csproj|solutionrelative:contracting\\shared\\fullnamevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2E50557-8D87-42B8-9B28-9E6C0ED25192}|Contracting.Test\\Contracting.Test.csproj|c:\\users\\carlos\\desktop\\aprendizaje\\csharp\\nurtricenter-contratacting\\contracting\\contracting.test\\application\\contracts\\updateaddresshandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E50557-8D87-42B8-9B28-9E6C0ED25192}|Contracting.Test\\Contracting.Test.csproj|solutionrelative:contracting.test\\application\\contracts\\updateaddresshandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,91 +13,25 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 178,
+          "SelectedChildIndex": -1,
+          "Children": []
+        },
+        {
+          "DockedWidth": 178,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdministratorConfig.cs",
-              "DocumentMoniker": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting.Infrastructure\\DomainModel\\Config\\AdministratorConfig.cs",
-              "RelativeDocumentMoniker": "Contracting.Infrastructure\\DomainModel\\Config\\AdministratorConfig.cs",
-              "ToolTip": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting.Infrastructure\\DomainModel\\Config\\AdministratorConfig.cs",
-              "RelativeToolTip": "Contracting.Infrastructure\\DomainModel\\Config\\AdministratorConfig.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAADwvw8AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T01:35:24.858Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FullNameValue.cs",
-              "DocumentMoniker": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting\\Shared\\FullNameValue.cs",
-              "RelativeDocumentMoniker": "Contracting\\Shared\\FullNameValue.cs",
-              "ToolTip": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting\\Shared\\FullNameValue.cs",
-              "RelativeToolTip": "Contracting\\Shared\\FullNameValue.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T16:41:20.157Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 3,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Patient.cs",
-              "DocumentMoniker": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting\\Patients\\Patient.cs",
-              "RelativeDocumentMoniker": "Contracting\\Patients\\Patient.cs",
-              "ToolTip": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting\\Patients\\Patient.cs",
-              "RelativeToolTip": "Contracting\\Patients\\Patient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T01:45:45.527Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PatientConfig.cs",
-              "DocumentMoniker": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting.Infrastructure\\DomainModel\\Config\\PatientConfig.cs",
-              "RelativeDocumentMoniker": "Contracting.Infrastructure\\DomainModel\\Config\\PatientConfig.cs",
-              "ToolTip": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting.Infrastructure\\DomainModel\\Config\\PatientConfig.cs",
-              "RelativeToolTip": "Contracting.Infrastructure\\DomainModel\\Config\\PatientConfig.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAUwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T01:35:30.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PatientController.cs",
-              "DocumentMoniker": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting.WebApi\\Controllers\\PatientController.cs",
-              "RelativeDocumentMoniker": "Contracting.WebApi\\Controllers\\PatientController.cs",
-              "ToolTip": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting.WebApi\\Controllers\\PatientController.cs",
-              "RelativeToolTip": "Contracting.WebApi\\Controllers\\PatientController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowCAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T16:35:42.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PhoneNumberValue.cs",
-              "DocumentMoniker": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting\\Shared\\PhoneNumberValue.cs",
-              "RelativeDocumentMoniker": "Contracting\\Shared\\PhoneNumberValue.cs",
-              "ToolTip": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting\\Shared\\PhoneNumberValue.cs",
-              "RelativeToolTip": "Contracting\\Shared\\PhoneNumberValue.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBgAAAAZAAAAAAAAAA==",
+              "Title": "UpdateAddressHandlerTest.cs",
+              "DocumentMoniker": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting.Test\\Application\\Contracts\\UpdateAddressHandlerTest.cs",
+              "RelativeDocumentMoniker": "Contracting.Test\\Application\\Contracts\\UpdateAddressHandlerTest.cs",
+              "ToolTip": "C:\\Users\\CARLOS\\Desktop\\Aprendizaje\\CSharp\\Nurtricenter-Contratacting\\Contracting\\Contracting.Test\\Application\\Contracts\\UpdateAddressHandlerTest.cs",
+              "RelativeToolTip": "Contracting.Test\\Application\\Contracts\\UpdateAddressHandlerTest.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T16:41:07.811Z",
+              "WhenOpened": "2025-02-24T01:47:55.362Z",
               "EditorCaption": ""
             }
           ]

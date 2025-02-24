@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Contracting.Infrastructure.StoredModel.Entities;
 
 [Table("contracts")]
-internal class ContractStoredModel
+public class ContractStoredModel
 {
     [Key]
     [Column("contractId")]

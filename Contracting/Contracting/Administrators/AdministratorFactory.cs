@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Contracting.Domain.Shared;
 
 namespace Contracting.Domain.Administrators;
 
-public class AdministradorFactory : IAdministratorFactory
+public class AdministratorFactory : IAdministratorFactory
 {
     public Administrator Create(string administratorName, string administratorPhone)
     {

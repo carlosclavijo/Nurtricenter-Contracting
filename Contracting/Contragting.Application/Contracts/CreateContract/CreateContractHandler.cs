@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contracting.Domain.Abstractions;
 using Contracting.Domain.Contracts;
 using Contracting.Domain.Contracts.Exceptions;
@@ -11,7 +7,7 @@ using MediatR;
 
 namespace Contracting.Application.Contracts.CreateContract;
 
-internal class CreateContractHandler : IRequestHandler<CreateContractCommand, Guid>
+public class CreateContractHandler : IRequestHandler<CreateContractCommand, Guid>
 {
     private readonly IContractFactory _contractFactory;
     private readonly IContractRepository _contractRepository;
@@ -29,27 +25,26 @@ internal class CreateContractHandler : IRequestHandler<CreateContractCommand, Gu
         var contract = request.Type switch
         {
             "HalfMonth" => _contractFactory.CreateHalfMonthContract(request.AdministratorId, request.PatientId, request.StartDate),
-            "FullMonth" => _contractFactory.CreateFullMonthContract(request.AdministratorId, request.PatientId, request.StartDate),
-            _ => throw new ContractCreationException("Invalid contract type")
+            "FullMonth" => _contractFactory.CreateFullMonthContract(request.AdministratorId, request.PatientId, request.StartDate)
         };
 
         List<DeliveryDay> deliveryDays = new List<DeliveryDay>();
-        TimeSpan timespan = request.Days.Last().Ends - request.Days.First().Start;
-        if (request.Type == "HalfMonth" && timespan.Days == 14 || request.Type == "FullMonth" && timespan.Days == 29)
+        foreach (var days in request.Days)
         {
-            foreach (var days in request.Days)
+            int span;
+            if (request.Type == "HalfMonth")
             {
-                timespan = days.Ends - days.Start;
-                for (int i = 0; i <= timespan.Days; i++)
-                {
-                    DeliveryDay d = new DeliveryDay(contract.Id, days.Start.AddDays(i), days.Street, days.Number, days.Longitude, days.Latitude);
-                    deliveryDays.Add(d);
-                }
+                span = 14;
             }
-        } 
-        else
-        {
-            throw new ArgumentException("If type is half month the days needs to be 15 and if type is FullMonth needs to be 30");
+            else
+            { 
+                span = 29;
+            }
+            for (int i = 0; i <= span; i++)
+            {
+                DeliveryDay d = new DeliveryDay(contract.Id, days.Start.AddDays(i), days.Street, days.Number, days.Longitude, days.Latitude);
+                deliveryDays.Add(d);
+            }
         }
         contract.CreateCalendar(deliveryDays);
 

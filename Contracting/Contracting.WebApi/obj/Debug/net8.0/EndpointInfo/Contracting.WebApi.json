@@ -353,10 +353,6 @@
             "type": "string",
             "format": "date-time"
           },
-          "ends": {
-            "type": "string",
-            "format": "date-time"
-          },
           "street": {
             "type": "string",
             "nullable": true

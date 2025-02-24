@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Contracting.Infrastructure.StoredModel.Entities;
 
 [Table("deliverydays")]
-internal class DeliveryDayStoredModel
+public class DeliveryDayStoredModel
 {
     [Key]
     [Column("deliveryDayId")]
