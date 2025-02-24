@@ -27,12 +27,7 @@ public class PatientController : ControllerBase
 
             var response = new
             {
-                Patient = new
-                {
-                    Id = id,
-                    Name = createdPatient.PatientName,
-                    Phone = createdPatient.PatientPhone,
-                },
+                Patient = createdPatient,
                 Message = "Patient created successfully"
             };
             return Created("", response);
@@ -69,6 +64,14 @@ public class PatientController : ControllerBase
         try
         {
             var result = await _mediator.Send(new GetPatientByIdQuery(id));
+            if (result == null)
+            {
+                var res = new
+                {
+                    message = "Patient not found"
+                };
+                return NotFound(res);
+            }
             var response = new
             {
                 Patient = result,

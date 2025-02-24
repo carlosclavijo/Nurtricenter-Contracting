@@ -239,4 +239,3 @@ C:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contratacting\Contractin
 C:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contratacting\Contracting\Contracting.WebApi\obj\Debug\net8.0\Contracting.WebApi.pdb
 C:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contratacting\Contracting\Contracting.WebApi\obj\Debug\net8.0\Contracting.WebApi.genruntimeconfig.cache
 C:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contratacting\Contracting\Contracting.WebApi\obj\Debug\net8.0\ref\Contracting.WebApi.dll
-C:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contratacting\Contracting\Contracting.WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

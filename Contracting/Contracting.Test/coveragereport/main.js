@@ -293,9 +293,9 @@ var assemblies = [
   {
     "name": "Contracting.WebApi",
     "classes": [
-      { "name": "Contracting.WebApi.Controllers.AdministratorController", "rp": "Contracting.WebApi_AdministratorController.html", "cl": 44, "ucl": 0, "cal": 44, "tl": 81, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Contracting.WebApi.Controllers.AdministratorController", "rp": "Contracting.WebApi_AdministratorController.html", "cl": 45, "ucl": 6, "cal": 51, "tl": 89, "cb": 1, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Contracting.WebApi.Controllers.ContractController", "rp": "Contracting.WebApi_ContractController.html", "cl": 63, "ucl": 0, "cal": 63, "tl": 123, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Contracting.WebApi.Controllers.PatientController", "rp": "Contracting.WebApi_PatientController.html", "cl": 48, "ucl": 1, "cal": 49, "tl": 85, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Contracting.WebApi.Controllers.PatientController", "rp": "Contracting.WebApi_PatientController.html", "cl": 45, "ucl": 6, "cal": 51, "tl": 88, "cb": 1, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "Program", "rp": "Contracting.WebApi_Program.html", "cl": 0, "ucl": 29, "cal": 29, "tl": 43, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
 ];

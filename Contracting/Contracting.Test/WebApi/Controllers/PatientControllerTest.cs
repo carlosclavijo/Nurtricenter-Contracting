@@ -28,7 +28,7 @@ public class PatientControllerTest
         var phone = "77601415";
         var command = new CreatePatientCommand(name, phone);
         var result = await _controller.CreatePatient(command);
-        var createdResult = Assert.IsType<ObjectResult>(result);
+        var createdResult = Assert.IsType<CreatedResult>(result);
 
         Assert.NotNull(createdResult);
     }

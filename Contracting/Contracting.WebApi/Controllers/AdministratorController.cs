@@ -65,6 +65,14 @@ public class AdministratorController : ControllerBase
         try
         {
             var result = await _mediator.Send(new GetAdministratorByIdQuery(id));
+            if (result == null)
+            {
+                var res = new
+                {
+                    message = "Administrator not found"
+                };
+                return NotFound(res);
+            }
             var response = new
             {
                 Administrator = result,
