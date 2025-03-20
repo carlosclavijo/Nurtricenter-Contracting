@@ -1,0 +1,11 @@
+services:
+    cms:
+        image: wordpress
+        ports:
+            - 8080:80
+        environment:
+        - WORDPRESS_DB_host-cms-db
+        - WORDPRESS_DB_USE-db_user
+        - WORDPRESS_DB_PASSWORD=superseguro
+        - WORDPRESS_DB_NAME=WORDPRESS_DB_host
+        
