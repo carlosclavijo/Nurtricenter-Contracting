@@ -1,29 +1,29 @@
-# Etapa 1: Construcción
+# Stage 1: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Copiar la solución y los proyectos en el orden correcto
+# Stage 2: Copy source code
 COPY ./Contracting.sln ./
 COPY ./Contracting.Domain/ ./Contracting.Domain/
 COPY ./Contracting.Application/ ./Contracting.Application/
 COPY ./Contracting.Infrastructure/ ./Contracting.Infrastructure/
 COPY ./Contracting.WebApi/ ./Contracting.WebApi/
 
-# Restaurar dependencias
+# Stage 3: Restore dependencies
 RUN dotnet restore ./Contracting.WebApi/Contracting.WebApi.csproj
 
-# Compilar y publicar en modo Release
+# Stage 4: Build and publish the application
 RUN dotnet publish ./Contracting.WebApi/Contracting.WebApi.csproj -c Release -o /out
 
-# Etapa 2: Ejecución
+# Stage 5: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
-# Copiar los archivos compilados
+# Stage 6: Copy compiled files
 COPY --from=build /out ./
 
-# Exponer el puerto de la API
+# Stage 7: Expose the API port
 EXPOSE 8080
 
-# Comando de inicio
+# Stage 8: Startup command
 ENTRYPOINT ["dotnet", "Contracting.WebApi.dll"]
