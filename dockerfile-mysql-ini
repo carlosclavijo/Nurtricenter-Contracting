@@ -1,0 +1,9 @@
+FROM postgres:15
+
+# Set environment variables
+ENV POSTGRES_DB=contracting
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=abc12345
+
+# Copy custom scripts or configuration files from your host to the container
+COPY ./script-init.sql /docker-entrypoint-initdb.d/

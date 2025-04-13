@@ -1,11 +1,27 @@
+version: "3.8"
+
 services:
-    cms:
-        image: wordpress
-        ports:
-            - 8080:80
-        environment:
-        - WORDPRESS_DB_host-cms-db
-        - WORDPRESS_DB_USE-db_user
-        - WORDPRESS_DB_PASSWORD=superseguro
-        - WORDPRESS_DB_NAME=WORDPRESS_DB_host
-        
+  database:
+    image: carlosclavijo/mipostgresql:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: abc12345
+      POSTGRES_DB: contracting
+    ports:
+      - "5433:5432"
+
+  contracting-app:
+    image: carlosclavijo/contracting-app:latest
+    container_name: contracting_app
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=database;Port=5432;Database=contracting;Username=postgres;Password=abc12345
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+  
+  
