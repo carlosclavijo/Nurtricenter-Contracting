@@ -15,4 +15,12 @@
     <ProjectReference Include="..\Contracting.Domain\Contracting.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Application\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Application\.editorconfig" />
+  </ItemGroup>
+
 </Project>
