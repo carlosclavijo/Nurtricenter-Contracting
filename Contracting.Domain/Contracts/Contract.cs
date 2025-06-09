@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Domain.Abstractions;
+﻿using Contracting.Domain.Abstractions;
 using Contracting.Domain.Delivery;
 using Contracting.Domain.Shared;
 
@@ -49,7 +48,9 @@ public class Contract : AggregateRoot
         StartDate = startDate;
         Cost = CalculateTotalCost(type);
         _deliveryDays = new List<DeliveryDay>();
-    }
+
+		//AddDomainEvent(new ContractCreated(Id, PatientId, StartDate, Type.ToString()));
+	}
 
     public decimal CalculateTotalCost(ContractType type)
     {

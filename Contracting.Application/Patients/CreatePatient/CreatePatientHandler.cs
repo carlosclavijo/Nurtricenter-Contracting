@@ -1,28 +1,18 @@
 ﻿using System;
 using Contracting.Domain.Abstractions;
 using Contracting.Domain.Patients;
+using Joseco.DDD.Core.Results;
 using MediatR;
 
 namespace Contracting.Application.Patients.CreatePatient;
 
-public class CreatePatientHandler : IRequestHandler<CreatePatientCommand, Guid>
+public class CreatePatientHandler(IPatienteFactory pacientFactory, IPatientRepository patientRepository, IUnitOfWork unitOfWork) : IRequestHandler<CreatePatientCommand, Result<Guid>>
 {
-    private readonly IPatienteFactory _patientFactory;
-    private readonly IPatientRepository _patientRepository;
-    private readonly IUnitOfWork _unitOfWork;
-
-    public CreatePatientHandler(IPatienteFactory patientFactory, IPatientRepository patientRepository, IUnitOfWork unitOfWork)
+    public async Task<Result<Guid>> Handle(CreatePatientCommand request, CancellationToken cancellationToken)
     {
-        _patientFactory = patientFactory;
-        _patientRepository = patientRepository;
-        _unitOfWork = unitOfWork;
-    }
-
-    public async Task<Guid> Handle(CreatePatientCommand request, CancellationToken cancellationToken)
-    {
-        var patient = _patientFactory.Create(request.PatientName, request.PatientPhone);
-        await _patientRepository.AddSync(patient);
-        await _unitOfWork.CommitAsync(cancellationToken);
+        var patient = pacientFactory.Create(request.PatientName, request.PatientPhone);
+        await patientRepository.AddSync(patient);
+        await unitOfWork.CommitAsync(cancellationToken);
         return patient.Id;
     }
 }

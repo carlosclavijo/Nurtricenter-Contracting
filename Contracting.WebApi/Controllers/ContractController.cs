@@ -5,6 +5,7 @@ using Contracting.Application.Contracts.GetContractById;
 using Contracting.Application.Contracts.GetContracts;
 using Contracting.Application.Contracts.InProgressContract;
 using Contracting.Application.Contracts.UpdateAddressById;
+using Contracting.WebApi.Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,7 +13,7 @@ namespace Contracting.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class ContractController : ControllerBase
+public class ContractController : CustomController
 {
     private readonly IMediator _mediator;
 

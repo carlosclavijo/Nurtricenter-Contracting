@@ -1,7 +1,7 @@
 ﻿using System;
 using Contracting.Application.Contracts.GetContractById;
 using Contracting.Application.Contracts.GetContracts;
-using Contracting.Infrastructure.StoredModel;
+using Contracting.Infrastructure.Persistence.StoredModel;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

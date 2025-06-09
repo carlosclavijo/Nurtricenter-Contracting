@@ -1,6 +1,7 @@
 ﻿using Contracting.Application.Patients.CreatePatient;
 using Contracting.Application.Patients.GetPatientById;
 using Contracting.Application.Patients.GetPatients;
+using Contracting.WebApi.Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,7 +9,7 @@ namespace Contracting.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class PatientController : ControllerBase
+public class PatientController : CustomController
 {
     private readonly IMediator _mediator;
 
@@ -18,20 +19,13 @@ public class PatientController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult> CreatePatient([FromBody] CreatePatientCommand command)
+    public async Task<IActionResult> CreatePatient([FromBody] CreatePatientCommand command)
     {
         try
         {
-            var id = await _mediator.Send(command);
-            var createdPatient = await _mediator.Send(new GetPatientByIdQuery(id));
-
-            var response = new
-            {
-                Patient = createdPatient,
-                Message = "Patient created successfully"
-            };
-            return Created("", response);
-        }
+            var result = await _mediator.Send(command);
+			return BuildResult(result);
+		}
         catch (Exception ex)
         {
             return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
@@ -39,7 +33,7 @@ public class PatientController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult> GetPatients()
+    public async Task<IActionResult> GetPatients()
     {
         try
         {

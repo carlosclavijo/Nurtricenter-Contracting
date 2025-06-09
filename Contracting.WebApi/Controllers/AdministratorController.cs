@@ -1,6 +1,7 @@
 ﻿using Contracting.Application.Administrators.CreateAdministrator;
 using Contracting.Application.Administrators.GetAdministratorById;
 using Contracting.Application.Administrators.GetAdministrators;
+using Contracting.WebApi.Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,7 +9,7 @@ namespace Contracting.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class AdministratorController : ControllerBase
+public class AdministratorController : CustomController
 {
     private readonly IMediator _mediator;
 

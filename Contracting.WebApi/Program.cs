@@ -1,38 +1,40 @@
+using Contracting.Application;
 using Contracting.Infrastructure;
+using Contracting.WebApi;
+using Contracting.WebApi.Extensions;
+using Nur.Store2025.Observability;
 
 var builder = WebApplication.CreateBuilder(args);
 
+string serviceName = "contracting.api";
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAllOrigins", policy =>
-    {
-        policy.WithOrigins("http://localhost:5120", "https://localhost:5120") // Agrega tu URL aquí
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
+builder.Host.UseLogging(serviceName, builder.Configuration);
+
 // Add services to the container.
-builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services
+	.AddApplication()
+	.AddInfrastructure(builder.Configuration, builder.Environment, serviceName)
+	.AddPresentation(builder.Configuration, builder.Environment);
+
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+	app.UseSwaggerWithUi();
+	app.ApplyMigrations();
 }
 
-app.UseCors(builder => builder
-    .AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader()
-);
+app.UseRouting();
+
+app.UseHealthChecks();
+
+app.UseRequestCorrelationId();
+
+app.UseRequestContextLogging();
+
+app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using Contracting.Domain.Abstractions;
+using Contracting.Domain.Patients.Events;
 using Contracting.Domain.Shared;
 
 namespace Contracting.Domain.Patients;
@@ -13,7 +14,8 @@ public class Patient : AggregateRoot
     {
         Name = name;
         Phone = phone;
-    }
+		AddDomainEvent(new PatientCreated(Id, Name, Phone));
+	}
 
     //Need for EF Core
     private Patient() { }

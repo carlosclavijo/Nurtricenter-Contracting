@@ -1,7 +1,7 @@
 ﻿using System;
 using Contracting.Application.Patients.GetPatientById;
 using Contracting.Application.Patients.GetPatients;
-using Contracting.Infrastructure.StoredModel;
+using Contracting.Infrastructure.Persistence.StoredModel;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

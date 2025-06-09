@@ -1,6 +1,6 @@
 ﻿using System;
 using Contracting.Application.Administrators.GetAdministrators;
-using Contracting.Infrastructure.StoredModel;
+using Contracting.Infrastructure.Persistence.StoredModel;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
