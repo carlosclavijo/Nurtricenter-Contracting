@@ -13,44 +13,21 @@ namespace Contracting.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class ContractController : CustomController
+public class ContractController(IMediator Mediator) : CustomController
 {
-    private readonly IMediator _mediator;
-
-    public ContractController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
-
-    [HttpPost]
+	[HttpPost]
     public async Task<IActionResult> CreateContract([FromBody] CreateContractCommand command)
     {
         try
         {
-            var id = await _mediator.Send(command);
-            var createdContract = await _mediator.Send(new GetAdministratorByIdQuery(id));
+            var id = await Mediator.Send(command);
+            var createdContract = await Mediator.Send(new GetContractByIdQuery(id.Value));
+			var response = new
+			{
+				Contract = createdContract,
+				Message = "Contract created successfully"
+			};
             return Ok(createdContract);
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, ex.Message);
-        }
-    }
-
-    [HttpGet]
-    [Route("{id}")]
-    public async Task<IActionResult> GetContractById([FromRoute] Guid id)
-    {
-        try
-        {
-            var result = await _mediator.Send(new GetContractByIdQuery(id));
-            var response = new
-            {
-                Contract = result,
-                Message = "Contract details retrieved successfully"
-            };
-
-            return Ok(response);
         }
         catch (Exception ex)
         {
@@ -63,7 +40,7 @@ public class ContractController : CustomController
     {
         try
         {
-            var result = await _mediator.Send(new GetContractsQuery(""));
+            var result = await Mediator.Send(new GetContractsQuery(""));
             var response = new
             {
                 Total = result.Count(),
@@ -71,19 +48,48 @@ public class ContractController : CustomController
             };
             return Ok(response);
         }
-        catch (Exception ex)
-        {
-            return StatusCode(500, ex.Message);
-        }
-    }
+		catch (Exception ex)
+		{
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
+	}
 
-    [HttpPost]
+	[HttpGet]
+	[Route("{id}")]
+	public async Task<IActionResult> GetContractById([FromRoute] Guid id)
+	{
+		try
+		{
+			var result = await Mediator.Send(new GetContractByIdQuery(id));
+			if (result == null)
+			{
+				var res = new
+				{
+					message = "Administrator not found"
+				};
+				return NotFound(res);
+			}
+			var response = new
+			{
+				Contract = result,
+				Message = "Contract details retrieved successfully"
+			};
+
+			return Ok(response);
+		}
+		catch (Exception ex)
+		{
+			return StatusCode(500, ex.Message);
+		}
+	}
+
+	[HttpPost]
     [Route("InProgress")]
     public async Task<IActionResult> InProgressContract([FromBody] InProgressContractCommand command)
     {
         try
         {
-            bool result = await _mediator.Send(command);
+            bool result = await Mediator.Send(command);
             return Ok(result);
         }
         catch (Exception ex)
@@ -98,7 +104,7 @@ public class ContractController : CustomController
     {
         try
         {
-            bool result = await _mediator.Send(command);
+            bool result = await Mediator.Send(command);
             return Ok(result);
         }
         catch (Exception ex)
@@ -113,7 +119,7 @@ public class ContractController : CustomController
     {
         try
         {
-            bool result = await _mediator.Send(command);
+            bool result = await Mediator.Send(command);
             return Ok(result);
         }
         catch (Exception ex)

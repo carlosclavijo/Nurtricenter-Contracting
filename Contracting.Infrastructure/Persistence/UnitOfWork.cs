@@ -8,23 +8,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Infrastructure.Persistence;
 
-public class UnitOfWork : IUnitOfWork, IOutboxDatabase<DomainEvent>
+public class UnitOfWork(DomainDbContext DbContext, IPublisher Publisher) : IUnitOfWork, IOutboxDatabase<DomainEvent>
 {
-	private readonly DomainDbContext _dbContext;
-	private readonly IMediator _mediator;
-
 	private int _contractCount = 0;
-
-	public UnitOfWork(DomainDbContext dbContext, IMediator mediator)
-	{
-		_dbContext = dbContext;
-	}
 
 	public async Task CommitAsync(CancellationToken cancellationToken = default)
 	{
 		_contractCount++;
 
-		var domainEvents = _dbContext.ChangeTracker
+		var domainEvents = DbContext.ChangeTracker
 			.Entries<Entity>()
 			.Where(x => x.Entity.DomainEvents.Any())
 			.Select(x =>
@@ -40,12 +32,12 @@ public class UnitOfWork : IUnitOfWork, IOutboxDatabase<DomainEvent>
 
 		foreach (var e in domainEvents)
 		{
-			await _mediator.Publish(e, cancellationToken);
+			await Publisher.Publish(e, cancellationToken);
 		}
 
 		if (_contractCount == 1)
 		{
-			await _dbContext.SaveChangesAsync(cancellationToken);
+			await DbContext.SaveChangesAsync(cancellationToken);
 		}
 		else
 		{
@@ -55,6 +47,6 @@ public class UnitOfWork : IUnitOfWork, IOutboxDatabase<DomainEvent>
 
 	public DbSet<OutboxMessage<DomainEvent>> GetOutboxMessages()
 	{
-		return _dbContext.OutboxMessages;
+		return DbContext.OutboxMessages;
 	}
 }

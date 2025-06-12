@@ -3,16 +3,9 @@ using System.Diagnostics;
 
 namespace Catalog.WebApi.Middleware;
 
-public class TracingMiddleware
+public class TracingMiddleware(RequestDelegate Next)
 {
-    private readonly RequestDelegate _next;
     private const string _correlationIdHeader = "X-Correlation-Id";
-
-    public TracingMiddleware(RequestDelegate next)
-    {
-        _next = next;
-    }
-
     public async Task InvokeAsync(HttpContext context, ITracingProvider tracingProvider)
     {
         var activity = Activity.Current;
@@ -28,7 +21,7 @@ public class TracingMiddleware
         // add the correlation id to the http response header
         AddCorrelationIdHeaderToResponse(context, requestCorrelationId);
 
-        await _next(context);
+        await Next(context);
     }
 
     private string GetCorrelationId(HttpContext context, ITracingProvider tracingProvider)

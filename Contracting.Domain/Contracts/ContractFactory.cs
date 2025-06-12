@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Contracting.Domain.Contracts;
+﻿namespace Contracting.Domain.Contracts;
 
 public class ContractFactory : IContractFactory
 {

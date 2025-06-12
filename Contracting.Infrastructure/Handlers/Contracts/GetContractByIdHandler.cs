@@ -1,29 +1,17 @@
-﻿using System;
-using Contracting.Application.Contracts.GetContractById;
+﻿using Contracting.Application.Contracts.GetContractById;
 using Contracting.Application.Contracts.GetContracts;
 using Contracting.Infrastructure.Persistence.StoredModel;
+using Joseco.DDD.Core.Results;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Infrastructure.Handlers.Contracts;
 
-public class GetContractByIdHandler : IRequestHandler<GetContractByIdQuery, ContractDto>
+public class GetContractByIdHandler(StoredDbContext DbContext) : IRequestHandler<GetContractByIdQuery, Result<ContractDto>>
 {
-    private readonly StoredDbContext _dbContext;
-
-    public GetContractByIdHandler(StoredDbContext dbContext)
+	public async Task<Result<ContractDto>> Handle(GetContractByIdQuery request, CancellationToken cancellationToken)
     {
-        _dbContext = dbContext;
-    }
-
-    public async Task<ContractDto> Handle(GetContractByIdQuery request, CancellationToken cancellationToken)
-    {
-        if (request.ContractId == Guid.Empty)
-        {
-            throw new ArgumentNullException(nameof(request.ContractId));
-        }
-
-        var contract = await _dbContext.Contract.AsNoTracking()
+        var contract = await DbContext.Contract.AsNoTracking()
                .Where(c => c.Id == request.ContractId)
                .Select(c => new ContractDto()
                {

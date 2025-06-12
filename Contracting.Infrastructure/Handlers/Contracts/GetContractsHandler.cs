@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Application.Contracts.GetContractById;
+﻿using Contracting.Application.Contracts.GetContractById;
 using Contracting.Application.Contracts.GetContracts;
 using Contracting.Infrastructure.Persistence.StoredModel;
 using MediatR;
@@ -7,18 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Infrastructure.Handlers.Contracts;
 
-public class GetContractsHandler : IRequestHandler<GetContractsQuery, IEnumerable<ContractDto>>
+public class GetContractsHandler(StoredDbContext DbContext) : IRequestHandler<GetContractsQuery, IEnumerable<ContractDto>>
 {
-    private readonly StoredDbContext _dbContext;
-
-    public GetContractsHandler(StoredDbContext dbContext)
+	public async Task<IEnumerable<ContractDto>> Handle(GetContractsQuery request, CancellationToken cancellationToken)
     {
-        _dbContext = dbContext;
-    }
-
-    public async Task<IEnumerable<ContractDto>> Handle(GetContractsQuery request, CancellationToken cancellationToken)
-    {
-        return await _dbContext.Contract.AsNoTracking()
+        return await DbContext.Contract.AsNoTracking()
             .Select(c => new ContractDto()
             {
                 Id = c.Id,

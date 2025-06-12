@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Contracting.Domain.Shared;
+﻿namespace Contracting.Domain.Shared;
 
 public record CostValue
 {

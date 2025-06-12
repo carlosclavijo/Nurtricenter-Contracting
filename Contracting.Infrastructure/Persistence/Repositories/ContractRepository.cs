@@ -1,22 +1,14 @@
-﻿using System;
-using Contracting.Domain.Contracts;
+﻿using Contracting.Domain.Contracts;
 using Contracting.Infrastructure.Persistence.DomainModel;
 using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Infrastructure.Persistence.Repositories;
 
-public class ContractRepository : IContractRepository
+public class ContractRepository(DomainDbContext DbContext) : IContractRepository
 {
-	private readonly DomainDbContext _dbContext;
-
-	public ContractRepository(DomainDbContext dbContext)
-	{
-		_dbContext = dbContext;
-	}
-
 	public async Task AddSync(Contract entity)
 	{
-		await _dbContext.Contract.AddAsync(entity);
+		await DbContext.Contract.AddAsync(entity);
 	}
 
 	public async Task DeleteAsync(Guid id)
@@ -24,18 +16,18 @@ public class ContractRepository : IContractRepository
 		var obj = await GetByIdAsync(id);
 		if (obj != null)
 		{
-			_dbContext.Contract.Remove(obj);
+			DbContext.Contract.Remove(obj);
 		}
 	}
 
 	public async Task<Contract?> GetByIdAsync(Guid id, bool readOnly = false)
 	{
-		return await _dbContext.Contract.Include(c => c.DeliveryDays).FirstOrDefaultAsync(i => i.Id == id);
+		return await DbContext.Contract.Include(c => c.DeliveryDays).FirstOrDefaultAsync(i => i.Id == id);
 	}
 
 	public Task UpdateAsync(Contract contract)
 	{
-		_dbContext.Contract.Update(contract);
+		DbContext.Contract.Update(contract);
 		return Task.CompletedTask;
 	}
 }

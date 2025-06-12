@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Contracting.Domain.Abstractions;
+﻿namespace Contracting.Domain.Abstractions;
 
 public interface IUnitOfWork
 {

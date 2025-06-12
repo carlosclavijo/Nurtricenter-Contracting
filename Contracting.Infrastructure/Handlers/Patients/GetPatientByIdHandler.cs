@@ -1,29 +1,17 @@
-﻿using System;
-using Contracting.Application.Patients.GetPatientById;
+﻿using Contracting.Application.Patients.GetPatientById;
 using Contracting.Application.Patients.GetPatients;
 using Contracting.Infrastructure.Persistence.StoredModel;
+using Joseco.DDD.Core.Results;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Infrastructure.Handlers.Patients;
 
-public class GetPatientByIdHandler : IRequestHandler<GetPatientByIdQuery, PatientDto>
+public class GetPatientByIdHandler(StoredDbContext DbContext) : IRequestHandler<GetPatientByIdQuery, Result<PatientDto>>
 {
-    private readonly StoredDbContext _dbContext;
-
-    public GetPatientByIdHandler(StoredDbContext dbContext)
+	public async Task<Result<PatientDto>> Handle(GetPatientByIdQuery request, CancellationToken cancellationToken)
     {
-        _dbContext = dbContext;
-    }
-
-    public async Task<PatientDto> Handle(GetPatientByIdQuery request, CancellationToken cancellationToken)
-    {
-        if (request.PatientId == Guid.Empty)
-        {
-            throw new ArgumentNullException(nameof(request.PatientId));
-        }
-
-        var patient = await _dbContext.Patient.AsNoTracking()
+        var patient = await DbContext.Patient.AsNoTracking()
             .Where(p => p.Id  == request.PatientId)
             .Select(p => new PatientDto()
             {

@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Domain.Abstractions;
+﻿using Contracting.Domain.Abstractions;
 
 namespace Contracting.Domain.Administrators;
 

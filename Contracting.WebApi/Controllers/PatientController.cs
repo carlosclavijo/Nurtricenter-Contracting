@@ -9,22 +9,21 @@ namespace Contracting.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class PatientController : CustomController
+public class PatientController(IMediator Mediator) : CustomController
 {
-    private readonly IMediator _mediator;
-
-    public PatientController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
-
     [HttpPost]
     public async Task<IActionResult> CreatePatient([FromBody] CreatePatientCommand command)
     {
         try
         {
-            var result = await _mediator.Send(command);
-			return BuildResult(result);
+            var id = await Mediator.Send(command);
+			var createdPatient = await Mediator.Send(new GetPatientByIdQuery(id.Value));
+			var response = new
+			{
+				Patient = createdPatient,
+				Message = "Patient created sucessfully"
+			};
+			return Ok(response);
 		}
         catch (Exception ex)
         {
@@ -37,7 +36,7 @@ public class PatientController : CustomController
     {
         try
         {
-            var result = await _mediator.Send(new GetPatientsQuery(""));
+            var result = await Mediator.Send(new GetPatientsQuery(""));
             var response = new
             {
                 Total = result.Count(),
@@ -57,7 +56,7 @@ public class PatientController : CustomController
     {
         try
         {
-            var result = await _mediator.Send(new GetPatientByIdQuery(id));
+            var result = await Mediator.Send(new GetPatientByIdQuery(id));
             if (result == null)
             {
                 var res = new

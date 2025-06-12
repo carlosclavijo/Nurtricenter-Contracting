@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Application.Contracts.GetContractById;
+﻿using Contracting.Application.Contracts.GetContractById;
 using MediatR;
 
 namespace Contracting.Application.Contracts.GetContracts;

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Contracting.Domain.Patients;
+﻿namespace Contracting.Domain.Patients;
 
 public interface IPatienteFactory
 {

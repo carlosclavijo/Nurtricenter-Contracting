@@ -9,30 +9,22 @@ namespace Contracting.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class AdministratorController : CustomController
+public class AdministratorController(IMediator Mediator) : CustomController
 {
-    private readonly IMediator _mediator;
-
-    public AdministratorController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
-
     [HttpPost]
-    public async Task<ActionResult> CreateAdministrator([FromBody] CreateAdministratorCommand command)
+    public async Task<IActionResult> CreateAdministrator([FromBody] CreateAdministratorCommand command)
     {
         try
         {
-            var id = await _mediator.Send(command);
-            var createdAdministrator = await _mediator.Send(new GetAdministratorByIdQuery(id));
-
+            var id = await Mediator.Send(command);
+            var createdAdministrator = await Mediator.Send(new GetAdministratorByIdQuery(id.Value));
             var response = new
             {
                 Administrator = createdAdministrator,
                 Message = "Administrator created successfully"
             };
 
-            return Created("", response);
+            return Ok(response);
         }
         catch (Exception ex)
         {
@@ -41,11 +33,11 @@ public class AdministratorController : CustomController
     }
 
     [HttpGet]
-    public async Task<ActionResult> GetAdministrators()
+    public async Task<IActionResult> GetAdministrators()
     {
         try
         {
-            var result = await _mediator.Send(new GetAdministratorsQuery(""));
+            var result = await Mediator.Send(new GetAdministratorsQuery(""));
             var response = new
             {
                 Total = result.Count(),
@@ -65,7 +57,7 @@ public class AdministratorController : CustomController
     {
         try
         {
-            var result = await _mediator.Send(new GetAdministratorByIdQuery(id));
+            var result = await Mediator.Send(new GetAdministratorByIdQuery(id));
             if (result == null)
             {
                 var res = new

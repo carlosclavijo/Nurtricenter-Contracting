@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Domain.Administrators;
+﻿using Contracting.Domain.Administrators;
 using Contracting.Domain.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

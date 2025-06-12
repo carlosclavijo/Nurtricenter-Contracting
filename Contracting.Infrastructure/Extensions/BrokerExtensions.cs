@@ -14,8 +14,6 @@ public static class BrokerExtensions
 		var rabbitMqSettings = serviceProvider.GetRequiredService<RabbitMqSettings>();
 
 		services.AddRabbitMQ(rabbitMqSettings);
-		//	.AddRabbitMqConsumer<ProductCreated, ProductCreatedConsumer>("inventory-product-created")
-		//	.AddRabbitMqConsumer<UserCreated, UserCreatedConsumer>("inventory-user-created");
 
 		return services;
 	}

@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Contracting.Application.Administrators.GetAdministrators;
+﻿namespace Contracting.Application.Administrators.GetAdministrators;
 
 public class AdministratorDto
 {
     public Guid Id { get; set; }
-    public string AdministratorName { get; set; }
-    public string AdministratorPhone { get; set; }
+    public required string AdministratorName { get; set; }
+    public required string AdministratorPhone { get; set; }
 }

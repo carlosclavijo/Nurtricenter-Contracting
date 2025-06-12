@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Contracting.Domain.Administrators;
+﻿namespace Contracting.Domain.Administrators;
 
 public class AdministratorFactory : IAdministratorFactory
 {

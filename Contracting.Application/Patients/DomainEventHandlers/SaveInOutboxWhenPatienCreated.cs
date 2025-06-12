@@ -6,13 +6,13 @@ using MediatR;
 
 namespace Contracting.Application.Patients.DomainEventHandlers;
 
-internal class SaveInOutboxWhenPatienCreated(IOutboxService<DomainEvent> outboxService, IUnitOfWork unitOfWork) : INotificationHandler<PatientCreated>
+internal class SaveInOutboxWhenPatienCreated(IOutboxService<DomainEvent> OutboxService, IUnitOfWork UnitOfWork) : INotificationHandler<PatientCreated>
 {
 	public async Task Handle(PatientCreated domainEvent, CancellationToken cancellationToken)
 	{
 		OutboxMessage<DomainEvent> outboxMessage = new(domainEvent);
 
-		await outboxService.AddAsync(outboxMessage);
-		await unitOfWork.CommitAsync(cancellationToken);
+		await OutboxService.AddAsync(outboxMessage);
+		await UnitOfWork.CommitAsync(cancellationToken);
 	}
 }

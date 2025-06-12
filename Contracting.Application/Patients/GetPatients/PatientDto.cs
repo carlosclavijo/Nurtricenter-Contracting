@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Contracting.Application.Patients.GetPatients;
+﻿namespace Contracting.Application.Patients.GetPatients;
 
 public class PatientDto
 {

@@ -1,23 +1,15 @@
-﻿using System;
-using Contracting.Application.Administrators.GetAdministrators;
+﻿using Contracting.Application.Administrators.GetAdministrators;
 using Contracting.Infrastructure.Persistence.StoredModel;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Infrastructure.Handlers.Administrators;
 
-public class GetAdministratorsHandler : IRequestHandler<GetAdministratorsQuery, IEnumerable<AdministratorDto>>
+public class GetAdministratorsHandler(StoredDbContext DbContext) : IRequestHandler<GetAdministratorsQuery, IEnumerable<AdministratorDto>>
 {
-    private readonly StoredDbContext _dbContext;
-
-    public GetAdministratorsHandler(StoredDbContext dbContext)
-    {
-        _dbContext = dbContext;
-    }
-
     public async Task<IEnumerable<AdministratorDto>> Handle(GetAdministratorsQuery request, CancellationToken cancellationToken)
     {
-        return await _dbContext.Administrator.AsNoTracking()
+        return await DbContext.Administrator.AsNoTracking()
             .Select(i => new AdministratorDto()
             {
                 Id = i.Id,

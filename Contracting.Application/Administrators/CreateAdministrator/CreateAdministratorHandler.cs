@@ -1,30 +1,17 @@
-﻿using System;
-using Contracting.Domain.Abstractions;
+﻿using Contracting.Domain.Abstractions;
 using Contracting.Domain.Administrators;
+using Joseco.DDD.Core.Results;
 using MediatR;
 
 namespace Contracting.Application.Administrators.CreateAdministrator;
 
-public class CreateAdministratorHandler : IRequestHandler<CreateAdministratorCommand, Guid>
+public class CreateAdministratorHandler(IAdministratorFactory AdministratorFactory, IAdministratorRepository AdministratorRepository, IUnitOfWork UnitOfWork) : IRequestHandler<CreateAdministratorCommand, Result<Guid>>
 {
-    private readonly IAdministratorFactory _administratorFactory;
-    private readonly IAdministratorRepository _administratorRepository;
-    private readonly IUnitOfWork _unitOfWork;
-
-    public CreateAdministratorHandler(IAdministratorFactory administratorFactory,
-        IAdministratorRepository administratorRepository,
-        IUnitOfWork unitOfWork)
+    public async Task<Result<Guid>> Handle(CreateAdministratorCommand request, CancellationToken cancellationToken)
     {
-        _administratorFactory = administratorFactory;
-        _administratorRepository = administratorRepository;
-        _unitOfWork = unitOfWork;
-    }
-
-    public async Task<Guid> Handle(CreateAdministratorCommand request, CancellationToken cancellationToken)
-    {
-        var administrator = _administratorFactory.Create(request.AdministratorName, request.AdministratorPhone);
-        await _administratorRepository.AddSync(administrator);
-        await _unitOfWork.CommitAsync(cancellationToken);
+        var administrator = AdministratorFactory.Create(request.AdministratorName, request.AdministratorPhone);
+        await AdministratorRepository.AddSync(administrator);
+        await UnitOfWork.CommitAsync(cancellationToken);
         return administrator.Id;
     }
 }

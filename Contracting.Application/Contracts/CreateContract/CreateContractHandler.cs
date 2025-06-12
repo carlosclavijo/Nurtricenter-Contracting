@@ -1,34 +1,23 @@
-﻿using System;
-using Contracting.Domain.Abstractions;
+﻿using Contracting.Domain.Abstractions;
 using Contracting.Domain.Contracts;
-using Contracting.Domain.Contracts.Exceptions;
 using Contracting.Domain.Delivery;
+using Joseco.DDD.Core.Results;
 using MediatR;
 
 namespace Contracting.Application.Contracts.CreateContract;
 
-public class CreateContractHandler : IRequestHandler<CreateContractCommand, Guid>
+public class CreateContractHandler(IContractFactory ContractFactory, IContractRepository ContractRepository, IUnitOfWork UnitOfWork) : IRequestHandler<CreateContractCommand, Result<Guid>>
 {
-    private readonly IContractFactory _contractFactory;
-    private readonly IContractRepository _contractRepository;
-    private readonly IUnitOfWork _unitOfWork;
-
-    public CreateContractHandler(IContractFactory contractFactory, IContractRepository contractRepository, IUnitOfWork unitOfWork)
-    {
-        _contractFactory = contractFactory;
-        _contractRepository = contractRepository;
-        _unitOfWork = unitOfWork;
-    }
-
-    public async Task<Guid> Handle(CreateContractCommand request, CancellationToken cancellationToken)
+    public async Task<Result<Guid>> Handle(CreateContractCommand request, CancellationToken cancellationToken)
     {
         var contract = request.Type switch
-        {
-            "HalfMonth" => _contractFactory.CreateHalfMonthContract(request.AdministratorId, request.PatientId, request.StartDate),
-            "FullMonth" => _contractFactory.CreateFullMonthContract(request.AdministratorId, request.PatientId, request.StartDate)
-        };
+		{
+			"HalfMonth" => ContractFactory.CreateHalfMonthContract(request.AdministratorId, request.PatientId, request.StartDate),
+			"FullMonth" => ContractFactory.CreateFullMonthContract(request.AdministratorId, request.PatientId, request.StartDate),
+			_ => throw new NotImplementedException()
+		};
 
-        List<DeliveryDay> deliveryDays = new List<DeliveryDay>();
+        List<DeliveryDay> deliveryDays = [];
         foreach (var days in request.Days)
         {
             int span;
@@ -42,14 +31,14 @@ public class CreateContractHandler : IRequestHandler<CreateContractCommand, Guid
             }
             for (int i = 0; i <= span; i++)
             {
-                DeliveryDay d = new DeliveryDay(contract.Id, days.Start.AddDays(i), days.Street, days.Number, days.Longitude, days.Latitude);
+                DeliveryDay d = new(contract.Id, days.Start.AddDays(i), days.Street, days.Number, days.Longitude, days.Latitude);
                 deliveryDays.Add(d);
             }
         }
         contract.CreateCalendar(deliveryDays);
 
-        await _contractRepository.AddSync(contract);
-        await _unitOfWork.CommitAsync(cancellationToken);
+        await ContractRepository.AddSync(contract);
+        await UnitOfWork.CommitAsync(cancellationToken);
         return contract.Id;
     }
 }

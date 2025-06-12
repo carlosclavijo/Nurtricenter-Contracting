@@ -1,23 +1,15 @@
-﻿using System;
-using Contracting.Application.Patients.GetPatients;
+﻿using Contracting.Application.Patients.GetPatients;
 using Contracting.Infrastructure.Persistence.StoredModel;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Infrastructure.Handlers.Patients;
 
-public class GetPatientsHandler : IRequestHandler<GetPatientsQuery, IEnumerable<PatientDto>>
+public class GetPatientsHandler(StoredDbContext DbContext) : IRequestHandler<GetPatientsQuery, IEnumerable<PatientDto>>
 {
-    private readonly StoredDbContext _dbContext;
-
-    public GetPatientsHandler(StoredDbContext dbContext)
+	public async Task<IEnumerable<PatientDto>> Handle(GetPatientsQuery request, CancellationToken cancellationToken)
     {
-        _dbContext = dbContext;
-    }
-
-    public async Task<IEnumerable<PatientDto>> Handle(GetPatientsQuery request, CancellationToken cancellationToken)
-    {
-        return await _dbContext.Patient.AsNoTracking()
+        return await DbContext.Patient.AsNoTracking()
             .Select(i => new  PatientDto()
             {
                 Id = i.Id,

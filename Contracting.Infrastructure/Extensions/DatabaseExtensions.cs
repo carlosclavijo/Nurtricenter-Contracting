@@ -21,9 +21,7 @@ public static class DatabaseExtensions
 		var databaseSettings = services.BuildServiceProvider().GetRequiredService<DatabaseSettings>();
 		var connectionString = databaseSettings.ConnectionString;
 
-		void optionsAction(DbContextOptionsBuilder options) =>
-				options
-					.UseNpgsql(connectionString);
+		void optionsAction(DbContextOptionsBuilder options) => options.UseNpgsql(connectionString);
 
 		services.AddDbContext<StoredDbContext>(optionsAction).AddDbContext<DomainDbContext>(optionsAction);
 

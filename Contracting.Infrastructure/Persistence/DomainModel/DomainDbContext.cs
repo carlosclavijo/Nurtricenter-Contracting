@@ -8,17 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Infrastructure.Persistence.DomainModel;
 
-public class DomainDbContext : DbContext
+public class DomainDbContext(DbContextOptions<DomainDbContext> options) : DbContext(options)
 {
 
 	public DbSet<Administrator> Administrator { get; set; }
 	public DbSet<Patient> Patient { get; set; }
 	public DbSet<Contract> Contract { get; set; }
 	public DbSet<OutboxMessage<DomainEvent>> OutboxMessages { get; set; }
-
-	public DomainDbContext(DbContextOptions<DomainDbContext> options) : base(options)
-	{
-	}
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{

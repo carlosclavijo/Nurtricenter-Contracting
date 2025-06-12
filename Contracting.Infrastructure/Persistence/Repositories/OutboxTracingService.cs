@@ -4,25 +4,16 @@ using Nur.Store2025.Observability.Tracing;
 
 namespace Contracting.Infrastructure.Persistence.Repositories;
 
-public class OutboxTracingService<T> : IOutboxService<T>
+public class OutboxTracingService<T>(IOutboxService<T> BaseOutService, ITracingProvider TracingProvider) : IOutboxService<T>
 {
-	private readonly IOutboxService<T> _baseOutboService;
-	private readonly ITracingProvider _tracingProvider;
-
-	public OutboxTracingService(IOutboxService<T> baseOutboService, ITracingProvider tracingProvider)
-	{
-		_baseOutboService = baseOutboService;
-		_tracingProvider = tracingProvider;
-	}
-
 	public async Task AddAsync(OutboxMessage<T> message)
 	{
 		OutboxMessage<T> outboxMessage = new(message.Content,
-			_tracingProvider.GetCorrelationId(),
-			_tracingProvider.GetTraceId(),
-			_tracingProvider.GetSpanId());
+			TracingProvider.GetCorrelationId(),
+			TracingProvider.GetTraceId(),
+			TracingProvider.GetSpanId());
 
-		await _baseOutboService.AddAsync(outboxMessage);
+		await BaseOutService.AddAsync(outboxMessage);
 	}
 }
 
