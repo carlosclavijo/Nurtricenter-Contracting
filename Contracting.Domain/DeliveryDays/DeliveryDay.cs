@@ -1,4 +1,5 @@
-﻿using Contracting.Domain.Abstractions;
+﻿using System.Text.Json.Serialization;
+using Contracting.Domain.Abstractions;
 using Contracting.Domain.Contracts;
 
 namespace Contracting.Domain.Delivery;
@@ -6,7 +7,7 @@ namespace Contracting.Domain.Delivery;
 public class DeliveryDay : Entity
 {
     public Guid ContractId { get; set; }
-    public Contract Contract { get; set; }
+	//public Contract Contract { get; set; }
     private DateTime _date;
     public DateTime Date
     {

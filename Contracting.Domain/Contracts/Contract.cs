@@ -1,4 +1,5 @@
 ﻿using Contracting.Domain.Abstractions;
+using Contracting.Domain.Contracts.Events;
 using Contracting.Domain.Delivery;
 using Contracting.Domain.Shared;
 
@@ -68,7 +69,9 @@ public class Contract : AggregateRoot
             throw new ArgumentNullException("Days cannot be null", nameof(days));
         }
         _deliveryDays = days;
-    }
+
+		AddDomainEvent(new CalendarCreated(Id, PatientId, StartDate, days[^1].Date, _deliveryDays));
+	}
 
     public void UpdateAddressByDays(DateTime fromDate, DateTime toDate, string street, int number, double latitude, double longitude)
     {

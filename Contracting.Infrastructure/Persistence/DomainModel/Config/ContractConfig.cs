@@ -49,7 +49,7 @@ internal class ContractConfig : IEntityTypeConfiguration<Contract>, IEntityTypeC
 		builder.Property(x => x.Cost).HasColumnName("totalCost").HasConversion(costConverter);
 
 		builder.HasMany(c => c.DeliveryDays)
-			   .WithOne(c => c.Contract)
+			   .WithOne()
 			   .HasForeignKey(c => c.ContractId)
 			   .OnDelete(DeleteBehavior.Cascade);
 
@@ -78,7 +78,7 @@ internal class ContractConfig : IEntityTypeConfiguration<Contract>, IEntityTypeC
 
 		builder.Property(x => x.Latitude).HasColumnName("latitude");
 
-		builder.HasOne(c => c.Contract)
+		builder.HasOne<Contract>()
 			   .WithMany(c => c.DeliveryDays)
 			   .HasForeignKey(d => d.ContractId)
 			   .OnDelete(DeleteBehavior.Cascade);
