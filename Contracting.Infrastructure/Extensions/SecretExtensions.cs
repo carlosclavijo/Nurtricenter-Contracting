@@ -51,7 +51,7 @@ public static class SecretExtensions
 		return services;
 	}
 
-	private static void LoadSecretsFromVault(this IServiceCollection services)
+	public static void LoadSecretsFromVault(this IServiceCollection services)
 	{
 		using var serviceProvider = services.BuildServiceProvider();
 		var scopeFactory = serviceProvider.GetRequiredService<IServiceScopeFactory>();
@@ -71,14 +71,14 @@ public static class SecretExtensions
 		Task.WaitAll(tasks);
 	}
 
-	private static async Task LoadAndRegister<T>(ISecretManager secretManager, IServiceCollection services,
+	public static async Task LoadAndRegister<T>(ISecretManager secretManager, IServiceCollection services,
 		string secretName, string mountPoint) where T : class, new()
 	{
 		T secret = await secretManager.Get<T>(secretName, mountPoint);
 		services.AddSingleton<T>(secret);
 	}
 
-	private static IConfiguration LoadAndRegister<T>(this IConfiguration configuration, IServiceCollection services,
+	public static IConfiguration LoadAndRegister<T>(this IConfiguration configuration, IServiceCollection services,
 		string secretName) where T : class, new()
 	{
 		T secret = Activator.CreateInstance<T>();

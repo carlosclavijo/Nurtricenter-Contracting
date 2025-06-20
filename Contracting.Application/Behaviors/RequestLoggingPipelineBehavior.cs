@@ -5,7 +5,7 @@ using Serilog.Context;
 
 namespace Contracting.Application.Behaviors;
 
-internal sealed class RequestLoggingPipelineBehavior<TRequest, TResponse>(
+public sealed class RequestLoggingPipelineBehavior<TRequest, TResponse>(
 	ILogger<RequestLoggingPipelineBehavior<TRequest, TResponse>> logger)
 	: IPipelineBehavior<TRequest, TResponse>
 	where TRequest : class

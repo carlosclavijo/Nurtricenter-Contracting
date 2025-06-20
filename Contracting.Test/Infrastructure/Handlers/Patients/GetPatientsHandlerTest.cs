@@ -1,9 +1,8 @@
-﻿using System;
-using Contracting.Infrastructure.Handlers.Patients;
-using Contracting.Infrastructure.StoredModel.Entities;
-using Contracting.Infrastructure.StoredModel;
+﻿using Contracting.Infrastructure.Handlers.Patients;
 using Microsoft.EntityFrameworkCore;
 using Contracting.Application.Patients.GetPatients;
+using Contracting.Infrastructure.Persistence.StoredModel;
+using Contracting.Infrastructure.Persistence.StoredModel.Entities;
 
 namespace Contracting.Test.Infrastructure.Handlers.Patients;
 

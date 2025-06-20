@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Contracting.Infrastructure.Persistence.DomainModel.Config;
 
-internal class ContractConfig : IEntityTypeConfiguration<Contract>, IEntityTypeConfiguration<DeliveryDay>
+public class ContractConfig : IEntityTypeConfiguration<Contract>, IEntityTypeConfiguration<DeliveryDay>
 {
 	public void Configure(EntityTypeBuilder<Contract> builder)
 	{

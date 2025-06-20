@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Domain.Contracts.Exceptions;
+﻿using Contracting.Domain.Contracts.Exceptions;
 
 namespace Contracting.Test.Domain.Contracts.Exceptions;
 

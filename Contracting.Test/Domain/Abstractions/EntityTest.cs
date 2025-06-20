@@ -1,16 +1,14 @@
-﻿using System;
-using Contracting.Domain.Abstractions;
+﻿using Contracting.Domain.Abstractions;
 
 namespace Contracting.Test.Domain.Abstractions;
 
 public class EntityTest
 {
-    private class TestEntity : Entity
+    private class TestEntity(Guid id) : Entity(id)
     {
-        public TestEntity(Guid id) : base(id) { }
-    }
+	}
 
-    private record TestDomainEvent : DomainEvent
+	private record TestDomainEvent : DomainEvent
     {
         public TestDomainEvent() : base() { }
     }
@@ -28,9 +26,8 @@ public class EntityTest
     public void EntityWithValidId()
     {
         Guid validId = Guid.NewGuid();
-        List<DomainEvent> domainEvents = new List<DomainEvent>();
 
-        var entity = new TestEntity(validId);
+		var entity = new TestEntity(validId);
    
         Assert.NotNull(entity);
         Assert.Equal(validId, entity.Id);

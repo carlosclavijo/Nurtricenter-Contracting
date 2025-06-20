@@ -1,7 +1,6 @@
-﻿using System;
-using Contracting.Infrastructure.Migrations;
-using Contracting.Infrastructure.StoredModel;
+﻿using Contracting.Infrastructure.Persistence.StoredModel;
 using Microsoft.EntityFrameworkCore;
+using Contracting.Infrastructure.Migrations;
 
 namespace Contracting.Test.Infrastructure.Migrations;
 

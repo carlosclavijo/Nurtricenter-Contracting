@@ -3,7 +3,6 @@ using Microsoft.Extensions.Configuration;
 using System.Reflection;
 using Microsoft.Extensions.Hosting;
 using Contracting.Infrastructure.Extensions;
-using Catalog.Infrastructure.Extensions;
 
 namespace Contracting.Infrastructure;
 

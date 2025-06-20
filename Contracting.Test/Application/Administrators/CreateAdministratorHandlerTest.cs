@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Application.Administrators.CreateAdministrator;
+﻿using Contracting.Application.Administrators.CreateAdministrator;
 using Contracting.Domain.Abstractions;
 using Contracting.Domain.Administrators;
 using Moq;
@@ -20,7 +19,7 @@ public class CreateAdministratorHandlerTest
     }
 
     [Fact]
-    public async void HandleIsValid()
+    public async Task HandleIsValid()
     {
         var name = "Carlos Clavijo";
         var phone = "77141516";

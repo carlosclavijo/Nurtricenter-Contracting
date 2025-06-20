@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Domain.Shared;
+﻿using Contracting.Domain.Shared;
 
 namespace Contracting.Test.Domain.Shared;
 

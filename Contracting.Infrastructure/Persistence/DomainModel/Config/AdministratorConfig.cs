@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Contracting.Infrastructure.Persistence.DomainModel.Config;
 
-internal class AdministratorConfig : IEntityTypeConfiguration<Administrator>
+public class AdministratorConfig : IEntityTypeConfiguration<Administrator>
 {
 	public void Configure(EntityTypeBuilder<Administrator> builder)
 	{

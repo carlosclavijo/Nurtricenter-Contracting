@@ -12,9 +12,7 @@ public static class SecurityExtensions
 		if (environment is IWebHostEnvironment)
 		{
 			var jwtOptions = services.BuildServiceProvider().GetRequiredService<JwtOptions>();
-			//services.AddSecurity(jwtOptions, InventoryPermission.PermissionsList);
 		}
-
 		return services;
 	}
 }

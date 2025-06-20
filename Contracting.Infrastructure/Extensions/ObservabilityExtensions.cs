@@ -7,7 +7,7 @@ using Npgsql;
 using Nur.Store2025.Observability;
 using Nur.Store2025.Observability.Config;
 
-namespace Catalog.Infrastructure.Extensions;
+namespace Contracting.Infrastructure.Extensions;
 
 public static class ObservabilityExtensions
 {
@@ -33,7 +33,7 @@ public static class ObservabilityExtensions
         return services;
     }
 
-    private static IServiceCollection AddServicesHealthChecks(this IServiceCollection services)
+    public static IServiceCollection AddServicesHealthChecks(this IServiceCollection services)
     {
         var databaseSettings = services.BuildServiceProvider().GetRequiredService<DatabaseSettings>();
         var connectionString = databaseSettings.ConnectionString;

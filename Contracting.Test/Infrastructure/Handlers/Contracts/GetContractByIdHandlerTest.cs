@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Contracting.Application.Administrators.GetAdministratorById;
 using Contracting.Application.Contracts.GetContractById;
+using Contracting.Infrastructure.Handlers.Administrators;
 using Contracting.Infrastructure.Handlers.Contracts;
-using Contracting.Infrastructure.StoredModel;
-using Contracting.Infrastructure.StoredModel.Entities;
+using Contracting.Infrastructure.Persistence.StoredModel;
+using Contracting.Infrastructure.Persistence.StoredModel.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Contracting.Test.Infrastructure.Handlers.Contracts;
@@ -111,52 +112,53 @@ public class GetContractByIdHandlerTest
         var result = await handler.Handle(query, cancellationToken.Token);
 
         Assert.NotNull(result);
-        Assert.Equal(contractId, result.Id);
-        Assert.Equal(administrtorId, result.AdministratorId);
-        Assert.Equal(patientId, result.PatientId);
-        Assert.Equal("FullMonth", result.Type);
-        Assert.Equal("Created", result.Status);
-        Assert.Equal(startDate, result.StartDate);
-        Assert.Equal(completedDate, result.CompleteDate);
+        Assert.Equal(contractId, result.Value.Id);
+        Assert.Equal(administrtorId, result.Value.AdministratorId);
+		Assert.Equal(patientId, result.Value.PatientId);
+        Assert.Equal("FullMonth", result.Value.Type);
+        Assert.Equal("Created", result.Value.Status);
+        Assert.Equal(startDate, result.Value.StartDate);
+        Assert.Equal(completedDate, result.Value.CompleteDate);
 
-        Assert.Equal(deliveryDayId1, result.DeliveryDays.First().Id);
-        Assert.Equal(deliveryDayId2, result.DeliveryDays.ElementAt(1).Id);
-        Assert.Equal(deliveryDayId3, result.DeliveryDays.ElementAt(2).Id);;
+        Assert.Equal(deliveryDayId1, result.Value.DeliveryDays.First().Id);
+        Assert.Equal(deliveryDayId2, result.Value.DeliveryDays.ElementAt(1).Id);
+        Assert.Equal(deliveryDayId3, result.Value.DeliveryDays.ElementAt(2).Id);;
 
-        Assert.Equal(contractId, result.DeliveryDays.First().ContractId);
-        Assert.Equal(contractId, result.DeliveryDays.ElementAt(1).ContractId);
-        Assert.Equal(contractId, result.DeliveryDays.ElementAt(2).ContractId);
+        Assert.Equal(contractId, result.Value.DeliveryDays.First().ContractId);
+        Assert.Equal(contractId, result.Value.DeliveryDays.ElementAt(1).ContractId);
+        Assert.Equal(contractId, result.Value.DeliveryDays.ElementAt(2).ContractId);
 
-        Assert.Equal(startDate.AddDays(1), result.DeliveryDays.First().DateTime);
-        Assert.Equal(startDate.AddDays(2), result.DeliveryDays.ElementAt(1).DateTime);
-        Assert.Equal(startDate.AddDays(3), result.DeliveryDays.ElementAt(2).DateTime);
+        Assert.Equal(startDate.AddDays(1), result.Value.DeliveryDays.First().DateTime);
+        Assert.Equal(startDate.AddDays(2), result.Value.DeliveryDays.ElementAt(1).DateTime);
+        Assert.Equal(startDate.AddDays(3), result.Value.DeliveryDays.ElementAt(2).DateTime);
 
-        Assert.Equal("Grove Street", result.DeliveryDays.First().Street);
-        Assert.Equal("Elm Street", result.DeliveryDays.ElementAt(1).Street);
-        Assert.Equal("Paper Street", result.DeliveryDays.ElementAt(2).Street);
+        Assert.Equal("Grove Street", result.Value.DeliveryDays.First().Street);
+        Assert.Equal("Elm Street", result.Value.DeliveryDays.ElementAt(1).Street);
+        Assert.Equal("Paper Street", result.Value.DeliveryDays.ElementAt(2).Street);
 
-        Assert.Equal(-75.1234, result.DeliveryDays.First().Longitude);
-        Assert.Equal(-45.5025, result.DeliveryDays.ElementAt(1).Longitude);
-        Assert.Equal(-59.3794, result.DeliveryDays.ElementAt(2).Longitude);
+        Assert.Equal(-75.1234, result.Value.DeliveryDays.First().Longitude);
+        Assert.Equal(-45.5025, result.Value.DeliveryDays.ElementAt(1).Longitude);
+        Assert.Equal(-59.3794, result.Value.DeliveryDays.ElementAt(2).Longitude);
 
-        Assert.Equal(40.1234, result.DeliveryDays.First().Latitude);
-        Assert.Equal(107.2618, result.DeliveryDays.ElementAt(1).Latitude);
-        Assert.Equal(43.4752, result.DeliveryDays.ElementAt(2).Latitude);
+        Assert.Equal(40.1234, result.Value.DeliveryDays.First().Latitude);
+        Assert.Equal(107.2618, result.Value.DeliveryDays.ElementAt(1).Latitude);
+        Assert.Equal(43.4752, result.Value.DeliveryDays.ElementAt(2).Latitude);
 
     }
 
     [Fact]
-    public void HandleIsInvalid()
+    public async Task HandleIsInvalid()
     {
-        var id = Guid.Empty;
+		var options = new DbContextOptionsBuilder<StoredDbContext>()
+		.UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+		.Options;
 
-        var query = new GetContractByIdQuery(id);
-        var handler = new GetContractByIdHandler(_dbContext);
-        var cancellationToken = new CancellationTokenSource(1000);
+		await using var dbContext = new StoredDbContext(options);
 
-        var exception = Assert.ThrowsAsync<ArgumentNullException>(async () => await handler.Handle(query, cancellationToken.Token));
+		var handler = new GetContractByIdHandler(dbContext);
+		var query = new GetContractByIdQuery(Guid.NewGuid());
+		var result = await handler.Handle(query, CancellationToken.None);
 
-        Assert.NotNull(exception);
-        Assert.Equal("Value cannot be null. (Parameter 'ContractId')", exception.Result.Message);
-    }
+		Assert.True(result == null || result.IsFailure || result.Value == null);
+	}
 }

@@ -16,4 +16,3 @@ public class OutboxTracingService<T>(IOutboxService<T> BaseOutService, ITracingP
 		await BaseOutService.AddAsync(outboxMessage);
 	}
 }
-

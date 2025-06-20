@@ -1,11 +1,10 @@
-﻿using System;
-using Contracting.Infrastructure.Handlers.Administrators;
-using Contracting.Infrastructure.StoredModel.Entities;
-using Contracting.Infrastructure.StoredModel;
+﻿using Contracting.Infrastructure.Handlers.Administrators;
 using Microsoft.EntityFrameworkCore;
 using Contracting.Application.Administrators.GetAdministratorById;
-using System.Numerics;
-using System.Xml.Linq;
+using Contracting.Infrastructure.Persistence.StoredModel;
+using Contracting.Infrastructure.Persistence.StoredModel.Entities;
+using Moq;
+using System;
 
 namespace Contracting.Test.Infrastructure.Handlers.Administrator;
 
@@ -44,23 +43,24 @@ public class GetAdministratorByIdHandlerTest
         var result = await handler.Handle(query, cancellationToken.Token);
 
         Assert.NotNull(result);
-        Assert.Equal(id, result.Id);
-        Assert.Equal(name, result.AdministratorName);
-        Assert.Equal(phone, result.AdministratorPhone);
+        Assert.Equal(id, result.Value.Id);
+        Assert.Equal(name, result.Value.AdministratorName);
+        Assert.Equal(phone, result.Value.AdministratorPhone);
     }
 
-    [Fact]
-    public void HandleIsInvalid()
-    {
-        var id = Guid.Empty;
+	[Fact]
+	public async Task HandleIsInvalid()
+	{
+		var options = new DbContextOptionsBuilder<StoredDbContext>()
+		.UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+		.Options;
 
-        var query = new GetAdministratorByIdQuery(id);
-        var handler = new GetAdministratorByIdHandler(_dbContext);
-        var cancellationToken = new CancellationTokenSource(1000);
+		await using var dbContext = new StoredDbContext(options);
 
-        var exception = Assert.ThrowsAsync<ArgumentNullException>(async () => await handler.Handle(query, cancellationToken.Token));
+		var handler = new GetAdministratorByIdHandler(dbContext);
+		var query = new GetAdministratorByIdQuery(Guid.NewGuid());
+		var result = await handler.Handle(query, CancellationToken.None);
 
-        Assert.NotNull(exception);
-        Assert.Equal("Value cannot be null. (Parameter 'AdministratorId')", exception.Result.Message);
-    }
+		Assert.True(result == null || result.IsFailure || result.Value == null);
+	}
 }

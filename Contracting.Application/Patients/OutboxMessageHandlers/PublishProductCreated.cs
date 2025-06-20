@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Contracting.Application.Patients.OutboxMessageHandlers;
 
-class PublishProductCreated(IExternalPublisher integrationBusService) : INotificationHandler<OutboxMessage<PatientCreated>>
+public class PublishProductCreated(IExternalPublisher integrationBusService) : INotificationHandler<OutboxMessage<PatientCreated>>
 {
 	public async Task Handle(OutboxMessage<PatientCreated> notification, CancellationToken canellationToken)
 	{

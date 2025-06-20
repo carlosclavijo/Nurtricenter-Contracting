@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Domain.Administrators;
+﻿using Contracting.Domain.Administrators;
 using Contracting.Domain.Patients;
 
 namespace Contracting.Test.Domain.Patients;

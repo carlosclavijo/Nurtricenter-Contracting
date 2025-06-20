@@ -1,10 +1,6 @@
-﻿using Contracting.Application.Administrators.GetAdministratorById;
-using Contracting.Application.Contracts.CompleteContract;
-using Contracting.Application.Contracts.CreateContract;
+﻿using Contracting.Application.Contracts.CreateContract;
 using Contracting.Application.Contracts.GetContractById;
 using Contracting.Application.Contracts.GetContracts;
-using Contracting.Application.Contracts.InProgressContract;
-using Contracting.Application.Contracts.UpdateAddressById;
 using Contracting.WebApi.Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -83,7 +79,7 @@ public class ContractController(IMediator Mediator) : CustomController
 		}
 	}
 
-	[HttpPost]
+	/*[HttpPost]
     [Route("InProgress")]
     public async Task<IActionResult> InProgressContract([FromBody] InProgressContractCommand command)
     {
@@ -126,5 +122,5 @@ public class ContractController(IMediator Mediator) : CustomController
         {
             return StatusCode(500, ex.Message);
         }
-    }
+    }*/
 }

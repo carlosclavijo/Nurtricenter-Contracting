@@ -48,12 +48,10 @@ public class Contract : AggregateRoot
         CreationDate = DateTime.Now;
         StartDate = startDate;
         Cost = CalculateTotalCost(type);
-        _deliveryDays = new List<DeliveryDay>();
-
-		//AddDomainEvent(new ContractCreated(Id, PatientId, StartDate, Type.ToString()));
+        _deliveryDays = [];
 	}
 
-    public decimal CalculateTotalCost(ContractType type)
+	public decimal CalculateTotalCost(ContractType type)
     {
         if (type == ContractType.FullMonth)
         {
@@ -64,50 +62,14 @@ public class Contract : AggregateRoot
 
     public void CreateCalendar(List<DeliveryDay> days)
     {
-        if (!days.Any())
+        if (days.Count == 0)
         {
-            throw new ArgumentNullException("Days cannot be null", nameof(days));
+            throw new ArgumentNullException(nameof(days), "Days cannot be null");
         }
         _deliveryDays = days;
 
 		AddDomainEvent(new CalendarCreated(Id, PatientId, StartDate, days[^1].Date, _deliveryDays));
 	}
-
-    public void UpdateAddressByDays(DateTime fromDate, DateTime toDate, string street, int number, double latitude, double longitude)
-    {
-        fromDate = fromDate.Kind == DateTimeKind.Unspecified ? DateTime.SpecifyKind(fromDate, DateTimeKind.Utc) : fromDate.ToUniversalTime();
-        toDate = toDate.Kind == DateTimeKind.Unspecified ? DateTime.SpecifyKind(toDate, DateTimeKind.Utc) : toDate.ToUniversalTime();
-        if (fromDate < DateTime.Today.AddDays(1))
-        {
-            throw new ArgumentException("Date has to be day after tomorrow at least", nameof(fromDate));
-        }
-        if (fromDate.Date >= toDate.Date)
-        {
-            throw new ArgumentException("ToDate cannot be before than FromDate", nameof(toDate));
-        }
-        for (int i = 0; i < _deliveryDays.Count; i++)
-        {
-            if (_deliveryDays[i].Date >= fromDate.Date && _deliveryDays[i].Date <= toDate.Date)
-            {
-                _deliveryDays[i] = new DeliveryDay(Id, _deliveryDays[i].Date, street, number, latitude, longitude);
-            }
-        }
-    }
-
-    public void CancelDate(DateTime date)
-    {
-        if (date < DateTime.Today.AddDays(2))
-        {
-            throw new ArgumentException("Date has to be day after tomorrow at least", nameof(date));
-        }
-        for (int i = 0; i < _deliveryDays.Count; i++)
-        {
-            if (_deliveryDays[i].Date == date.Date)
-            {
-                _deliveryDays.RemoveAt(i);
-            }
-        }
-    }
 
     public void InProgress()
     {

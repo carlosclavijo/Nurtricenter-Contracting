@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Contracting.Infrastructure.Persistence.DomainModel.Config;
 
-internal class PatientConfig : IEntityTypeConfiguration<Patient>
+public class PatientConfig : IEntityTypeConfiguration<Patient>
 {
 	public void Configure(EntityTypeBuilder<Patient> builder)
 	{

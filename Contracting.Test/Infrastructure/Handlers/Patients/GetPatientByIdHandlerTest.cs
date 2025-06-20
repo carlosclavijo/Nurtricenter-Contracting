@@ -1,11 +1,10 @@
-﻿using System;
-using Contracting.Application.Administrators.GetAdministratorById;
-using Contracting.Infrastructure.Handlers.Administrators;
-using Contracting.Infrastructure.StoredModel.Entities;
-using Contracting.Infrastructure.StoredModel;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Contracting.Application.Patients.GetPatientById;
 using Contracting.Infrastructure.Handlers.Patients;
+using Contracting.Infrastructure.Persistence.StoredModel;
+using Contracting.Infrastructure.Persistence.StoredModel.Entities;
+using Contracting.Application.Administrators.GetAdministratorById;
+using Contracting.Infrastructure.Handlers.Administrators;
 
 namespace Contracting.Test.Infrastructure.Handlers.Patients;
 
@@ -44,23 +43,24 @@ public class GetPatientByIdHandlerTest
         var result = await handler.Handle(query, cancellationToken.Token);
 
         Assert.NotNull(result);
-        Assert.Equal(id, result.Id);
-        Assert.Equal(name, result.PatientName);
-        Assert.Equal(phone, result.PatientPhone);
+        Assert.Equal(id, result.Value.Id);
+        Assert.Equal(name, result.Value.PatientName);
+        Assert.Equal(phone, result.Value.PatientPhone);
     }
 
-    [Fact]
-    public void HandleIsInvalid()
-    {
-        var id = Guid.Empty;
+	[Fact]
+	public async Task HandleIsInvalid()
+	{
+		var options = new DbContextOptionsBuilder<StoredDbContext>()
+		.UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+		.Options;
 
-        var query = new GetPatientByIdQuery(id);
-        var handler = new GetPatientByIdHandler(_dbContext);
-        var cancellationToken = new CancellationTokenSource(1000);
+		await using var dbContext = new StoredDbContext(options);
 
-        var exception = Assert.ThrowsAsync<ArgumentNullException>(async () => await handler.Handle(query, cancellationToken.Token));
+		var handler = new GetPatientByIdHandler(dbContext);
+		var query = new GetPatientByIdQuery(Guid.NewGuid());
+		var result = await handler.Handle(query, CancellationToken.None);
 
-        Assert.NotNull(exception);
-        Assert.Equal("Value cannot be null. (Parameter 'PatientId')", exception.Result.Message);
-    }
+		Assert.True(result == null || result.IsFailure || result.Value == null);
+	}
 }

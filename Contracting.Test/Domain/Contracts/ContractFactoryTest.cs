@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Domain.Contracts;
+﻿using Contracting.Domain.Contracts;
 
 namespace Contracting.Test.Domain.Contracts;
 

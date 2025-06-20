@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Contracting.Application.Contracts.OutboxMessageHandlers;
 
-class PublishCalendarCreated(IExternalPublisher integrationBusService) : INotificationHandler<OutboxMessage<CalendarCreated>>
+public class PublishCalendarCreated(IExternalPublisher integrationBusService) : INotificationHandler<OutboxMessage<CalendarCreated>>
 {
 	public async Task Handle(OutboxMessage<CalendarCreated> notification, CancellationToken cancellationToken)
 	{

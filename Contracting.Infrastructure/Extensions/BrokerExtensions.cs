@@ -1,8 +1,6 @@
 ﻿using Joseco.Communication.External.RabbitMQ;
 using Joseco.Communication.External.RabbitMQ.Services;
 using Microsoft.Extensions.DependencyInjection;
-using Nur.Store2025.Integration.Catalog;
-using Nur.Store2025.Integration.Identity;
 
 namespace Contracting.Infrastructure.Extensions;
 

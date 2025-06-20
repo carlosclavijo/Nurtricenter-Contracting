@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Contracting.Infrastructure.Migrations
 {
     [DbContext(typeof(StoredDbContext))]
-    partial class StoredDbContextModelSnapshot : ModelSnapshot
+    public class StoredDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

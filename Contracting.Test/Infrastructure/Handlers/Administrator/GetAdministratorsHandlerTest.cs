@@ -1,10 +1,8 @@
-﻿using System;
-using Contracting.Application.Administrators.GetAdministrators;
+﻿using Contracting.Application.Administrators.GetAdministrators;
 using Contracting.Infrastructure.Handlers.Administrators;
-using Contracting.Infrastructure.StoredModel;
-using Contracting.Infrastructure.StoredModel.Entities;
+using Contracting.Infrastructure.Persistence.StoredModel;
+using Contracting.Infrastructure.Persistence.StoredModel.Entities;
 using Microsoft.EntityFrameworkCore;
-using Moq;
 
 namespace Contracting.Test.Infrastructure.Handlers.Administrator;
 

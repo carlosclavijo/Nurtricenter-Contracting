@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Contracting.Domain.Delivery;
+﻿using Contracting.Domain.Delivery;
 using Joseco.Communication.External.Contracts.Message;
 
 namespace Contracting.Application.Contracts.OutboxMessageHandlers;

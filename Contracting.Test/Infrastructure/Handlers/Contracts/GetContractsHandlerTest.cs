@@ -1,10 +1,8 @@
-﻿using System;
-using Contracting.Infrastructure.StoredModel;
-using Microsoft.EntityFrameworkCore;
-using Contracting.Infrastructure.StoredModel.Entities;
+﻿using Microsoft.EntityFrameworkCore;
 using Contracting.Application.Contracts.GetContracts;
 using Contracting.Infrastructure.Handlers.Contracts;
-using System.Linq;
+using Contracting.Infrastructure.Persistence.StoredModel;
+using Contracting.Infrastructure.Persistence.StoredModel.Entities;
 
 namespace Contracting.Test.Infrastructure.Handlers.Contracts;
 

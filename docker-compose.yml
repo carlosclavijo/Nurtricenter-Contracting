@@ -19,6 +19,11 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Host=database;Port=5432;Database=contracting;Username=postgres;Password=abc12345
+      - RabbitMqSettings__Host= host.docker.internal
+      - RabbitMqSettings__Port= 5672
+      - RabbitMqSettings__UserName= storeUser
+      - RabbitMqSettings__Password= storeUserPassword
+
     ports:
       - "8080:8080"
     depends_on:

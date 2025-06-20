@@ -1,7 +1,5 @@
-﻿using System;
-using Contracting.Application.Patients.CreatePatient;
+﻿using Contracting.Application.Patients.CreatePatient;
 using Contracting.Domain.Abstractions;
-using Contracting.Domain.Administrators;
 using Contracting.Domain.Patients;
 using Moq;
 
@@ -21,7 +19,7 @@ public class CreatePatientHandlerTest
     }
 
     [Fact]
-    public async void HandleIsValid()
+    public async Task HandleIsValid()
     {
         var name = "Alberto Fernandez";
         var phone = "78645975";

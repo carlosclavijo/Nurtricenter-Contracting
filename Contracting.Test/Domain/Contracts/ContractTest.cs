@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Domain.Contracts;
+﻿using Contracting.Domain.Contracts;
 using Contracting.Domain.Delivery;
 
 namespace Contracting.Test.Domain.Contracts;
@@ -74,7 +73,7 @@ public class ContractTest
         var number1 = 30;
         var longitude1 = -74.0060;
         var latitude1 = 40.7128;
-        DeliveryDay day1 = new DeliveryDay(contractId1, date1, street1, number1, longitude1, latitude1);
+        DeliveryDay day1 = new(contractId1, date1, street1, number1, longitude1, latitude1);
 
         var contractId2 = Guid.NewGuid();
         var date2 = DateTime.Today.AddDays(2);
@@ -82,7 +81,7 @@ public class ContractTest
         var number2 = 70;
         var longitude2 = -31.0060;
         var latitude2 = 29.7456;
-        DeliveryDay day2 = new DeliveryDay(contractId2, date2, street2, number2, longitude2, latitude2);
+        DeliveryDay day2 = new(contractId2, date2, street2, number2, longitude2, latitude2);
 
         List<DeliveryDay> listDays = [day1, day2];
         contract.CreateCalendar(listDays);
@@ -99,51 +98,31 @@ public class ContractTest
     public void CreateInvalidCalendar()
     {
         Contract contract = new(Guid.NewGuid(), Guid.NewGuid(), ContractType.FullMonth, DateTime.Now);
-        List<DeliveryDay> deliveryDays = new List<DeliveryDay>();
+        List<DeliveryDay> deliveryDays = [];
 
         var exception = Assert.Throws<ArgumentNullException>(() => contract.CreateCalendar(deliveryDays));
 
         Assert.NotNull(exception);
-        Assert.Equal("days (Parameter 'Days cannot be null')", exception.Message);
+        Assert.Equal("Days cannot be null (Parameter 'days')", exception.Message);
     }
 
-    public List<DeliveryDay> ListDays(Guid id)
+    public static List<DeliveryDay> ListDays(Guid id)
     {
         var date = DateTime.Today;
         var street = "Any Street";
         var number = 30;
         var longitude = -74.0060;
         var latitude = 40.7128;
-        DeliveryDay day = new DeliveryDay(id, date, street, number, longitude, latitude);
+        DeliveryDay day = new(id, date, street, number, longitude, latitude);
         List<DeliveryDay> days = new List<DeliveryDay>();
 
         for (int i = 0; i < 10; i++)
         {
-            DeliveryDay newDay = new DeliveryDay(id, date.AddDays(i), street, number, longitude, latitude);
+            DeliveryDay newDay = new(id, date.AddDays(i), street, number, longitude, latitude);
             days.Add(newDay);
         }
 
         return days;
-    }
-
-    [Fact]
-    public void UpdateAddressByDaysTest()
-    {
-        Contract contract = new(Guid.NewGuid(), Guid.NewGuid(), ContractType.FullMonth, DateTime.Now);
-        contract.CreateCalendar(ListDays(contract.Id));
-        DateTime tomorrow = DateTime.Today.AddDays(1);
-        DateTime afterTomorrow = DateTime.Today.AddDays(2);
-        var street = "Different Street";
-        var number = 10;
-        var longitude = -18.2938;
-        var latitude = 57.9183;
-        DeliveryDay updateDay1 = new DeliveryDay(contract.Id, tomorrow, street, number, longitude, latitude);
-        DeliveryDay updateDay2 = new DeliveryDay(contract.Id, afterTomorrow, street, number, longitude, latitude);
-
-        contract.UpdateAddressByDays(tomorrow, afterTomorrow, street, number, longitude, latitude);
-
-        Assert.Equal(updateDay1.Date.Kind, contract.DeliveryDays.ElementAt(1).Date.Kind);
-        Assert.Equal(updateDay2.Date.Kind, contract.DeliveryDays.ElementAt(2).Date.Kind);
     }
 
     [Fact]

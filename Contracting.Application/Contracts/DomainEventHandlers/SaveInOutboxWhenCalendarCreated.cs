@@ -11,7 +11,7 @@ using MediatR;
 
 namespace Contracting.Application.Contracts.DomainEventHandlers;
 
-internal class SaveInOutboxWhenCalendarCreated(IOutboxService<DomainEvent> OutboxService, IUnitOfWork UnitOfWork) : INotificationHandler<CalendarCreated>
+public class SaveInOutboxWhenCalendarCreated(IOutboxService<DomainEvent> OutboxService, IUnitOfWork UnitOfWork) : INotificationHandler<CalendarCreated>
 {
 	public async Task Handle(CalendarCreated domainEvent, CancellationToken cancellationToken)
 	{

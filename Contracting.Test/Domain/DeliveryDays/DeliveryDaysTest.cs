@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Domain.Delivery;
+﻿using Contracting.Domain.Delivery;
 
 namespace Contracting.Test.Domain.DeliveryDays;
 

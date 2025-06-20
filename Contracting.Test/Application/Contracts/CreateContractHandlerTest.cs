@@ -1,10 +1,6 @@
-﻿using System;
-using Contracting.Application.Contracts.CreateContract;
-using Contracting.Application.Contracts.GetContracts;
+﻿using Contracting.Application.Contracts.CreateContract;
 using Contracting.Domain.Abstractions;
-using Contracting.Domain.Administrators;
 using Contracting.Domain.Contracts;
-using Contracting.Domain.Delivery;
 using Moq;
 
 namespace Contracting.Test.Application.Contracts;
@@ -25,7 +21,7 @@ public class CreateContractHandlerTest
     [Theory]
     [InlineData("FullMonth", ContractType.FullMonth)]
     [InlineData("HalfMonth", ContractType.HalfMonth)]
-    public async Task HandleIsValid(string strType, ContractType type)
+	public async Task HandleIsValid(string strType, ContractType type)
     {
         // Arrange
         Guid administratorId = Guid.NewGuid();
@@ -35,7 +31,7 @@ public class CreateContractHandlerTest
         int number = 15;
         double longitude = 1.2563;
         double latitude = -8.2453;
-        ICollection<CreateDeliveryDaysCommand> commands = new List<CreateDeliveryDaysCommand>();
+        ICollection<CreateDeliveryDaysCommand> commands = [];
 
         var deliveryDaysCommand = new CreateDeliveryDaysCommand(startDate, street, number, longitude, latitude);
         commands.Add(deliveryDaysCommand);
@@ -61,7 +57,7 @@ public class CreateContractHandlerTest
         var handler = new CreateContractHandler(_contractFactory.Object, _contractRepository.Object, _unitOfWork.Object);
         var result = await handler.Handle(command, cancellationToken);
 
-        Assert.Equal(contract.Id, result);
+        Assert.Equal(contract.Id, result.Value);
         if (type == ContractType.FullMonth)
         {
             _contractFactory.Verify(x => x.CreateFullMonthContract(administratorId, patientId, startDate), Times.Once);

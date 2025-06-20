@@ -1,5 +1,4 @@
-﻿using System;
-using Contracting.Application;
+﻿using Contracting.Application;
 using Contracting.Domain.Administrators;
 using Contracting.Domain.Contracts;
 using Contracting.Domain.Patients;
@@ -8,11 +7,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Contracting.Test.Application;
 
-public class ExtensionsTest
+public class DependencyInjectionTest
 {
     private readonly ServiceCollection _services;
 
-    public ExtensionsTest()
+    public DependencyInjectionTest()
     {
         _services = new ServiceCollection();
     }
