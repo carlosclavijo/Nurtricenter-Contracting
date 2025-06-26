@@ -1,39 +1,34 @@
-name: SonarCloud Analysis
+name: .NET Build and SonarCloud Analysis
 
 on:
   push:
     branches:
       - main
   pull_request:
-    types: [opened, synchronize, reopened]
+    branches:
+      - main
 
 jobs:
   build:
-    name: Build and Analyze
     runs-on: windows-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup .NET SDK
+      - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: '8.x'
 
-      - name: Install SonarScanner for .NET
+      - name: Install SonarScanner
         run: dotnet tool install --global dotnet-sonarscanner
 
-      - name: Begin SonarCloud analysis
-        run: |
-          dotnet sonarscanner begin `
-            /k:"carlosclavijo_Nurtricenter-Contracting" `
-            /o:"carlosclavijo" `
-            /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
-            /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.cobertura.xml"
+      - name: Start SonarCloud analysis
+        run: dotnet sonarscanner begin /k:"contracting" /o:"carlosclavijo" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.cobertura.xml"
 
       - name: Run tests with coverage
-        run: dotnet test Contracting.Test/Contracting.Test.csproj --collect:"XPlat Code Coverage"
+        run: dotnet test --collect:"XPlat Code Coverage"
 
       - name: End SonarCloud analysis
         run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
