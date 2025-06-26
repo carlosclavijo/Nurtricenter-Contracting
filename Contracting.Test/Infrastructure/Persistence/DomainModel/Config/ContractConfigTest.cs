@@ -59,8 +59,6 @@ public class ContractConfigTest
 		Assert.Equal("contractId", deliveryDayEntity.FindProperty("ContractId")?.GetColumnName());
 		Assert.Equal("street", deliveryDayEntity.FindProperty("Street")?.GetColumnName());
 		Assert.Equal("number", deliveryDayEntity.FindProperty("Number")?.GetColumnName());
-		Assert.Equal("longitude", deliveryDayEntity.FindProperty("Longitude")?.GetColumnName());
-		Assert.Equal("latitude", deliveryDayEntity.FindProperty("Latitude")?.GetColumnName());
 		Assert.Equal("date", deliveryDayEntity.FindProperty("Date")?.GetColumnName());
 
 		var dateConverter = deliveryDayEntity.FindProperty("Date")?.GetValueConverter();

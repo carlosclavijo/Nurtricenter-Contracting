@@ -9,7 +9,7 @@ public class PhoneNumberValueTest
     {
         string number = "77141516";
 
-        PhoneNumberValue value = new PhoneNumberValue(number);
+        PhoneNumberValue value = new(number);
 
         Assert.Equal(number, value);
     }
@@ -17,7 +17,7 @@ public class PhoneNumberValueTest
     [Theory]
     [InlineData(null)]
     [InlineData("")]
-    public void CreateEmptyOrNullPhoneNumber(string number)
+    public void CreateEmptyOrNullPhoneNumber(string? number)
     {
         var exception = Assert.Throws<ArgumentNullException>(() => new PhoneNumberValue(number));
 

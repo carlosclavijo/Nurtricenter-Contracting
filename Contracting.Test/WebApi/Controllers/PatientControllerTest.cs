@@ -1,4 +1,7 @@
-﻿using Contracting.Application.Patients.CreatePatient;
+﻿using Contracting.Application.Administrators.CreateAdministrator;
+using Contracting.Application.Administrators.GetAdministratorById;
+using Contracting.Application.Administrators.GetAdministrators;
+using Contracting.Application.Patients.CreatePatient;
 using Contracting.Application.Patients.GetPatientById;
 using Contracting.Application.Patients.GetPatients;
 using Contracting.Domain.Patients;
@@ -8,6 +11,7 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using Newtonsoft.Json.Linq;
 
 namespace Contracting.Test.WebApi.Controllers;
 
@@ -25,47 +29,34 @@ public class PatientControllerTest
     [Fact]
     public async Task CreatePatientValidTest()
     {
-        var patient = new Patient("Carlos Clavijo", "77601415");
+		var patientId = Guid.NewGuid();
+		var command = new CreatePatientCommand("Alberto Fernandez", "71231237");
+		var patientDto = new PatientDto
+		{
+			Id = patientId,
+			PatientName = "Alberto Fernandez",
+			PatientPhone = "71231237"
+		};
 
 		_mediator
-			.Setup(m => m.Send(It.IsAny<CreatePatientCommand>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(patient.Id);
+			.Setup(m => m.Send(command, It.IsAny<CancellationToken>()))
+			.ReturnsAsync(patientId);
 
 		_mediator
-		   .Setup(m => m.Send(It.Is<GetPatientByIdQuery>(q => q.PatientId == patient.Id), It.IsAny<CancellationToken>()))
-           .ReturnsAsync(Result<PatientDto>.Success(new PatientDto
-           {
-               Id = patient.Id,
-               PatientName = patient.Name,
-               PatientPhone = patient.Phone
-           }));
+			.Setup(m => m.Send(It.Is<GetPatientByIdQuery>(q => q.PatientId == patientId), It.IsAny<CancellationToken>()))
+			.ReturnsAsync(Result<AdministratorDto>.Success(patientDto));
 
-        var controller = new PatientController(_mediator.Object);
-        var command = new CreatePatientCommand("Carlos Clavijo", "77601415");
-        var result = await controller.CreatePatient(command);
-        var okResult = Assert.IsType<OkObjectResult>(result);
-		var value = okResult.Value;
-		var valueType = value.GetType();
+		var controller = new PatientController(_mediator.Object);
+		var result = await controller.CreatePatient(command);
+		var okResult = Assert.IsType<OkObjectResult>(result);
+		dynamic response = okResult.Value;
+		var responseJson = JObject.FromObject(okResult.Value);
 
-		var messageProp = valueType.GetProperty("Message");
-		var patientProp = valueType.GetProperty("Patient");
-
-		var message = (string)messageProp.GetValue(value);
-		var patientResult = patientProp.GetValue(value);
-
-		var patientResultType = patientResult.GetType();
-		var valueProp = patientResultType.GetProperty("Value");
-		var patientDto = valueProp.GetValue(patientResult);
-
-		var patientDtoType = patientDto.GetType();
-		var id = (Guid)patientDtoType.GetProperty("Id").GetValue(patientDto);
-		var name = (string)patientDtoType.GetProperty("PatientName").GetValue(patientDto);
-		var phone = (string)patientDtoType.GetProperty("PatientPhone").GetValue(patientDto);
-
-		Assert.Equal("Patient created sucessfully", message);
-		Assert.Equal(patient.Id, id);
-		Assert.Equal("Carlos Clavijo", name);
-		Assert.Equal("77601415", phone);
+		Assert.Equal("Patient created successfully", responseJson["Message"]!.ToString());
+		var patientJson = responseJson["Patient"]!;
+		Assert.Equal(patientDto.Id.ToString(), patientJson["Id"]!.ToString());
+		Assert.Equal(patientDto.PatientName, patientJson["PatientName"]!.ToString());
+		Assert.Equal(patientDto.PatientPhone, patientJson["PatientPhone"]!.ToString());
 	}
 
 	[Fact]
@@ -110,8 +101,8 @@ public class PatientControllerTest
 		var patientDto = new PatientDto
 		{
 			Id = patientId,
-			PatientName = "Carlos Clavijo",
-			PatientPhone = "77601415"
+			PatientName = "Alberto Fernandez",
+			PatientPhone = "77887878"
 		};
 
 		_mediator
@@ -121,29 +112,14 @@ public class PatientControllerTest
 		var controller = new PatientController(_mediator.Object);
 		var result = await controller.GetPatientById(patientId);
 		var okResult = Assert.IsType<OkObjectResult>(result);
-		var value = okResult.Value;
-		var valueType = value.GetType();
+		var responseJson = JObject.FromObject(okResult.Value);
 
-		var messageProp = valueType.GetProperty("Message");
-		var patientProp = valueType.GetProperty("Patient");
+		Assert.Equal("Patient details retrieved successfully", responseJson["Message"]!.ToString());
 
-		var message = (string)messageProp.GetValue(value);
-		var patientResult = patientProp.GetValue(value);
-
-		var patientResultType = patientResult.GetType();
-		var valueProp = patientResultType.GetProperty("Value");
-		var patientDtoValue = valueProp.GetValue(patientResult);
-
-		var patientDtoType = patientDtoValue.GetType();
-		var id = (Guid)patientDtoType.GetProperty("Id").GetValue(patientDtoValue);
-		var name = (string)patientDtoType.GetProperty("PatientName").GetValue(patientDtoValue);
-		var phone = (string)patientDtoType.GetProperty("PatientPhone").GetValue(patientDtoValue);
-
-		Assert.NotNull(value);
-		Assert.Equal("Patient details retrieved successfully", message);
-		Assert.Equal(patientId, id);
-		Assert.Equal("Carlos Clavijo", name);
-		Assert.Equal("77601415", phone);
+		var patientJson = responseJson["Patient"]!;
+		Assert.Equal(patientId.ToString(), patientJson["Id"]!.ToString());
+		Assert.Equal("Alberto Fernandez", patientJson["PatientName"]!.ToString());
+		Assert.Equal("77887878", patientJson["PatientPhone"]!.ToString());
 	}
 
     [Fact]

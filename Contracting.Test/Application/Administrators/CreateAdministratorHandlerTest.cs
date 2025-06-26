@@ -37,7 +37,7 @@ public class CreateAdministratorHandlerTest
             .Returns(Task.CompletedTask);
 
         var handler = new CreateAdministratorHandler(_administratorFactory.Object, _administratorRepository.Object, _unitOfWork.Object);
-        var result = await handler.Handle(command, cancellationToken.Token);
+        await handler.Handle(command, cancellationToken.Token);
 
         _administratorRepository.Verify(x => x.AddSync(It.IsAny<Administrator>()), Times.Once());
         _unitOfWork.Verify(x => x.CommitAsync(cancellationToken.Token), Times.Once());

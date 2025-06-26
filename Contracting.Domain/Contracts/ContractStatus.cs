@@ -3,6 +3,6 @@
 public enum ContractStatus
 {
     Created,
-    InPropgress,
+    InProgress,
     Completed
 }

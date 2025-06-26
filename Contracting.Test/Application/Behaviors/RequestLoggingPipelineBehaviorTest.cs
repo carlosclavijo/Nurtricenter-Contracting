@@ -20,16 +20,10 @@ public class RequestLoggingPipelineBehaviorTest
     [Fact]
     public async Task HandleIsValid()
     {
-        // Arrange  
         var request = new FakeRequest();
-        var result = Result.Success(); // 👈 usamos el factory method  
-
+        var result = Result.Success();
         RequestHandlerDelegate<Result> next = (CancellationToken _) => Task.FromResult(Result.Success());
-
-        // Act  
         var response = await _behavior.Handle(request, next, CancellationToken.None);
-
-        // Assert  
         Assert.True(response.IsSuccess);
 
         _loggerMock.Verify(
@@ -58,17 +52,12 @@ public class RequestLoggingPipelineBehaviorTest
     [Fact]
     public async Task HandleIsInvalid()
     {
-        // Arrange  
         var request = new FakeRequest();
         var error = Error.NotFound("404", "Not found");
-        var result = Result.Failure(error); // 👈 usamos el factory method de fallo  
+		var result = Result.Failure(error);
 
 		Task<Result> next(CancellationToken _ = default) => Task.FromResult(result);
-
-		// Act  
 		var response = await _behavior.Handle(request, next, CancellationToken.None);
-
-        // Assert  
         Assert.False(response.IsSuccess);
 
         _loggerMock.Verify(

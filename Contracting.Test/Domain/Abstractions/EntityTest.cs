@@ -53,7 +53,6 @@ public class EntityTest
         var domainEvent = new TestDomainEvent();
 
         entity.AddDomainEvent(domainEvent);
-
         entity.ClearDomainEvents();
 
         Assert.Empty(entity.DomainEvents);

@@ -1,15 +1,13 @@
 ﻿using Contracting.Application.Administrators.CreateAdministrator;
 using Contracting.Application.Administrators.GetAdministratorById;
 using Contracting.Application.Administrators.GetAdministrators;
-using Contracting.Application.Patients.GetPatientById;
-using Contracting.Application.Patients.GetPatients;
-using Contracting.Domain.Administrators;
 using Contracting.WebApi.Controllers;
 using Joseco.DDD.Core.Results;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using Newtonsoft.Json.Linq;
 
 namespace Contracting.Test.WebApi.Controllers;
 
@@ -27,50 +25,38 @@ public class AdministratorControllerTest
     [Fact]
     public async Task CreateAdministratorValidTest()
     {
-		var administrator = new Administrator("Carlos Clavijo", "77601415");
+        var administratorId = Guid.NewGuid();
+        var command = new CreateAdministratorCommand("Carlos Clavijo", "77601415");
+        var administratorDto = new AdministratorDto
+        {
+            Id = administratorId,
+            AdministratorName = "Carlos Clavijo",
+            AdministratorPhone = "77601415"
+        };
 
 		_mediator
-			.Setup(m => m.Send(It.IsAny<CreateAdministratorCommand>(), It.IsAny<CancellationToken>()))
-			.ReturnsAsync(administrator.Id);
+			.Setup(m => m.Send(command, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(administratorId);
 
 		_mediator
-		   .Setup(m => m.Send(It.Is<GetAdministratorByIdQuery>(q => q.AdministratorId == administrator.Id), It.IsAny<CancellationToken>()))
-		   .ReturnsAsync(Result<Administrator>.Success(new AdministratorDto
-		   {
-			   Id = administrator.Id,
-			   AdministratorName = administrator.Name,
-			   AdministratorPhone = administrator.Phone
-		   }));
+			.Setup(m => m.Send(It.Is<GetAdministratorByIdQuery>(q => q.AdministratorId == administratorId), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(Result<AdministratorDto>.Success(administratorDto));
 
-		var controller = new AdministratorController(_mediator.Object);
-		var command = new CreateAdministratorCommand("Carlos Clavijo", "77601415");
-		var result = await controller.CreateAdministrator(command);
+        var controller = new AdministratorController(_mediator.Object);
+        var result = await controller.CreateAdministrator(command);
 		var okResult = Assert.IsType<OkObjectResult>(result);
-		var value = okResult.Value;
-		var valueType = value.GetType();
+		dynamic response = okResult.Value;
+		var responseJson = JObject.FromObject(okResult.Value);
 
-		var messageProp = valueType.GetProperty("Message");
-		var administratorProp = valueType.GetProperty("Administrator");
-
-		var message = (string)messageProp.GetValue(value);
-		var administratorResult = administratorProp.GetValue(value);
-
-		var administratorResultType = administratorResult.GetType();
-		var valueProp = administratorResultType.GetProperty("Value");
-		var administratorDto = valueProp.GetValue(administratorResult);
-
-		var administratorDtoType = administratorDto.GetType();
-		var id = (Guid)administratorDtoType.GetProperty("Id").GetValue(administratorDto);
-		var name = (string)administratorDtoType.GetProperty("AdministratorName").GetValue(administratorDto);
-		var phone = (string)administratorDtoType.GetProperty("AdministratorPhone").GetValue(administratorDto);
-
-		Assert.Equal("Administrator created successfully", message);
-		Assert.Equal(administrator.Id, id);
-		Assert.Equal("Carlos Clavijo", name);
-		Assert.Equal("77601415", phone);
+		Assert.Equal("Administrator created successfully", responseJson["Message"]!.ToString());
+		var adminJson = responseJson["Administrator"]!;
+		Assert.Equal(administratorDto.Id.ToString(), adminJson["Id"]!.ToString());
+		Assert.Equal(administratorDto.AdministratorName, adminJson["AdministratorName"]!.ToString());
+		Assert.Equal(administratorDto.AdministratorPhone, adminJson["AdministratorPhone"]!.ToString());
 	}
 
-    [Fact]
+
+	[Fact]
     public async Task CreateAdministratorInvalidTest()
     {
         var name = "Carlos Clavijo";
@@ -123,29 +109,14 @@ public class AdministratorControllerTest
 		var controller = new AdministratorController(_mediator.Object);
 		var result = await controller.GetAdministratorById(administratorId);
 		var okResult = Assert.IsType<OkObjectResult>(result);
-		var value = okResult.Value;
-		var valueType = value.GetType();
+		var responseJson = JObject.FromObject(okResult.Value);
 
-		var messageProp = valueType.GetProperty("Message");
-		var administratorProp = valueType.GetProperty("Administrator");
+		Assert.Equal("Administrator details retrieved successfully", responseJson["Message"]!.ToString());
 
-		var message = (string)messageProp.GetValue(value);
-		var administratorResult = administratorProp.GetValue(value);
-
-		var administratorResultType = administratorResult.GetType();
-		var valueProp = administratorResultType.GetProperty("Value");
-		var administratorDtoValue = valueProp.GetValue(administratorResult);
-
-		var administratorDtoType = administratorDtoValue.GetType();
-		var id = (Guid)administratorDtoType.GetProperty("Id").GetValue(administratorDtoValue);
-		var name = (string)administratorDtoType.GetProperty("AdministratorName").GetValue(administratorDtoValue);
-		var phone = (string)administratorDtoType.GetProperty("AdministratorPhone").GetValue(administratorDtoValue);
-
-		Assert.NotNull(value);
-		Assert.Equal("Administrator details retrieved successfully", message);
-		Assert.Equal(administratorId, id);
-		Assert.Equal("Carlos Clavijo", name);
-		Assert.Equal("77601415", phone);
+		var adminJson = responseJson["Administrator"]!;
+		Assert.Equal(administratorId.ToString(), adminJson["Id"]!.ToString());
+		Assert.Equal("Carlos Clavijo", adminJson["AdministratorName"]!.ToString());
+		Assert.Equal("77601415", adminJson["AdministratorPhone"]!.ToString());
 	}
 
     [Fact]

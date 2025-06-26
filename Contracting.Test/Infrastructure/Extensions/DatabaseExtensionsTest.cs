@@ -21,24 +21,22 @@ public class DatabaseExtensionsTest
 	public void AddDatabaseIsValid()
 	{
 		var services = new ServiceCollection();
-
 		var settings = new DatabaseSettings
 		{
 			ConnectionString = "Host=localhost;Port=5432;Database=test;Username=postgres;Password=pass"
 		};
 
 		var tracingProviderMock = new Mock<ITracingProvider>();
+
 		tracingProviderMock.Setup(tp => tp.GetCorrelationId()).Returns("fake-correlation-id");
 		tracingProviderMock.Setup(tp => tp.GetTraceId()).Returns("fake-trace-id");
 		tracingProviderMock.Setup(tp => tp.GetSpanId()).Returns("fake-span-id");
 
 		services.AddSingleton(tracingProviderMock.Object);
-
 		services.AddSingleton(settings);
-
 		services.AddEntityFrameworkNpgsql();
-
 		services.AddDatabase();
+
 		var provider = services.BuildServiceProvider();
 
 		Assert.NotNull(provider.GetService<StoredDbContext>());

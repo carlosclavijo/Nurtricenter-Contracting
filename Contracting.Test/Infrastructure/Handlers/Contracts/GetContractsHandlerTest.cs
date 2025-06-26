@@ -65,42 +65,33 @@ public class GetContractsHandlerTest
             StartDate = startDate,
             CompletedDate = completedDate,
             TotalCost = totalCost,
-            DeliveryDays = new List<DeliveryDayStoredModel>
-            {
-                new DeliveryDayStoredModel
+            DeliveryDays =
+			[
+				new DeliveryDayStoredModel
                 {
-                    DeliveryDayId = deliveryDayId1,
+					Id = deliveryDayId1,
                     ContractId = contractId1,
-                    Contract = null,
                     Date = startDate.AddDays(1),
                     Street = "Grove Street",
-                    Number = 30,
-                    Longitude = -75.1234,
-                    Latitude = 40.1234
+                    Number = 30
                 },
                 new DeliveryDayStoredModel
                 {
-                    DeliveryDayId = deliveryDayId2,
+					Id = deliveryDayId2,
                     ContractId = contractId1,
-                    Contract = null,
                     Date = startDate.AddDays(2),
                     Street = "Elm Street",
-                    Number = 100,
-                    Longitude = -45.5025,
-                    Latitude = 107.2618
+                    Number = 100
                 },
                 new DeliveryDayStoredModel
                 {
-                    DeliveryDayId = deliveryDayId3,
+					Id = deliveryDayId3,
                     ContractId = contractId1,
-                    Contract = null,
                     Date = startDate.AddDays(3),
                     Street = "Paper Street",
-                    Number = 50,
-                    Longitude = -59.3794,
-                    Latitude = 43.4752
+                    Number = 50
                 },
-            }
+            ]
         };
 
         var contract2 = new ContractStoredModel
@@ -116,31 +107,25 @@ public class GetContractsHandlerTest
             StartDate = startDate,
             CompletedDate = completedDate,
             TotalCost = totalCost,
-            DeliveryDays = new List<DeliveryDayStoredModel>
-            {
-                new DeliveryDayStoredModel
+            DeliveryDays =
+			[
+				new DeliveryDayStoredModel
                 {
-                    DeliveryDayId = deliveryDayId4,
+					Id = deliveryDayId4,
                     ContractId = contractId2,
-                    Contract = null,
                     Date = startDate.AddDays(10),
                     Street = "Spooner Street",
-                    Number = 200,
-                    Longitude = -24.1953,
-                    Latitude = 119.2496
+                    Number = 200
                 },
                 new DeliveryDayStoredModel
                 {
-                    DeliveryDayId = deliveryDayId5,
+					Id = deliveryDayId5,
                     ContractId = contractId2,
-                    Contract = null,
                     Date = startDate.AddDays(11),
                     Street = "Evergreen Terrace",
-                    Number = 150,
-                    Longitude = -12.8486,
-                    Latitude = 94.1127
+                    Number = 150
                 }
-            }
+            ]
         };
 
         _dbContext.Administrator.Add(administrator);
@@ -153,7 +138,6 @@ public class GetContractsHandlerTest
         var cancellationToken = new CancellationTokenSource(1000);
         var result = await handler.Handle(query, cancellationToken.Token);
 
-        // Validación de resultados
         Assert.NotNull(result);
         Assert.Equal(2, result.Count());
         Assert.Equal(contractId1, result.First().Id);
@@ -194,18 +178,5 @@ public class GetContractsHandlerTest
         Assert.Equal("Paper Street", result.First().DeliveryDays.ElementAt(2).Street);
         Assert.Equal("Spooner Street", result.ElementAt(1).DeliveryDays.First().Street);
         Assert.Equal("Evergreen Terrace", result.ElementAt(1).DeliveryDays.ElementAt(1).Street);
-
-        Assert.Equal(-75.1234, result.First().DeliveryDays.First().Longitude);
-        Assert.Equal(-45.5025, result.First().DeliveryDays.ElementAt(1).Longitude);
-        Assert.Equal(-59.3794, result.First().DeliveryDays.ElementAt(2).Longitude);
-        Assert.Equal(-24.1953, result.ElementAt(1).DeliveryDays.First().Longitude);
-        Assert.Equal(-12.8486, result.ElementAt(1).DeliveryDays.ElementAt(1).Longitude);
-
-        Assert.Equal(40.1234, result.First().DeliveryDays.First().Latitude);
-        Assert.Equal(107.2618, result.First().DeliveryDays.ElementAt(1).Latitude);
-        Assert.Equal(43.4752, result.First().DeliveryDays.ElementAt(2).Latitude);
-        Assert.Equal(119.2496, result.ElementAt(1).DeliveryDays.First().Latitude);
-        Assert.Equal(94.1127, result.ElementAt(1).DeliveryDays.ElementAt(1).Latitude);
-
     }
 }

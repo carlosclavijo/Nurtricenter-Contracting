@@ -17,7 +17,7 @@ public class FullNameValueTest
     [Theory]
     [InlineData(null)]
     [InlineData("")]
-    public void FullNameWithNullOrEmptyValue(string str)
+    public void FullNameWithNullOrEmptyValue(string? str)
     {
         var exception = Assert.Throws<ArgumentNullException>(() => new FullNameValue(str));
 
@@ -51,7 +51,7 @@ public class FullNameValueTest
         FullNameValue fullname1 = name1;
         FullNameValue fullname2 = name2;
 
-        Assert.Equal(fullname1, "Carlos Clavijo");
-        Assert.Equal(fullname2, "Alberto Fernandez");
+        Assert.Equal("Carlos Clavijo", fullname1);
+        Assert.Equal("Alberto Fernandez", fullname2);
     }
 }

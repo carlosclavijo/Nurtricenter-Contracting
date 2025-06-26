@@ -20,7 +20,7 @@ public class AdministratorController(IMediator Mediator) : CustomController
             var createdAdministrator = await Mediator.Send(new GetAdministratorByIdQuery(id.Value));
             var response = new
             {
-                Administrator = createdAdministrator,
+                Administrator = createdAdministrator.Value,
                 Message = "Administrator created successfully"
             };
 
@@ -68,7 +68,7 @@ public class AdministratorController(IMediator Mediator) : CustomController
             }
             var response = new
             {
-                Administrator = result,
+                Administrator = result.Value,
                 Message = "Administrator details retrieved successfully"
             };
 

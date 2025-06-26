@@ -74,10 +74,6 @@ public class ContractConfig : IEntityTypeConfiguration<Contract>, IEntityTypeCon
 		builder.Property(x => x.Street).HasColumnName("street");
 		builder.Property(x => x.Number).HasColumnName("number");
 
-		builder.Property(x => x.Longitude).HasColumnName("longitude");
-
-		builder.Property(x => x.Latitude).HasColumnName("latitude");
-
 		builder.HasOne<Contract>()
 			   .WithMany(c => c.DeliveryDays)
 			   .HasForeignKey(d => d.ContractId)

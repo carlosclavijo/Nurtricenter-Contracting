@@ -31,7 +31,7 @@ public class CreateContractHandler(IContractFactory ContractFactory, IContractRe
             }
             for (int i = 0; i <= span; i++)
             {
-                DeliveryDay d = new(contract.Id, days.Start.AddDays(i), days.Street, days.Number, days.Longitude, days.Latitude);
+                DeliveryDay d = new(contract.Id, days.Start.AddDays(i), days.Street, days.Number);
                 deliveryDays.Add(d);
             }
         }

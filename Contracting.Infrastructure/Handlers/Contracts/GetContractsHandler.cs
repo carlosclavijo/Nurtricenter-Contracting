@@ -24,13 +24,11 @@ public class GetContractsHandler(StoredDbContext DbContext) : IRequestHandler<Ge
                 CostValue = c.TotalCost,
                 DeliveryDays = c.DeliveryDays.Select(d => new DeliveryDayDto()
                 {
-                    Id = d.DeliveryDayId,
+                    Id = d.Id,
                     ContractId = d.ContractId,
                     DateTime = d.Date,
                     Street = d.Street,
-                    Number = d.Number,
-                    Longitude = d.Longitude,
-                    Latitude = d.Latitude
+                    Number = d.Number
                 }).ToList()
             })
             .ToListAsync(cancellationToken);

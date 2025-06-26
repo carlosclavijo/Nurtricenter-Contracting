@@ -29,9 +29,9 @@ public class CostValueTest
     [Fact]
     public void CostValueWithNullValue()
     {
-        CostValue cost = null;
+        CostValue? cost = null;
 
-        decimal value = cost; // Se convierte implícitamente a decimal
+        decimal value = cost;
 
         Assert.Equal(0m, value);
     }

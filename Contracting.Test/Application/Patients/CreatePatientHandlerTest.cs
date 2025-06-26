@@ -37,7 +37,7 @@ public class CreatePatientHandlerTest
             .Returns(Task.CompletedTask);
 
         var handler = new CreatePatientHandler(_patientFactory.Object, _patientRepository.Object, _unitOfWork.Object);
-        var result = await handler.Handle(command, cancellationToken.Token);
+        await handler.Handle(command, cancellationToken.Token);
 
         _patientRepository.Verify(x => x.AddSync(It.IsAny<Patient>()), Times.Once());
         _unitOfWork.Verify(x => x.CommitAsync(cancellationToken.Token), Times.Once());

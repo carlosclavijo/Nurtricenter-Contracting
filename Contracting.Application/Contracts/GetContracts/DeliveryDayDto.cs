@@ -7,6 +7,4 @@ public class DeliveryDayDto
     public required string Street { get; set; }
     public int Number {  get; set; }
     public DateTime DateTime { get; set; }
-    public double Longitude { get; set; }
-    public double Latitude { get; set; }
 }

@@ -33,9 +33,7 @@ public class SaveInOutboxWhenPatientCreatedTest
 
 		await _handler.Handle(domainEvent, cancellationToken);
 
-		_outboxService.Verify(s => s.AddAsync(
-			It.Is<OutboxMessage<DomainEvent>>(msg => msg.Content == domainEvent)), Times.Once);
-
+		_outboxService.Verify(s => s.AddAsync(It.Is<OutboxMessage<DomainEvent>>(msg => msg.Content == domainEvent)), Times.Once);
 		_unitOfWork.Verify(u => u.CommitAsync(cancellationToken), Times.Once);
 	}
 }

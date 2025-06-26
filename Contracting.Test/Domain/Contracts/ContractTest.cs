@@ -43,9 +43,7 @@ public class ContractTest
     public void CalculateFullMonthCost()
     {
         Contract contract = new(Guid.NewGuid(), Guid.NewGuid(), ContractType.FullMonth, DateTime.Now);
-        
         var type = ContractType.FullMonth;
-
         decimal cost = contract.CalculateTotalCost(type);
 
         Assert.Equal(1000, cost);
@@ -55,11 +53,8 @@ public class ContractTest
     public void CalculateHalfMonthCost()
     {
         Contract contract = new(Guid.NewGuid(), Guid.NewGuid(), ContractType.FullMonth, DateTime.Now);
-        
         var type = ContractType.HalfMonth;
-
         decimal cost = contract.CalculateTotalCost(type);
-
         Assert.Equal(500, cost);
     }
 
@@ -71,17 +66,13 @@ public class ContractTest
         var date1 = DateTime.Today;
         var street1 = "Any Street";
         var number1 = 30;
-        var longitude1 = -74.0060;
-        var latitude1 = 40.7128;
-        DeliveryDay day1 = new(contractId1, date1, street1, number1, longitude1, latitude1);
+        DeliveryDay day1 = new(contractId1, date1, street1, number1);
 
         var contractId2 = Guid.NewGuid();
         var date2 = DateTime.Today.AddDays(2);
         var street2 = "Other Street";
         var number2 = 70;
-        var longitude2 = -31.0060;
-        var latitude2 = 29.7456;
-        DeliveryDay day2 = new(contractId2, date2, street2, number2, longitude2, latitude2);
+        DeliveryDay day2 = new(contractId2, date2, street2, number2);
 
         List<DeliveryDay> listDays = [day1, day2];
         contract.CreateCalendar(listDays);
@@ -111,14 +102,11 @@ public class ContractTest
         var date = DateTime.Today;
         var street = "Any Street";
         var number = 30;
-        var longitude = -74.0060;
-        var latitude = 40.7128;
-        DeliveryDay day = new(id, date, street, number, longitude, latitude);
         List<DeliveryDay> days = new List<DeliveryDay>();
 
         for (int i = 0; i < 10; i++)
         {
-            DeliveryDay newDay = new(id, date.AddDays(i), street, number, longitude, latitude);
+            DeliveryDay newDay = new(id, date.AddDays(i), street, number);
             days.Add(newDay);
         }
 
@@ -129,21 +117,16 @@ public class ContractTest
     public void InProgressValidTest()
     {
         Contract contract = new(Guid.NewGuid(), Guid.NewGuid(), ContractType.FullMonth, DateTime.Now);
-
         contract.InProgress();
-
-        Assert.Equal(ContractStatus.InPropgress, contract.Status);
+        Assert.Equal(ContractStatus.InProgress, contract.Status);
     }
 
     [Fact]
     public void InProgressInValidTest()
     {
         Contract contract = new(Guid.NewGuid(), Guid.NewGuid(), ContractType.FullMonth, DateTime.Now);
-
         contract.InProgress();
-
         var exception = Assert.Throws<InvalidOperationException>(() => contract.InProgress());
-
         Assert.Equal("Cannot progress without creating a contract", exception.Message);
     }
 
@@ -151,10 +134,8 @@ public class ContractTest
     public void CompleteValidTest()
     {
         Contract contract = new(Guid.NewGuid(), Guid.NewGuid(), ContractType.FullMonth, DateTime.Now);
-
         contract.InProgress();
         contract.Complete();
-
         Assert.Equal(ContractStatus.Completed, contract.Status);
     }
 
@@ -162,9 +143,7 @@ public class ContractTest
     public void CompleteInValidTest()
     {
         Contract contract = new(Guid.NewGuid(), Guid.NewGuid(), ContractType.FullMonth, DateTime.Now);
-
         var exception = Assert.Throws<InvalidOperationException>(() => contract.Complete());
-
         Assert.Equal("Cannot complete without contract beign in progress contract", exception.Message);
     }
 }

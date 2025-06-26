@@ -20,8 +20,8 @@ public class PatientController(IMediator Mediator) : CustomController
 			var createdPatient = await Mediator.Send(new GetPatientByIdQuery(id.Value));
 			var response = new
 			{
-				Patient = createdPatient,
-				Message = "Patient created sucessfully"
+				Patient = createdPatient.Value,
+				Message = "Patient created successfully"
 			};
 			return Ok(response);
 		}
@@ -67,7 +67,7 @@ public class PatientController(IMediator Mediator) : CustomController
             }
             var response = new
             {
-                Patient = result,
+                Patient = result.Value,
                 Message = "Patient details retrieved successfully"
             };
 

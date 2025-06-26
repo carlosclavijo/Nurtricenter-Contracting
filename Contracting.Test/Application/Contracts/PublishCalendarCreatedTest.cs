@@ -27,14 +27,13 @@ public class PublishCalendarCreatedTest
 		var endDate = startDate.AddDays(30);
 		var deliveryDays = new List<DeliveryDay>
 		{
-		   new(contractId, startDate, "Grover Street", 10, 1.2563, -8.2453),
-		   new(contractId, startDate, "Elm Street", 10, 8.5823, 8.2234),
-		   new(contractId, startDate, "Sesame Street", 10, 17.3810, -3.6432),
+		   new(contractId, startDate, "Grover Street", 10),
+		   new(contractId, startDate, "Elm Street", 10),
+		   new(contractId, startDate, "Sesame Street", 10),
 		};
 		var correlationId = Guid.NewGuid();
-
-		var domainEvent = new CalendarCreated(contractId, patientId, startDate, endDate, deliveryDays);
-		var outboxMessage = new OutboxMessage<CalendarCreated>(domainEvent)
+		var domainEvent = new CreateCalendar(contractId, patientId, startDate, endDate, deliveryDays);
+		var outboxMessage = new OutboxMessage<CreateCalendar>(domainEvent)
 		{
 			CorrelationId = correlationId.ToString()
 		};
@@ -52,7 +51,7 @@ public class PublishCalendarCreatedTest
 
 		Assert.NotNull(publishedMessage);
 		Assert.Equal(contractId, publishedMessage.ContractId);
-		Assert.Equal(patientId, publishedMessage.PatiendId); // typo original en record
+		Assert.Equal(patientId, publishedMessage.PatiendId);
 		Assert.Equal(startDate, publishedMessage.StartTime);
 		Assert.Equal(endDate, publishedMessage.EndDate);
 		Assert.Equal(deliveryDays, publishedMessage.DeliveryDays);

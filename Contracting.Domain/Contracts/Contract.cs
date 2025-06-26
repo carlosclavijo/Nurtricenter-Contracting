@@ -27,7 +27,7 @@ public class Contract : AggregateRoot
     public DateTime? CompletedDate
     {
         get => _completedDate;
-        set => _completedDate = (DateTime)(value.HasValue && value.Value.Kind != DateTimeKind.Utc ? value.Value.ToUniversalTime() : value);
+        set => _completedDate = value.HasValue && value.Value.Kind != DateTimeKind.Utc ? value.Value.ToUniversalTime() : value.GetValueOrDefault();
     }
     public CostValue Cost { get; set; }
     private List<DeliveryDay> _deliveryDays;
@@ -68,7 +68,7 @@ public class Contract : AggregateRoot
         }
         _deliveryDays = days;
 
-		AddDomainEvent(new CalendarCreated(Id, PatientId, StartDate, days[^1].Date, _deliveryDays));
+		AddDomainEvent(new CreateCalendar(Id, PatientId, StartDate, days[^1].Date, _deliveryDays));
 	}
 
     public void InProgress()
@@ -77,12 +77,12 @@ public class Contract : AggregateRoot
         {
             throw new InvalidOperationException("Cannot progress without creating a contract");
         }
-        Status = ContractStatus.InPropgress;
+        Status = ContractStatus.InProgress;
     }
 
     public void Complete()
     {
-        if (Status != ContractStatus.InPropgress)
+        if (Status != ContractStatus.InProgress)
         {
             throw new InvalidOperationException("Cannot complete without contract beign in progress contract");
         }
@@ -90,5 +90,5 @@ public class Contract : AggregateRoot
         CompletedDate = DateTime.Now;
     }
 
-    private Contract() { }
+	private Contract() { }
 }

@@ -29,11 +29,9 @@ public class CreateContractHandlerTest
         DateTime startDate = DateTime.Now.AddDays(2);
         string street = "Street";
         int number = 15;
-        double longitude = 1.2563;
-        double latitude = -8.2453;
         ICollection<CreateDeliveryDaysCommand> commands = [];
 
-        var deliveryDaysCommand = new CreateDeliveryDaysCommand(startDate, street, number, longitude, latitude);
+        var deliveryDaysCommand = new CreateDeliveryDaysCommand(startDate, street, number);
         commands.Add(deliveryDaysCommand);
         commands.Add(deliveryDaysCommand);
         commands.Add(deliveryDaysCommand);

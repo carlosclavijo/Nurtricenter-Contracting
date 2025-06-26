@@ -13,60 +13,59 @@ namespace Contracting.Test.Infrastructure;
 
 public class DependencyInjectionTest
 {
-	[Fact]
-	public void AddInfrastructure_ShouldRegisterExpectedServices()
-	{
-		var services = new ServiceCollection();
+    [Fact]
+    public void AddInfrastructure_ShouldRegisterExpectedServices()
+    {
+        var services = new ServiceCollection();
 
-		var configuration = new ConfigurationBuilder()
-			.AddInMemoryCollection(new Dictionary<string, string>
-			{
-				{ "UseSecretManager", "false" }
+        var configuration = new ConfigurationBuilder()
+            .AddInMemoryCollection(new Dictionary<string, string?>
+            {
+            { "UseSecretManager", "false" }
             })
-			.Build();
+            .Build();
 
-		var environmentMock = new Mock<IHostEnvironment>();
-		environmentMock.Setup(e => e.EnvironmentName).Returns("Development");
+        var environmentMock = new Mock<IHostEnvironment>();
+        environmentMock.Setup(e => e.EnvironmentName).Returns("Development");
 
-		services.AddSingleton(new RabbitMqSettings
-		{
-			Host = "localhost",
-			UserName = "test",
-			Password = "test",
-			VirtualHost = "/"
-		});
+        services.AddSingleton(new RabbitMqSettings
+        {
+            Host = "localhost",
+            UserName = "test",
+            Password = "test",
+            VirtualHost = "/"
+        });
 
-		services.AddSingleton(new DatabaseSettings
-		{
-			ConnectionString = "Host=localhost;Port=5432;Database=test;Username=postgres;Password=pass"
-		});
+        services.AddSingleton(new DatabaseSettings
+        {
+            ConnectionString = "Host=localhost;Port=5432;Database=test;Username=postgres;Password=pass"
+        });
 
-		services.AddSingleton(new JeagerSettings
-		{
-			Host = "localhost",
-			Port = 6831
-		});
+        services.AddSingleton(new JeagerSettings
+        {
+            Host = "localhost",
+            Port = 6831
+        });
 
-		services.AddSingleton(new JwtOptions
-		{
-			Lifetime = 60,
-			SecretKey = "test-secret",
-			ValidAudience = "test",
-			ValidIssuer = "test",
-			ValidateAudience = false,
-			ValidateIssuer = false,
-			ValidateLifetime = false
-		});
+        services.AddSingleton(new JwtOptions
+        {
+            Lifetime = 60,
+            SecretKey = "test-secret",
+            ValidAudience = "test",
+            ValidIssuer = "test",
+            ValidateAudience = false,
+            ValidateIssuer = false,
+            ValidateLifetime = false
+        });
 
-		services.AddInfrastructure(configuration, environmentMock.Object, "test-service");
+        services.AddInfrastructure(configuration, environmentMock.Object, "test-service");
 
-		var provider = services.BuildServiceProvider();
+        var provider = services.BuildServiceProvider();
 
-		// Assert
-		Assert.NotNull(provider.GetService<RabbitMqSettings>());
-		Assert.NotNull(provider.GetService<DatabaseSettings>());
-		Assert.NotNull(provider.GetService<JwtOptions>());
-		Assert.NotNull(provider.GetService<JeagerSettings>());
-		Assert.NotNull(provider.GetService<IMediator>());
-	}
+        Assert.NotNull(provider.GetService<RabbitMqSettings>());
+        Assert.NotNull(provider.GetService<DatabaseSettings>());
+        Assert.NotNull(provider.GetService<JwtOptions>());
+        Assert.NotNull(provider.GetService<JeagerSettings>());
+        Assert.NotNull(provider.GetService<IMediator>());
+    }
 }

@@ -11,8 +11,6 @@ public class ContractCreationExceptionTest
     public void ContractCreationException_ShouldIncludeCustomMessage(string message)
     {
         var exception = new ContractCreationException(message);
-
-        // Assert
         Assert.Equal("The contract cannot be created because: " + message, exception.Message);
     }
 }

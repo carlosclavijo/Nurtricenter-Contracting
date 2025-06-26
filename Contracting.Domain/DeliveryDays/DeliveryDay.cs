@@ -1,13 +1,11 @@
-﻿using System.Text.Json.Serialization;
-using Contracting.Domain.Abstractions;
-using Contracting.Domain.Contracts;
+﻿using Contracting.Domain.Abstractions;
+using Contracting.Domain.DeliveryDays.Events;
 
 namespace Contracting.Domain.Delivery;
 
 public class DeliveryDay : Entity
 {
     public Guid ContractId { get; set; }
-	//public Contract Contract { get; set; }
     private DateTime _date;
     public DateTime Date
     {
@@ -16,27 +14,27 @@ public class DeliveryDay : Entity
     }
     public string Street { get; private set; }
     public int Number { get; private set; }
-    public double Longitude { get; private set; }
-    public double Latitude { get; private set; }
 
-
-    public DeliveryDay(Guid contractId, DateTime date, string street, int number, double longitude, double latitude) : base(Guid.NewGuid())
+    public DeliveryDay(Guid contractId, DateTime date, string street, int number) : base(Guid.NewGuid())
     {
         ContractId = contractId;
         Date = date.Kind == DateTimeKind.Unspecified ? DateTime.SpecifyKind(date, DateTimeKind.Utc) : date.ToUniversalTime();
         Street = street;
         Number = number;
-        Longitude = longitude;
-        Latitude = latitude;
     }
 
-    public void Update(string street, int number, double longitude, double latitude)
+    public void Update(string street, int number)
     {
         Street = street;
         Number = number;
-        Longitude = longitude;
-        Latitude = latitude;
-    }
+
+		AddDomainEvent(new DeliveryDayUpdated(ContractId, Id, street, number));
+	}
+
+	public void Delete()
+	{
+		AddDomainEvent(new DeliveryDayDeleted(ContractId, Id));
+	}
 
     private DeliveryDay() { }
 }

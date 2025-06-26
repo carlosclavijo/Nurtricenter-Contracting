@@ -64,42 +64,33 @@ public class GetContractByIdHandlerTest
             StartDate = startDate,
             CompletedDate = completedDate,
             TotalCost = totalCost,
-            DeliveryDays = new List<DeliveryDayStoredModel>
-            {
-                new DeliveryDayStoredModel
+            DeliveryDays =
+			[
+				new DeliveryDayStoredModel
                 {
-                    DeliveryDayId = deliveryDayId1,
+                    Id = deliveryDayId1,
                     ContractId = contractId,
-                    Contract = null,
                     Date = startDate.AddDays(1),
                     Street = "Grove Street",
                     Number = 30,
-                    Longitude = -75.1234,
-                    Latitude = 40.1234
                 },
                 new DeliveryDayStoredModel
                 {
-                    DeliveryDayId = deliveryDayId2,
+					Id = deliveryDayId2,
                     ContractId = contractId,
-                    Contract = null,
                     Date = startDate.AddDays(2),
                     Street = "Elm Street",
-                    Number = 100,
-                    Longitude = -45.5025,
-                    Latitude = 107.2618
+                    Number = 100
                 },
                 new DeliveryDayStoredModel
                 {
-                    DeliveryDayId = deliveryDayId3,
+					Id = deliveryDayId3,
                     ContractId = contractId,
-                    Contract = null,
                     Date = startDate.AddDays(3),
                     Street = "Paper Street",
-                    Number = 50,
-                    Longitude = -59.3794,
-                    Latitude = 43.4752
+                    Number = 50
                 },
-            }
+            ]
         };
 
         _dbContext.Patient.Add(patient);
@@ -135,15 +126,6 @@ public class GetContractByIdHandlerTest
         Assert.Equal("Grove Street", result.Value.DeliveryDays.First().Street);
         Assert.Equal("Elm Street", result.Value.DeliveryDays.ElementAt(1).Street);
         Assert.Equal("Paper Street", result.Value.DeliveryDays.ElementAt(2).Street);
-
-        Assert.Equal(-75.1234, result.Value.DeliveryDays.First().Longitude);
-        Assert.Equal(-45.5025, result.Value.DeliveryDays.ElementAt(1).Longitude);
-        Assert.Equal(-59.3794, result.Value.DeliveryDays.ElementAt(2).Longitude);
-
-        Assert.Equal(40.1234, result.Value.DeliveryDays.First().Latitude);
-        Assert.Equal(107.2618, result.Value.DeliveryDays.ElementAt(1).Latitude);
-        Assert.Equal(43.4752, result.Value.DeliveryDays.ElementAt(2).Latitude);
-
     }
 
     [Fact]

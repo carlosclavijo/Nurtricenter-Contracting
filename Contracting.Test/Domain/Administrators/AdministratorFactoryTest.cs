@@ -25,7 +25,6 @@ public class AdministratorFactoryTest
         string name = "";
         string phone = "7141516";
 
-
         var exception = Assert.Throws<ArgumentException>(() => _factory.Create(name, phone));
 
         Assert.NotNull(exception);

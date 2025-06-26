@@ -37,13 +37,13 @@ public class PatientConfigTest
 		Assert.NotNull(nameConverter);
 		Assert.Equal("Carlos", nameConverter.ConvertToProvider.Invoke(new FullNameValue("Carlos")));
 		var fullNameValue = nameConverter.ConvertFromProvider.Invoke("Carlos") as FullNameValue;
-		Assert.Equal("Carlos", fullNameValue.Name);
+		Assert.Equal("Carlos", fullNameValue?.Name);
 
 		var phoneProp = entity.FindProperty("Phone");
 		var phoneConverter = phoneProp?.GetValueConverter();
 		Assert.NotNull(phoneConverter);
 		Assert.Equal("77141516", phoneConverter.ConvertToProvider.Invoke(new PhoneNumberValue("77141516")));
 		var phoneValue = phoneConverter.ConvertFromProvider.Invoke("77141516") as PhoneNumberValue;
-		Assert.Equal("77141516", phoneValue.Phone);
+		Assert.Equal("77141516", phoneValue?.Phone);
 	}
 }

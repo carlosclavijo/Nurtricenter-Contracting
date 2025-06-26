@@ -17,70 +17,57 @@ namespace Contracting.Test.Infrastructure.Extensions;
 public class SecretExtensionsTest
 {
 	[Fact]
-	public void AddSecretsWhenSecretManagerIsFalse()
-	{
-		var inMemorySettings = new Dictionary<string, string>
-		{
-			{ "UseSecretManager", "false" }
-		};
+    public void AddSecretsWhenSecretManagerIsFalse()
+    {
+        var inMemorySettings = new Dictionary<string, string?>
+       {
+           { "UseSecretManager", "false" }
+       };
 
-		IConfiguration configuration = new ConfigurationBuilder()
-			.AddInMemoryCollection(inMemorySettings)
-			.Build();
+        IConfiguration configuration = new ConfigurationBuilder()
+            .AddInMemoryCollection(inMemorySettings)
+            .Build();
 
-		var services = new ServiceCollection();
-		var rabbitSettings = new RabbitMqSettings
-		{
-			Host = "localhost",
-			UserName = "storeUser",
-			Password = "storePassword",
-			VirtualHost = "/"
-		};
+        var services = new ServiceCollection();
+        var rabbitSettings = new RabbitMqSettings
+        {
+            Host = "localhost",
+            UserName = "storeUser",
+            Password = "storePassword",
+            VirtualHost = "/"
+        };
 
-		var databaseSettings = new DatabaseSettings
-		{
-			ConnectionString = "Host=localhost;Port=5432;Database=test;Username=postgres;Password=pass"
-		};
+        var databaseSettings = new DatabaseSettings
+        {
+            ConnectionString = "Host=localhost;Port=5432;Database=test;Username=postgres;Password=pass"
+        };
 
-		var jaegerSettings = new JeagerSettings
-		{
-			Host = "localhost",
-			Port = 6831,
-		};
+        var jaegerSettings = new JeagerSettings
+        {
+            Host = "localhost",
+            Port = 6831,
+        };
 
-		var jwtOptions = new JwtOptions
-		{
-			Lifetime = 30,
-			SecretKey = "HL#6j=4;5H{5qZ#M=6J!1[W<YvWdbzEif|M]:ZB<6<{ap^K!@Tg{];OD0E",
-			ValidAudience = "storeApp",
-			ValidIssuer = "identity",
-			ValidateAudience = true,
-			ValidateIssuer = true,
-			ValidateLifetime = true
-		};
+        var environment = new Mock<IHostEnvironment>();
+        environment.Setup(e => e.EnvironmentName).Returns("Development");
 
-		var environment = new Mock<IHostEnvironment>();
-		environment.Setup(e => e.EnvironmentName).Returns("Development");
+        services.AddSingleton(rabbitSettings);
+        services.AddSingleton(databaseSettings);
+        services.AddSingleton(jaegerSettings);
+        services.AddSingleton(environment.Object);
+        services.AddSecrets(configuration, environment.Object);
+        services.AddRabbitMQ();
+        services.AddDatabase();
+        services.AddObservability(environment.Object, "test-service");
 
-		services.AddSingleton(rabbitSettings);
-		services.AddSingleton(databaseSettings);
-		services.AddSingleton(jaegerSettings);
-		services.AddSingleton(environment.Object);
+        var provider = services.BuildServiceProvider();
 
-		services.AddSecrets(configuration, environment.Object);
+        Assert.NotNull(provider.GetService<RabbitMqSettings>());
+        Assert.NotNull(provider.GetService<IUnitOfWork>());
+        Assert.NotNull(provider.GetService<IDatabase>());
+        Assert.NotNull(provider.GetService<IPatientRepository>());
+    }
 
-		services.AddRabbitMQ();
-		services.AddDatabase();
-		services.AddObservability(environment.Object, "test-service");
-		bool isWebApp = environment is IWebHostEnvironment;
-
-		var provider = services.BuildServiceProvider();
-
-		Assert.NotNull(provider.GetService<RabbitMqSettings>());
-		Assert.NotNull(provider.GetService<IUnitOfWork>());
-		Assert.NotNull(provider.GetService<IDatabase>());
-		Assert.NotNull(provider.GetService<IPatientRepository>());
-	}
  
 	[Fact]
 	public void AddSecretsNullOrEmpty()
@@ -89,7 +76,7 @@ public class SecretExtensionsTest
         Environment.SetEnvironmentVariable("VAULT_TOKEN", null);
 
         var configuration = new ConfigurationBuilder()
-            .AddInMemoryCollection(new Dictionary<string, string>
+            .AddInMemoryCollection(new Dictionary<string, string?>
             {
                 { "UseSecretManager", "true" }
             })
@@ -192,7 +179,6 @@ public class SecretExtensionsTest
 			.Setup(sm => sm.Get<JwtOptions>("JwtOptions", "secrets"))
 			.ReturnsAsync(expectedJwtOptions);
 
-		// Act
 		await SecretExtensions.LoadAndRegister<JwtOptions>(
 			secretManagerMock.Object,
 			services,

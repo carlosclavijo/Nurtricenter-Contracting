@@ -45,12 +45,12 @@ public class UnitOfWorkTests
 		var outbox = _unitOfWork.GetOutboxMessages();
 
 		Assert.NotNull(outbox);
-		Assert.IsAssignableFrom<DbSet<OutboxMessage<DomainEvent>>>(outbox);
+		Assert.IsType<DbSet<OutboxMessage<DomainEvent>>>(outbox, exactMatch: false);
 	}
 
 	public class TestEntity : Entity
 	{
-		public Guid Id { get; set; } = Guid.NewGuid();
+		public new Guid Id { get; set; } = Guid.NewGuid();
 	}
 
     private record DummyDomainEvent : DomainEvent
@@ -58,10 +58,8 @@ public class UnitOfWorkTests
         public DummyDomainEvent() : base() { }
     }
 
-	public class TestDbContext : DomainDbContext
+	public class TestDbContext(DbContextOptions<DomainDbContext> options) : DomainDbContext(options)
 	{
-		public TestDbContext(DbContextOptions<DomainDbContext> options) : base(options) { }
-
 		public DbSet<TestEntity> TestEntities { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)

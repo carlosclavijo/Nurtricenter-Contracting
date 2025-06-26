@@ -30,20 +30,17 @@ public class SaveInOutboxWhenCalendarCreatedTest
 		var endDate = startDate.AddDays(30);
 		var deliveryDays = new List<DeliveryDay>
 	   {
-		   new(contractId, startDate, "Grover Street", 10, 1.2563, -8.2453),
-		   new(contractId, startDate, "Elm Street", 10, 8.5823, 8.2234),
-		   new(contractId, startDate, "Sesame Street", 10, 17.3810, -3.6432),
+		   new(contractId, startDate, "Grover Street", 10),
+		   new(contractId, startDate, "Elm Street", 10),
+		   new(contractId, startDate, "Sesame Street", 10),
 	   };
 
-		var domainEvent = new CalendarCreated(contractId, patientId, startDate, endDate, deliveryDays);
+		var domainEvent = new CreateCalendar(contractId, patientId, startDate, endDate, deliveryDays);
 		var cancellationToken = CancellationToken.None;
 
 		await _handler.Handle(domainEvent, cancellationToken);
 
-		_outboxService.Verify(s => s.AddAsync(
-			It.Is<OutboxMessage<DomainEvent>>(msg => msg.Content == domainEvent)), Times.Once);
-
+		_outboxService.Verify(s => s.AddAsync(It.Is<OutboxMessage<DomainEvent>>(msg => msg.Content == domainEvent)), Times.Once);
 		_unitOfWork.Verify(u => u.CommitAsync(cancellationToken), Times.Once);
-
 	}
 }
