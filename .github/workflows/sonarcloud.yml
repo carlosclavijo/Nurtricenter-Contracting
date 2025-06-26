@@ -1,0 +1,38 @@
+name: SonarCloud analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.x
+
+      - name: Install SonarScanner
+        run: dotnet tool install --global dotnet-sonarscanner
+
+      - name: Start SonarCloud analysis
+        run: |
+          dotnet sonarscanner begin `
+            /k:"contracting" `
+            /o:"carlosclavijo" `
+            /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
+            /d:sonar.cs.opencover.reportsPaths="**/coverage.cobertura.xml"
+
+      - name: Run tests with coverage
+        run: dotnet test --collect:"XPlat Code Coverage"
+
+      - name: End SonarCloud analysis
+        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

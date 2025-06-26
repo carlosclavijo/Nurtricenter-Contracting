@@ -5,7 +5,7 @@
 -- Dumped from database version 15.3
 -- Dumped by pg_dump version 15.3
 
--- Started on 2025-06-13 17:33:33
+-- Started on 2025-06-26 11:01:12
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,7 +19,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 6 (class 2615 OID 283345)
+-- TOC entry 6 (class 2615 OID 292521)
 -- Name: outbox; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -33,7 +33,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 217 (class 1259 OID 283351)
+-- TOC entry 217 (class 1259 OID 292527)
 -- Name: outboxMessage; Type: TABLE; Schema: outbox; Owner: postgres
 --
 
@@ -53,7 +53,7 @@ CREATE TABLE outbox."outboxMessage" (
 ALTER TABLE outbox."outboxMessage" OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 283340)
+-- TOC entry 215 (class 1259 OID 292516)
 -- Name: __EFMigrationsHistory; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -66,7 +66,7 @@ CREATE TABLE public."__EFMigrationsHistory" (
 ALTER TABLE public."__EFMigrationsHistory" OWNER TO postgres;
 
 --
--- TOC entry 216 (class 1259 OID 283346)
+-- TOC entry 216 (class 1259 OID 292522)
 -- Name: administrators; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -80,7 +80,7 @@ CREATE TABLE public.administrators (
 ALTER TABLE public.administrators OWNER TO postgres;
 
 --
--- TOC entry 219 (class 1259 OID 283363)
+-- TOC entry 219 (class 1259 OID 292539)
 -- Name: contracts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -100,7 +100,7 @@ CREATE TABLE public.contracts (
 ALTER TABLE public.contracts OWNER TO postgres;
 
 --
--- TOC entry 220 (class 1259 OID 283378)
+-- TOC entry 220 (class 1259 OID 292554)
 -- Name: deliverydays; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -109,16 +109,14 @@ CREATE TABLE public.deliverydays (
     "contractId" uuid NOT NULL,
     date timestamp with time zone NOT NULL,
     street character varying(100) NOT NULL,
-    number integer NOT NULL,
-    longitude double precision NOT NULL,
-    latitude double precision NOT NULL
+    number integer NOT NULL
 );
 
 
 ALTER TABLE public.deliverydays OWNER TO postgres;
 
 --
--- TOC entry 218 (class 1259 OID 283358)
+-- TOC entry 218 (class 1259 OID 292534)
 -- Name: patients; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -132,7 +130,7 @@ CREATE TABLE public.patients (
 ALTER TABLE public.patients OWNER TO postgres;
 
 --
--- TOC entry 3355 (class 0 OID 283351)
+-- TOC entry 3355 (class 0 OID 292527)
 -- Dependencies: 217
 -- Data for Name: outboxMessage; Type: TABLE DATA; Schema: outbox; Owner: postgres
 --
@@ -142,18 +140,18 @@ COPY outbox."outboxMessage" ("outboxId", content, type, created, processed, "pro
 
 
 --
--- TOC entry 3353 (class 0 OID 283340)
+-- TOC entry 3353 (class 0 OID 292516)
 -- Dependencies: 215
 -- Data for Name: __EFMigrationsHistory; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public."__EFMigrationsHistory" ("MigrationId", "ProductVersion") FROM stdin;
-20250606004001_CreateDatabase	9.0.5
+20250625164921_CreateDatabase	9.0.6
 \.
 
 
 --
--- TOC entry 3354 (class 0 OID 283346)
+-- TOC entry 3354 (class 0 OID 292522)
 -- Dependencies: 216
 -- Data for Name: administrators; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -163,7 +161,7 @@ COPY public.administrators ("administratorId", name, phone) FROM stdin;
 
 
 --
--- TOC entry 3357 (class 0 OID 283363)
+-- TOC entry 3357 (class 0 OID 292539)
 -- Dependencies: 219
 -- Data for Name: contracts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -173,17 +171,17 @@ COPY public.contracts ("contractId", "administratorId", "patientId", "transactio
 
 
 --
--- TOC entry 3358 (class 0 OID 283378)
+-- TOC entry 3358 (class 0 OID 292554)
 -- Dependencies: 220
 -- Data for Name: deliverydays; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.deliverydays ("deliveryDayId", "contractId", date, street, number, longitude, latitude) FROM stdin;
+COPY public.deliverydays ("deliveryDayId", "contractId", date, street, number) FROM stdin;
 \.
 
 
 --
--- TOC entry 3356 (class 0 OID 283358)
+-- TOC entry 3356 (class 0 OID 292534)
 -- Dependencies: 218
 -- Data for Name: patients; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -193,7 +191,7 @@ COPY public.patients ("patientId", name, phone) FROM stdin;
 
 
 --
--- TOC entry 3198 (class 2606 OID 283357)
+-- TOC entry 3198 (class 2606 OID 292533)
 -- Name: outboxMessage PK_outboxMessage; Type: CONSTRAINT; Schema: outbox; Owner: postgres
 --
 
@@ -202,7 +200,7 @@ ALTER TABLE ONLY outbox."outboxMessage"
 
 
 --
--- TOC entry 3194 (class 2606 OID 283344)
+-- TOC entry 3194 (class 2606 OID 292520)
 -- Name: __EFMigrationsHistory PK___EFMigrationsHistory; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -211,7 +209,7 @@ ALTER TABLE ONLY public."__EFMigrationsHistory"
 
 
 --
--- TOC entry 3196 (class 2606 OID 283350)
+-- TOC entry 3196 (class 2606 OID 292526)
 -- Name: administrators PK_administrators; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -220,7 +218,7 @@ ALTER TABLE ONLY public.administrators
 
 
 --
--- TOC entry 3204 (class 2606 OID 283367)
+-- TOC entry 3204 (class 2606 OID 292543)
 -- Name: contracts PK_contracts; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -229,7 +227,7 @@ ALTER TABLE ONLY public.contracts
 
 
 --
--- TOC entry 3207 (class 2606 OID 283382)
+-- TOC entry 3207 (class 2606 OID 292558)
 -- Name: deliverydays PK_deliverydays; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -238,7 +236,7 @@ ALTER TABLE ONLY public.deliverydays
 
 
 --
--- TOC entry 3200 (class 2606 OID 283362)
+-- TOC entry 3200 (class 2606 OID 292538)
 -- Name: patients PK_patients; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -247,7 +245,7 @@ ALTER TABLE ONLY public.patients
 
 
 --
--- TOC entry 3201 (class 1259 OID 283388)
+-- TOC entry 3201 (class 1259 OID 292564)
 -- Name: IX_contracts_administratorId; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -255,7 +253,7 @@ CREATE INDEX "IX_contracts_administratorId" ON public.contracts USING btree ("ad
 
 
 --
--- TOC entry 3202 (class 1259 OID 283389)
+-- TOC entry 3202 (class 1259 OID 292565)
 -- Name: IX_contracts_patientId; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -263,7 +261,7 @@ CREATE INDEX "IX_contracts_patientId" ON public.contracts USING btree ("patientI
 
 
 --
--- TOC entry 3205 (class 1259 OID 283390)
+-- TOC entry 3205 (class 1259 OID 292566)
 -- Name: IX_deliverydays_contractId; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -271,7 +269,7 @@ CREATE INDEX "IX_deliverydays_contractId" ON public.deliverydays USING btree ("c
 
 
 --
--- TOC entry 3208 (class 2606 OID 283368)
+-- TOC entry 3208 (class 2606 OID 292544)
 -- Name: contracts FK_contracts_administrators_administratorId; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -280,7 +278,7 @@ ALTER TABLE ONLY public.contracts
 
 
 --
--- TOC entry 3209 (class 2606 OID 283373)
+-- TOC entry 3209 (class 2606 OID 292549)
 -- Name: contracts FK_contracts_patients_patientId; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -289,7 +287,7 @@ ALTER TABLE ONLY public.contracts
 
 
 --
--- TOC entry 3210 (class 2606 OID 283383)
+-- TOC entry 3210 (class 2606 OID 292559)
 -- Name: deliverydays FK_deliverydays_contracts_contractId; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -297,7 +295,7 @@ ALTER TABLE ONLY public.deliverydays
     ADD CONSTRAINT "FK_deliverydays_contracts_contractId" FOREIGN KEY ("contractId") REFERENCES public.contracts("contractId") ON DELETE CASCADE;
 
 
--- Completed on 2025-06-13 17:33:34
+-- Completed on 2025-06-26 11:01:12
 
 --
 -- PostgreSQL database dump complete
