@@ -1,0 +1,3652 @@
+Ÿ
+sContracting.Domain.Patients.Events.PatientCreated.PatientCreated(Contracting.Domain.Patients.Events.PatientCreated)Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs ("0*†
+0É
+Ä
+
+%0void"9Contracting.Domain.Abstractions.DomainEvent.DomainEvent()*753
+1Contracting.Domain.Patients.Events.PatientCreated"
+implicit returnB53
+1Contracting.Domain.Patients.Events.PatientCreatedX∞
+?Contracting.Domain.Patients.Events.PatientCreated.PatientId.getÇ
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs" (+"0*≠
+0+ (+˛
+˚
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs" (+
+%retSystem.Guid"__id*ÿ
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs" (+Q*O3
+1Contracting.Domain.Patients.Events.PatientCreated"
+	PatientIdSystem.Guid"ú
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs" (+
+
+%retSystem.GuidB53
+1Contracting.Domain.Patients.Events.PatientCreatedƒ
+@Contracting.Domain.Patients.Events.PatientCreated.PatientId.initÇ
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs" (+"0*¶
+0+ (+˘
+ˆ
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs" (+O3
+1Contracting.Domain.Patients.Events.PatientCreated"
+	PatientIdSystem.Guid"__id*
+
+valueSystem.Guid"ö
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs" (+
+implicit return:
+valueSystem.GuidB53
+1Contracting.Domain.Patients.Events.PatientCreatedXó
+:Contracting.Domain.Patients.Events.PatientCreated.Name.getÇ
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs4 (8"0*ô
+08 (8Ô
+Ï
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs4 (8
+%retstring"__id*Œ
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs4 (8G*E3
+1Contracting.Domain.Patients.Events.PatientCreated"
+Namestring"ó
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs4 (8
+
+%retstringB53
+1Contracting.Domain.Patients.Events.PatientCreated´
+;Contracting.Domain.Patients.Events.PatientCreated.Name.initÇ
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs4 (8"0*ó
+08 (8Í
+Á
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs4 (8E3
+1Contracting.Domain.Patients.Events.PatientCreated"
+Namestring"__id*
+
+valuestring"ö
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs4 (8
+implicit return:
+valuestringB53
+1Contracting.Domain.Patients.Events.PatientCreatedXô
+;Contracting.Domain.Patients.Events.PatientCreated.Phone.getÇ
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.csA (F"0*ö
+0F (F
+Ì
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.csA (F
+%retstring"__id*œ
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.csA (FH*F3
+1Contracting.Domain.Patients.Events.PatientCreated"
+Phonestring"ó
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.csA (F
+
+%retstringB53
+1Contracting.Domain.Patients.Events.PatientCreated≠
+<Contracting.Domain.Patients.Events.PatientCreated.Phone.initÇ
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.csA (F"0*ò
+0F (FÎ
+Ë
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.csA (FF3
+1Contracting.Domain.Patients.Events.PatientCreated"
+Phonestring"__id*
+
+valuestring"ö
+Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.csA (F
+implicit return:
+valuestringB53
+1Contracting.Domain.Patients.Events.PatientCreatedXÜ
+]Contracting.Domain.Patients.Events.PatientCreated.PatientCreated(System.Guid, string, string)Ç
+xC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Events\PatientCreated.cs ("0*¢
+0∑
+¥
+ (V
+%0System.Guid"@Contracting.Domain.Patients.Events.PatientCreated.PatientId.init*753
+1Contracting.Domain.Patients.Events.PatientCreated*
+
+	PatientIdSystem.Guid£
+†
+ (V
+%1string";Contracting.Domain.Patients.Events.PatientCreated.Name.init*753
+1Contracting.Domain.Patients.Events.PatientCreated*
+
+Namestring•
+¢
+ (V
+%2string"<Contracting.Domain.Patients.Events.PatientCreated.Phone.init*753
+1Contracting.Domain.Patients.Events.PatientCreated*
+
+Phonestring"
+implicit return:
+	PatientIdSystem.Guid:
+Namestring:
+PhonestringB53
+1Contracting.Domain.Patients.Events.PatientCreatedXá
+áContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.DeliveryDayDeleted(Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted)ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs ( "0*®
+0ã
+à
+
+%0void"9Contracting.Domain.Abstractions.DomainEvent.DomainEvent()*?=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted"
+implicit returnB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeletedXÓ
+HContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.ContractId.getã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs& (0"0*—
+00 (0ô
+ñ
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs& (0
+%retSystem.Guid"__id*Í
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs& (0Z*X;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted"
+
+ContractIdSystem.Guid"•
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs& (0
+
+%retSystem.GuidB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted˘
+IContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.ContractId.initã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs& (0"0*¡
+00 (0ã
+à
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs& (0X;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted"
+
+ContractIdSystem.Guid"__id*
+
+valueSystem.Guid"£
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs& (0
+implicit return:
+valueSystem.GuidB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeletedXÙ
+KContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.DeliveryDayId.getã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs7 (D"0*‘
+0D (Dú
+ô
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs7 (D
+%retSystem.Guid"__id*Ì
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs7 (D]*[;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted"
+DeliveryDayIdSystem.Guid"•
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs7 (D
+
+%retSystem.GuidB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeletedˇ
+LContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.DeliveryDayId.initã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs7 (D"0*ƒ
+0D (Dé
+ã
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs7 (D[;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted"
+DeliveryDayIdSystem.Guid"__id*
+
+valueSystem.Guid"£
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs7 (D
+implicit return:
+valueSystem.GuidB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeletedX≤
+fContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.DeliveryDayDeleted(System.Guid, System.Guid)ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayDeleted.cs ( "0*∏
+0…
+∆
+ (T
+%0System.Guid"IContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.ContractId.init*?=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted*
+
+
+ContractIdSystem.Guidœ
+Ã
+ (T
+%1System.Guid"LContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.DeliveryDayId.init*?=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted* 
+
+DeliveryDayIdSystem.Guid"
+implicit return:
+
+ContractIdSystem.Guid:
+DeliveryDayIdSystem.GuidB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeletedXä
+dContracting.Domain.Abstractions.DomainEvent.DomainEvent(Contracting.Domain.Abstractions.DomainEvent)|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs (""0*n
+0R
+P
+
+%0void"object.Object()*1/-
++Contracting.Domain.Abstractions.DomainEvent"
+implicit returnB/-
++Contracting.Domain.Abstractions.DomainEventX‡
+RContracting.Domain.Shared.CostValue.CostValue(Contracting.Domain.Shared.CostValue)t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs ("0*f
+0J
+H
+
+%0void"object.Object()*)'%
+#Contracting.Domain.Shared.CostValue"
+implicit returnB'%
+#Contracting.Domain.Shared.CostValueXá
+áContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.DeliveryDayUpdated(Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated)ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs (&"0*®
+0ã
+à
+
+%0void"9Contracting.Domain.Abstractions.DomainEvent.DomainEvent()*?=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"
+implicit returnB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdatedXÓ
+HContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.ContractId.getã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs, (6"0*—
+06 (6ô
+ñ
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs, (6
+%retSystem.Guid"__id*Í
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs, (6Z*X;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"
+
+ContractIdSystem.Guid"•
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs, (6
+
+%retSystem.GuidB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated˘
+IContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.ContractId.initã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs, (6"0*¡
+06 (6ã
+à
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs, (6X;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"
+
+ContractIdSystem.Guid"__id*
+
+valueSystem.Guid"£
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs, (6
+implicit return:
+valueSystem.GuidB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdatedXÙ
+KContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.DeliveryDayId.getã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs= (J"0*‘
+0J (Jú
+ô
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs= (J
+%retSystem.Guid"__id*Ì
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs= (J]*[;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"
+DeliveryDayIdSystem.Guid"•
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs= (J
+
+%retSystem.GuidB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdatedˇ
+LContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.DeliveryDayId.initã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs= (J"0*ƒ
+0J (Jé
+ã
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs= (J[;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"
+DeliveryDayIdSystem.Guid"__id*
+
+valueSystem.Guid"£
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs= (J
+implicit return:
+valueSystem.GuidB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdatedX◊
+DContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Street.getã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.csS (Y"0*æ
+0Y (Yã
+à
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.csS (Y
+%retstring"__id*·
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.csS (YQ*O;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"
+Streetstring"†
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.csS (Y
+
+%retstringB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated‚
+EContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Street.initã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.csS (Y"0*≥
+0Y (Y˝
+˙
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.csS (YO;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"
+Streetstring"__id*
+
+valuestring"£
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.csS (Y
+implicit return:
+valuestringB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdatedX–
+DContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Number.getã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs_ (e"0*µ
+0e (eÖ
+Ç
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs_ (e
+%retint"__id*ﬁ
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs_ (eN*L;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"
+Numberint"ù
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs_ (e
+
+%retintB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdatedXŸ
+EContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Number.initã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs_ (e"0*≠
+0e (e˜
+Ù
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs_ (eL;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"
+Numberint"__id*
+
+valueint"£
+ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs_ (e
+implicit return:
+valueintB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdatedX“	
+sContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.DeliveryDayUpdated(System.Guid, System.Guid, string, int)ã
+ÄC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\Events\DeliveryDayUpdated.cs (&"0*¶
+0…
+∆
+ (u
+%0System.Guid"IContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.ContractId.init*?=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated*
+
+
+ContractIdSystem.Guidœ
+Ã
+ (u
+%1System.Guid"LContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.DeliveryDayId.init*?=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated* 
+
+DeliveryDayIdSystem.Guid∑
+¥
+ (u
+%2string"EContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Street.init*?=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated*
+
+Streetstring±
+Æ
+ (u	
+%3int"EContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Number.init*?=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated*
+
+Numberint"
+implicit return:
+
+ContractIdSystem.Guid:
+DeliveryDayIdSystem.Guid:
+Streetstring:
+NumberintB=;
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdatedXï
+MContracting.Domain.Administrators.AdministratorFactory.AdministratorFactory()á
+}C:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\AdministratorFactory.cs (!"0*y
+0]
+[
+
+%0void"object.Object()*<:8
+6Contracting.Domain.Administrators.AdministratorFactory"
+implicit returnB:8
+6Contracting.Domain.Administrators.AdministratorFactoryXÁ
+>Contracting.Domain.Contracts.ContractFactory.ContractFactory()}
+sC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\ContractFactory.cs ("0*o
+0S
+Q
+
+%0void"object.Object()*20.
+,Contracting.Domain.Contracts.ContractFactory"
+implicit returnB0.
+,Contracting.Domain.Contracts.ContractFactoryX¯
+^Contracting.Domain.Shared.FullNameValue.FullNameValue(Contracting.Domain.Shared.FullNameValue)x
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs ("0*j
+0N
+L
+
+%0void"object.Object()*-+)
+'Contracting.Domain.Shared.FullNameValue"
+implicit returnB+)
+'Contracting.Domain.Shared.FullNameValueXú
+>Contracting.Domain.Shared.FullNameValue.FullNameValue()!staticx
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs ("0*≠
+0^\
+. (]*
+%0$System.Text.RegularExpressions.Regex"$System.Text.RegularExpressions.Regexä
+á
+. (]*
+%1$System.Text.RegularExpressions.Regex"_System.Text.RegularExpressions.Regex.Regex(string, System.Text.RegularExpressions.RegexOptions)*8
+. (],
+*
+%0$System.Text.RegularExpressions.Regex*"
+2 (E
+^[a-zA-Z√Ä-√ø\s]+$*
+G (\2£
+†
+, (]^)
+'Contracting.Domain.Shared.FullNameValue"1
+	NameRegex$System.Text.RegularExpressions.Regex"__id*.,
+*
+%0$System.Text.RegularExpressions.Regex"
+implicit returnB+")
+'Contracting.Domain.Shared.FullNameValueXÊ
+7Contracting.Domain.Abstractions.Entity.DomainEvents.getw
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs! (-"0*
+0 (*
+1*Ù
+11 (>ﬂ
+‹
+1 (>[
+%retSSystem.Collections.Generic.ICollection<Contracting.Domain.Abstractions.DomainEvent>"__id*m
+1 (>a*_(
+&Contracting.Domain.Abstractions.Entity"3
+_domainEvents"System.Collections.Generic.List<T>*
+2*x
+2? (?"i
+> (?]
+[
+%retSSystem.Collections.Generic.ICollection<Contracting.Domain.Abstractions.DomainEvent>B*(
+&Contracting.Domain.Abstractions.Entityﬁ
+uContracting.Domain.Contracts.Events.CreateCalendar.CreateCalendar(Contracting.Domain.Contracts.Events.CreateCalendar)É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs ("0*°
+0Ñ
+Å
+
+%0void"9Contracting.Domain.Abstractions.DomainEvent.DomainEvent()*864
+2Contracting.Domain.Contracts.Events.CreateCalendar"
+implicit returnB64
+2Contracting.Domain.Contracts.Events.CreateCalendarXπ
+AContracting.Domain.Contracts.Events.CreateCalendar.ContractId.getÉ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs" (,"0*≤
+0, (,Ç
+ˇ
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs" (,
+%retSystem.Guid"__id*€
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs" (,S*Q4
+2Contracting.Domain.Contracts.Events.CreateCalendar"
+
+ContractIdSystem.Guid"ù
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs" (,
+
+%retSystem.GuidB64
+2Contracting.Domain.Contracts.Events.CreateCalendarÃ
+BContracting.Domain.Contracts.Events.CreateCalendar.ContractId.initÉ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs" (,"0*™
+0, (,¸
+˘
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs" (,Q4
+2Contracting.Domain.Contracts.Events.CreateCalendar"
+
+ContractIdSystem.Guid"__id*
+
+valueSystem.Guid"õ
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs" (,
+implicit return:
+valueSystem.GuidB64
+2Contracting.Domain.Contracts.Events.CreateCalendarX∑
+@Contracting.Domain.Contracts.Events.CreateCalendar.PatientId.getÉ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs3 (<"0*±
+0< (<Å
+˛
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs3 (<
+%retSystem.Guid"__id*⁄
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs3 (<R*P4
+2Contracting.Domain.Contracts.Events.CreateCalendar"
+	PatientIdSystem.Guid"ù
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs3 (<
+
+%retSystem.GuidB64
+2Contracting.Domain.Contracts.Events.CreateCalendar 
+AContracting.Domain.Contracts.Events.CreateCalendar.PatientId.initÉ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs3 (<"0*©
+0< (<˚
+¯
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs3 (<P4
+2Contracting.Domain.Contracts.Events.CreateCalendar"
+	PatientIdSystem.Guid"__id*
+
+valueSystem.Guid"õ
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs3 (<
+implicit return:
+valueSystem.GuidB64
+2Contracting.Domain.Contracts.Events.CreateCalendarX√
+@Contracting.Domain.Contracts.Events.CreateCalendar.StartDate.getÉ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csG (P"0*Ω
+0P (Pâ
+Ü
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csG (P
+%retSystem.DateTime"__id*ﬁ
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csG (PV*T4
+2Contracting.Domain.Contracts.Events.CreateCalendar"
+	StartDateSystem.DateTime"°
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csG (P
+
+%retSystem.DateTimeB64
+2Contracting.Domain.Contracts.Events.CreateCalendar÷
+AContracting.Domain.Contracts.Events.CreateCalendar.StartDate.initÉ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csG (P"0*±
+0P (PÉ
+Ä
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csG (PT4
+2Contracting.Domain.Contracts.Events.CreateCalendar"
+	StartDateSystem.DateTime"__id*
+
+valueSystem.DateTime"õ
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csG (P
+implicit return:
+valueSystem.DateTimeB64
+2Contracting.Domain.Contracts.Events.CreateCalendarXø
+>Contracting.Domain.Contracts.Events.CreateCalendar.EndDate.getÉ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs[ (b"0*ª
+0b (bá
+Ñ
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs[ (b
+%retSystem.DateTime"__id*‹
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs[ (bT*R4
+2Contracting.Domain.Contracts.Events.CreateCalendar"
+EndDateSystem.DateTime"°
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs[ (b
+
+%retSystem.DateTimeB64
+2Contracting.Domain.Contracts.Events.CreateCalendar“
+?Contracting.Domain.Contracts.Events.CreateCalendar.EndDate.initÉ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs[ (b"0*Ø
+0b (bÅ
+˛
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs[ (bR4
+2Contracting.Domain.Contracts.Events.CreateCalendar"
+EndDateSystem.DateTime"__id*
+
+valueSystem.DateTime"õ
+É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs[ (b
+implicit return:
+valueSystem.DateTimeB64
+2Contracting.Domain.Contracts.Events.CreateCalendarX‘
+CContracting.Domain.Contracts.Events.CreateCalendar.DeliveryDays.getÑ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csv (Ç"0* 
+0
+Ç (Ç⁄
+◊
+Ñ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csv (ÇP
+%retHSystem.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>"__id*ı
+Ñ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csv (Çl*j4
+2Contracting.Domain.Contracts.Events.CreateCalendar"2
+DeliveryDays"System.Collections.Generic.List<T>"€
+Ñ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csv (ÇR
+P
+%retHSystem.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>B64
+2Contracting.Domain.Contracts.Events.CreateCalendarö
+DContracting.Domain.Contracts.Events.CreateCalendar.DeliveryDays.initÑ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csv (Ç"0*ﬁ
+0
+Ç (Ç≠
+™
+Ñ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csv (Çj4
+2Contracting.Domain.Contracts.Events.CreateCalendar"2
+DeliveryDays"System.Collections.Generic.List<T>"__id*/-
++
+value"System.Collections.Generic.List<T>"ú
+Ñ
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.csv (Ç
+implicit return:-+
+value"System.Collections.Generic.List<T>B64
+2Contracting.Domain.Contracts.Events.CreateCalendarX 
+«Contracting.Domain.Contracts.Events.CreateCalendar.CreateCalendar(System.Guid, System.Guid, System.DateTime, System.DateTime, System.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>)É
+yC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Events\CreateCalendar.cs ("0*ç
+0º
+π
+ (í
+%0System.Guid"BContracting.Domain.Contracts.Events.CreateCalendar.ContractId.init*864
+2Contracting.Domain.Contracts.Events.CreateCalendar*
+
+
+ContractIdSystem.Guid∫
+∑
+ (í
+%1System.Guid"AContracting.Domain.Contracts.Events.CreateCalendar.PatientId.init*864
+2Contracting.Domain.Contracts.Events.CreateCalendar*
+
+	PatientIdSystem.Guid¬
+ø
+ (í
+%2System.DateTime"AContracting.Domain.Contracts.Events.CreateCalendar.StartDate.init*864
+2Contracting.Domain.Contracts.Events.CreateCalendar* 
+
+	StartDateSystem.DateTimeæ
+ª
+ (í
+%3System.DateTime"?Contracting.Domain.Contracts.Events.CreateCalendar.EndDate.init*864
+2Contracting.Domain.Contracts.Events.CreateCalendar*
+
+EndDateSystem.DateTimeÓ
+Î
+ (í(
+%4"System.Collections.Generic.List<T>"DContracting.Domain.Contracts.Events.CreateCalendar.DeliveryDays.init*864
+2Contracting.Domain.Contracts.Events.CreateCalendar*64
+2
+DeliveryDays"System.Collections.Generic.List<T>"
+implicit return:
+
+ContractIdSystem.Guid:
+	PatientIdSystem.Guid:
+	StartDateSystem.DateTime:
+EndDateSystem.DateTime:42
+DeliveryDays"System.Collections.Generic.List<T>B64
+2Contracting.Domain.Contracts.Events.CreateCalendarX¥
+cContracting.Domain.Contracts.Exceptions.ContractCreationException.ContractCreationException(string)ì
+àC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Exceptions\ContractCreationException.cs (&"0*í
+0 Å
+
+ (yXC
+AContracting.Domain.Contracts.Exceptions.ContractCreationException"
+messagestring"__id*
+
+messagestring*
+1*ê
+19 (x
+}
+C (w
+%0string"__concat*8
+C (m,*
+(The contract cannot be created because: *
+p (w
+
+messagestring{
+y
+9 (x
+
+%1void"#System.Exception.Exception(string?)* 
+9 (x
+System.Exception*
+C (w
+
+%0string*
+2*.
+2y (y"
+x (y
+implicit return:
+messagestringBEC
+AContracting.Domain.Contracts.Exceptions.ContractCreationExceptionXﬁ
+;Contracting.Domain.Patients.PatientFactory.PatientFactory(){
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\PatientFactory.cs ("0*m
+0Q
+O
+
+%0void"object.Object()*0.,
+*Contracting.Domain.Patients.PatientFactory"
+implicit returnB.,
+*Contracting.Domain.Patients.PatientFactoryXä
+gContracting.Domain.Shared.PhoneNumberValue.PhoneNumberValue(Contracting.Domain.Shared.PhoneNumberValue){
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs ("0*m
+0Q
+O
+
+%0void"object.Object()*0.,
+*Contracting.Domain.Shared.PhoneNumberValue"
+implicit returnB.,
+*Contracting.Domain.Shared.PhoneNumberValueX•
+DContracting.Domain.Shared.PhoneNumberValue.PhoneNumberValue()!static{
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs ("0*™
+0^\
+/ (Y*
+%0$System.Text.RegularExpressions.Regex"$System.Text.RegularExpressions.RegexÉ
+Ä
+/ (Y*
+%1$System.Text.RegularExpressions.Regex"_System.Text.RegularExpressions.Regex.Regex(string, System.Text.RegularExpressions.RegexOptions)*8
+/ (Y,
+*
+%0$System.Text.RegularExpressions.Regex*
+3 (A
+^[67]\d{7}$*
+C (X2ß
+§
+- (Yb,
+*Contracting.Domain.Shared.PhoneNumberValue"2
+
+PhoneRegex$System.Text.RegularExpressions.Regex"__id*.,
+*
+%0$System.Text.RegularExpressions.Regex"
+implicit returnB.",
+*Contracting.Domain.Shared.PhoneNumberValueX∏
+-Contracting.Domain.Shared.CostValue.Value.gett
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs ("0*‚
+0 (∆
+√
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs (
+%retdecimal"__id*≥
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs (;*9%
+#Contracting.Domain.Shared.CostValue"
+Valuedecimal"â
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs (
+
+%retdecimalB'%
+#Contracting.Domain.Shared.CostValueX—
+-Contracting.Domain.Abstractions.Entity.Id.getw
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs ("0*˜
+0 (‘
+—
+w
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs (
+%retSystem.Guid"__id*∫
+w
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs (?*=(
+&Contracting.Domain.Abstractions.Entity"
+IdSystem.Guid"ê
+w
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs (
+
+%retSystem.GuidB*(
+&Contracting.Domain.Abstractions.Entity‰
+4Contracting.Domain.Shared.PhoneNumberValue.Phone.get{
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs	 	("0*˚
+0	 	(Ÿ
+÷
+{
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs	 	(
+%retstring"__id*¿
+{
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs	 	(A*?,
+*Contracting.Domain.Shared.PhoneNumberValue"
+Phonestring"è
+{
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs	 	(
+
+%retstringB.,
+*Contracting.Domain.Shared.PhoneNumberValue¯
+6Contracting.Domain.Delivery.DeliveryDay.ContractId.get|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs ( "0*è
+0! (!Á
+‰
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs ( 
+%retSystem.Guid"__id*»
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs ( H*F)
+'Contracting.Domain.Delivery.DeliveryDay"
+
+ContractIdSystem.Guid"ï
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs ( 
+
+%retSystem.GuidB+)
+'Contracting.Domain.Delivery.DeliveryDayÄ
+5Contracting.Domain.Shared.PhoneNumberValue.Phone.init{
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs	 	(#"0*Å
+0	$ 	($‹
+Ÿ
+{
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs	 	(#?,
+*Contracting.Domain.Shared.PhoneNumberValue"
+Phonestring"__id*
+
+valuestring"í
+{
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs	 	(#
+implicit return:
+valuestringB.,
+*Contracting.Domain.Shared.PhoneNumberValueXŸ
+.Contracting.Domain.Shared.CostValue.Value.initt
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs  ($"0*Ó
+0% (%–
+Õ
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs  ($9%
+#Contracting.Domain.Shared.CostValue"
+Valuedecimal"__id*
+
+valuedecimal"ã
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs  ($
+implicit return:
+valuedecimalB'%
+#Contracting.Domain.Shared.CostValueXí
+6Contracting.Domain.Delivery.DeliveryDay.ContractId.set|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs" (%"0*è
+0& (&È
+Ê
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs" (%F)
+'Contracting.Domain.Delivery.DeliveryDay"
+
+ContractIdSystem.Guid"__id*
+
+valueSystem.Guid"ì
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs" (%
+implicit return:
+valueSystem.GuidB+)
+'Contracting.Domain.Delivery.DeliveryDayX
+-Contracting.Domain.Abstractions.Entity.Id.setw
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs$ ('"0*¸
+0( ((€
+ÿ
+w
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs$ ('=(
+&Contracting.Domain.Abstractions.Entity"
+IdSystem.Guid"__id*
+
+valueSystem.Guid"é
+w
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs$ ('
+implicit return:
+valueSystem.GuidB*(
+&Contracting.Domain.Abstractions.EntityX¬
+0Contracting.Domain.Delivery.DeliveryDay.Date.get|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs ("0*
+0 (*
+1*ï
+1 (Ä
+~
+ (
+%retSystem.DateTime"__id*S
+ (G*E)
+'Contracting.Domain.Delivery.DeliveryDay"
+_dateSystem.DateTime*
+2*4
+2 ("%
+ (
+
+%retSystem.DateTimeB+)
+'Contracting.Domain.Delivery.DeliveryDayﬁ
+CContracting.Domain.Shared.PhoneNumberValue.PhoneNumberValue(string){
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs ("0*
+0 (*
+1*⁄
+1 ('e
+c
+ (
+
+%0void"object.Object()*:
+ (.,
+*Contracting.Domain.Shared.PhoneNumberValue\
+Z
+ ('
+
+%1bool"string.IsNullOrEmpty(string?)* *
+! (&
+
+phonestring*
+2
+3*Ô
+2 (ZNL
+ (Z"
+%2System.ArgumentNullException"System.ArgumentNullExceptionÓ
+Î
+ (Z"
+%3System.ArgumentNullException"DSystem.ArgumentNullException.ArgumentNullException(string?, string?)*0
+ (Z$
+"
+%2System.ArgumentNullException*,
+, (J 
+Phone number cannot be empty*
+L (Y	
+phone"
+ (
+implicit return*¯
+3 (&‡
+›
+ (&
+
+%4bool"4System.Text.RegularExpressions.Regex.IsMatch(string)*p
+ (d*b,
+*Contracting.Domain.Shared.PhoneNumberValue"2
+
+PhoneRegex$System.Text.RegularExpressions.Regex*
+  (%
+
+phonestring*
+4
+5*˛
+4 (}FD
+ (}
+%5System.ArgumentException"System.ArgumentExceptionÖ
+Ç
+ (}
+%6System.ArgumentException"<System.ArgumentException.ArgumentException(string?, string?)*,
+ (} 
+
+%5System.ArgumentException*S
+( (mGE
+CPhone number can only contain numbers and must be 8 characters long*
+o (|	
+phone"
+ (
+implicit return*∏
+5 (£
+†
+ (
+%7string"5Contracting.Domain.Shared.PhoneNumberValue.Phone.init*:
+ (.,
+*Contracting.Domain.Shared.PhoneNumberValue*
+
+phonestring*
+6*.
+6 ("
+ (
+implicit return:
+ ((
+phonestringB.,
+*Contracting.Domain.Shared.PhoneNumberValueX
+AContracting.Domain.Patients.PatientFactory.Create(string, string){
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\PatientFactory.cs ("0*
+0 (*
+1*~
+1 (2g
+e
+ (2
+
+%0bool""string.IsNullOrWhiteSpace(string?)* *#
+& (1
+
+patientNamestring*
+2
+3*Û
+2	 	(XFD
+	 	(X
+%1System.ArgumentException"System.ArgumentException‡
+›
+	 	(X
+%2System.ArgumentException"<System.ArgumentException.ArgumentException(string?, string?)*,
+	 	(X 
+
+%1System.ArgumentException*(
+	( 	(B
+Patient name is required*
+	D 	(W
+patientName"9
+ (-
++
+%ret#Contracting.Domain.Patients.Patient*
+3 (3h
+f
+ (3
+
+%3bool""string.IsNullOrWhiteSpace(string?)* *$
+& (2
+
+patientPhonestring*
+4
+5*ı
+4 (ZFD
+ (Z
+%4System.ArgumentException"System.ArgumentException‚
+ﬂ
+ (Z
+%5System.ArgumentException"<System.ArgumentException.ArgumentException(string?, string?)*,
+ (Z 
+
+%4System.ArgumentException*)
+( (C
+Patient phone is required*
+E (Y
+patientPhone"9
+ (-
++
+%ret#Contracting.Domain.Patients.Patient*Ê
+5 (5\Z
+ (5)
+%6#Contracting.Domain.Patients.Patient"#Contracting.Domain.Patients.Patient˘
+ˆ
+ (5)
+%7#Contracting.Domain.Patients.Patient";Contracting.Domain.Patients.Patient.Patient(string, string)*7
+ (5+
+)
+%6#Contracting.Domain.Patients.Patient*#
+ (&
+
+patientNamestring*$
+( (4
+
+patientPhonestringx
+v
+ (5+
+%ret#Contracting.Domain.Patients.Patient"__id*7
+ (5+
+)
+%6#Contracting.Domain.Patients.Patient*
+6*H
+6 ("9
+ (-
++
+%ret#Contracting.Domain.Patients.Patient:!
+ (,
+patientNamestring:"
+. (A
+patientPhonestringB.,
+*Contracting.Domain.Patients.PatientFactory”
+MContracting.Domain.Administrators.AdministratorFactory.Create(string, string)á
+}C:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\AdministratorFactory.cs ("0*
+0 (*
+1*Ñ
+1 (8m
+k
+ (8
+
+%0bool""string.IsNullOrWhiteSpace(string?)* *)
+& (7
+
+administratorNamestring*
+2
+3*ã
+2	 	(dFD
+	 	(d
+%1System.ArgumentException"System.ArgumentExceptionÏ
+È
+	 	(d
+%2System.ArgumentException"<System.ArgumentException.ArgumentException(string?, string?)*,
+	 	(d 
+
+%1System.ArgumentException*.
+	( 	(H" 
+Administrator name is required*!
+	J 	(c
+administratorName"E
+ (9
+7
+%ret/Contracting.Domain.Administrators.Administrator*Ö
+3 (9n
+l
+ (9
+
+%3bool""string.IsNullOrWhiteSpace(string?)* **
+& (8
+
+administratorPhonestring*
+4
+5*ç
+4 (fFD
+ (f
+%4System.ArgumentException"System.ArgumentExceptionÓ
+Î
+ (f
+%5System.ArgumentException"<System.ArgumentException.ArgumentException(string?, string?)*,
+ (f 
+
+%4System.ArgumentException*/
+( (I#!
+Administrator phone is required*"
+K (e
+administratorPhone"E
+ (9
+7
+%ret/Contracting.Domain.Administrators.Administrator*Œ
+5 (Gtr
+ (G5
+%6/Contracting.Domain.Administrators.Administrator"/Contracting.Domain.Administrators.AdministratorØ
+¨
+ (G5
+%7/Contracting.Domain.Administrators.Administrator"MContracting.Domain.Administrators.Administrator.Administrator(string, string)*C
+ (G7
+5
+%6/Contracting.Domain.Administrators.Administrator*)
+! (2
+
+administratorNamestring**
+4 (F
+
+administratorPhonestringë
+é
+ (G7
+%ret/Contracting.Domain.Administrators.Administrator"__id*C
+ (G7
+5
+%6/Contracting.Domain.Administrators.Administrator*
+6*T
+6 ("E
+ (9
+7
+%ret/Contracting.Domain.Administrators.Administrator:'
+  (8
+administratorNamestring:(
+: (S
+administratorPhonestringB:8
+6Contracting.Domain.Administrators.AdministratorFactoryî
+,Contracting.Domain.Patients.Patient.Name.gett
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs	  	(#"0*¡
+0	$ 	($Ö
+Ç
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs	  	(#/
+%ret'Contracting.Domain.Shared.FullNameValue"__id*“
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs	  	(#Z*X%
+#Contracting.Domain.Patients.Patient"/
+Name'Contracting.Domain.Shared.FullNameValue"©
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs	  	(#1
+/
+%ret'Contracting.Domain.Shared.FullNameValueB'%
+#Contracting.Domain.Patients.Patient∂
+,Contracting.Domain.Patients.Patient.Name.sett
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs	% 	(("0*≠
+0	) 	()è
+å
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs	% 	((X%
+#Contracting.Domain.Patients.Patient"/
+Name'Contracting.Domain.Shared.FullNameValue"__id*42
+0
+value'Contracting.Domain.Shared.FullNameValue"ã
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs	% 	((
+implicit return:20
+value'Contracting.Domain.Shared.FullNameValueB'%
+#Contracting.Domain.Patients.PatientXü
+-Contracting.Domain.Patients.Patient.Phone.gett
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs
+$ 
+('"0*À
+0
+( 
+((å
+â
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs
+$ 
+('2
+%ret*Contracting.Domain.Shared.PhoneNumberValue"__id*÷
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs
+$ 
+('^*\%
+#Contracting.Domain.Patients.Patient"3
+Phone*Contracting.Domain.Shared.PhoneNumberValue"¨
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs
+$ 
+('4
+2
+%ret*Contracting.Domain.Shared.PhoneNumberValueB'%
+#Contracting.Domain.Patients.Patientù
+:Contracting.Domain.Abstractions.Entity.Entity(System.Guid)w
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs	 	("0*
+0	 	(*
+1*∞
+1	 (a
+_
+	 (
+
+%0void"object.Object()*6
+	 (*(
+&Contracting.Domain.Abstractions.Entityµ
+≤
+ (
+
+%1bool"1System.Guid.operator ==(System.Guid, System.Guid)*"
+System.Guid*
+ (
+
+idSystem.Guid*3
+ ('*%
+System.Guid"
+EmptySystem.Guid*
+2
+3* 
+2 (IFD
+ (I
+%2System.ArgumentException"System.ArgumentException—
+Œ
+ (I
+%3System.ArgumentException"<System.ArgumentException.ArgumentException(string?, string?)*,
+ (I 
+
+%2System.ArgumentException*"
+( (<
+Id cannot be empty*
+> (H
+id"
+ (
+implicit return*—
+3 (0û
+õ
+ (
+%4System.Guid"-Contracting.Domain.Abstractions.Entity.Id.set*6
+ (
+*(
+&Contracting.Domain.Abstractions.Entity*
+
+idSystem.GuidZX
+ (/(
+%5"System.Collections.Generic.List<T>""System.Collections.Generic.List<T>ö
+ó
+ (/(
+%6"System.Collections.Generic.List<T>")System.Collections.Generic.List<T>.List()*6
+ (/*
+(
+%5"System.Collections.Generic.List<T>¢
+ü
+ (/_(
+&Contracting.Domain.Abstractions.Entity"3
+_domainEvents"System.Collections.Generic.List<T>"__id*,*
+(
+%5"System.Collections.Generic.List<T>*
+4*.
+4 ("
+ (
+implicit return:
+	 	(
+idSystem.GuidB*(
+&Contracting.Domain.Abstractions.EntityX∂
+bContracting.Domain.Abstractions.Entity.AddDomainEvent(Contracting.Domain.Abstractions.DomainEvent)w
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs ("0*
+0 (*
+1*ô
+1 ('Ñ
+Å
+ (&
+
+%0void"0System.Collections.Generic.ICollection<T>.Add(T)*m
+ (a*_(
+&Contracting.Domain.Abstractions.Entity"3
+_domainEvents"System.Collections.Generic.List<T>*H
+ (%<
+:
+domainEvent+Contracting.Domain.Abstractions.DomainEvent*
+2*.
+2 ("
+ (
+implicit return:F
+ (6:
+domainEvent+Contracting.Domain.Abstractions.DomainEventB*(
+&Contracting.Domain.Abstractions.EntityX¡
+-Contracting.Domain.Patients.Patient.Phone.sett
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs
+) 
+(,"0*¥
+0
+- 
+(-ñ
+ì
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs
+) 
+(,\%
+#Contracting.Domain.Patients.Patient"3
+Phone*Contracting.Domain.Shared.PhoneNumberValue"__id*75
+3
+value*Contracting.Domain.Shared.PhoneNumberValue"ã
+t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs
+) 
+(,
+implicit return:53
+value*Contracting.Domain.Shared.PhoneNumberValueB'%
+#Contracting.Domain.Patients.PatientXÏ
+8Contracting.Domain.Administrators.Administrator.Name.getÄ
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs  (#"0*Ù
+0$ ($´
+®
+Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs  (#/
+%ret'Contracting.Domain.Shared.FullNameValue"__id*Î
+Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs  (#f*d1
+/Contracting.Domain.Administrators.Administrator"/
+Name'Contracting.Domain.Shared.FullNameValue"∂
+Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs  (#1
+/
+%ret'Contracting.Domain.Shared.FullNameValueB31
+/Contracting.Domain.Administrators.AdministratorÅ
+8Contracting.Domain.Administrators.Administrator.Name.setÄ
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs% (("0*”
+0) ()®
+•
+Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs% ((d1
+/Contracting.Domain.Administrators.Administrator"/
+Name'Contracting.Domain.Shared.FullNameValue"__id*42
+0
+value'Contracting.Domain.Shared.FullNameValue"ò
+Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs% ((
+implicit return:20
+value'Contracting.Domain.Shared.FullNameValueB31
+/Contracting.Domain.Administrators.AdministratorX˜
+9Contracting.Domain.Administrators.Administrator.Phone.getÄ
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs	$ 	('"0*˛
+0	( 	((≤
+Ø
+Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs	$ 	('2
+%ret*Contracting.Domain.Shared.PhoneNumberValue"__id*Ô
+Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs	$ 	('j*h1
+/Contracting.Domain.Administrators.Administrator"3
+Phone*Contracting.Domain.Shared.PhoneNumberValue"π
+Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs	$ 	('4
+2
+%ret*Contracting.Domain.Shared.PhoneNumberValueB31
+/Contracting.Domain.Administrators.Administratorå
+9Contracting.Domain.Administrators.Administrator.Phone.setÄ
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs	) 	(,"0*⁄
+0	- 	(-Ø
+¨
+Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs	) 	(,h1
+/Contracting.Domain.Administrators.Administrator"3
+Phone*Contracting.Domain.Shared.PhoneNumberValue"__id*75
+3
+value*Contracting.Domain.Shared.PhoneNumberValue"ò
+Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs	) 	(,
+implicit return:53
+value*Contracting.Domain.Shared.PhoneNumberValueB31
+/Contracting.Domain.Administrators.AdministratorX∫
+;Contracting.Domain.Patients.Patient.Patient(string, string)t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs ("0*
+0 (*
+1*Ÿ
+1. (6<
+:
+5 (C
+%0System.Guid"System.Guid.NewGuid()* √
+¿
+. (D
+
+%1void"HContracting.Domain.Abstractions.AggregateRoot.AggregateRoot(System.Guid)*=
+. (D1/
+-Contracting.Domain.Abstractions.AggregateRoot*
+5 (C
+
+%0System.Guid≥
+∞
+ (-
+%2'Contracting.Domain.Shared.FullNameValue",Contracting.Domain.Patients.Patient.Name.set*3
+ ('%
+#Contracting.Domain.Patients.Patient*
+
+namestring∏
+µ
+ (0
+%3*Contracting.Domain.Shared.PhoneNumberValue"-Contracting.Domain.Patients.Patient.Phone.set*3
+ ('%
+#Contracting.Domain.Patients.Patient*
+
+phonestringÑ
+Å
+$ (&
+%4System.Guid"-Contracting.Domain.Abstractions.Entity.Id.get*3
+$ (&'%
+#Contracting.Domain.Patients.Patientü
+ú
+( (,-
+%5'Contracting.Domain.Shared.FullNameValue",Contracting.Domain.Patients.Patient.Name.get*3
+( (,'%
+#Contracting.Domain.Patients.Patient£
+†
+. (30
+%6*Contracting.Domain.Shared.PhoneNumberValue"-Contracting.Domain.Patients.Patient.Phone.get*3
+. (3'%
+#Contracting.Domain.Patients.Patientxv
+ (47
+%71Contracting.Domain.Patients.Events.PatientCreated"1Contracting.Domain.Patients.Events.PatientCreatedä
+á
+ (47
+%81Contracting.Domain.Patients.Events.PatientCreated"]Contracting.Domain.Patients.Events.PatientCreated.PatientCreated(System.Guid, string, string)*E
+ (49
+7
+%71Contracting.Domain.Patients.Events.PatientCreated*
+$ (&
+
+%4System.Guid*;
+( (,/
+-
+%5'Contracting.Domain.Shared.FullNameValue*>
+. (32
+0
+%6*Contracting.Domain.Shared.PhoneNumberValue˘
+ˆ
+ (5
+
+%9void"bContracting.Domain.Abstractions.Entity.AddDomainEvent(Contracting.Domain.Abstractions.DomainEvent)*3
+ ('%
+#Contracting.Domain.Patients.Patient*E
+ (49
+7
+%71Contracting.Domain.Patients.Events.PatientCreated*
+2*.
+2 ("
+ (
+implicit return:
+ (
+namestring:
+  (,
+phonestringB'%
+#Contracting.Domain.Patients.PatientX˝
+:Contracting.Domain.Abstractions.Entity.ClearDomainEvents()w
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs (!"0*
+0 (*
+1*–
+1 (ª
+∏
+ (
+
+%0void"1System.Collections.Generic.ICollection<T>.Clear()*m
+ (a*_(
+&Contracting.Domain.Abstractions.Entity"3
+_domainEvents"System.Collections.Generic.List<T>*
+2*.
+2 ("
+ (
+implicit returnB*(
+&Contracting.Domain.Abstractions.EntityX√
+MContracting.Domain.Administrators.Administrator.Administrator(string, string)Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs ("0*
+0 (*
+1*∑
+14 (<
+:
+; (I
+%0System.Guid"System.Guid.NewGuid()* √
+¿
+4 (J
+
+%1void"HContracting.Domain.Abstractions.AggregateRoot.AggregateRoot(System.Guid)*=
+4 (J1/
+-Contracting.Domain.Abstractions.AggregateRoot*
+; (I
+
+%0System.GuidÀ
+»
+ (-
+%2'Contracting.Domain.Shared.FullNameValue"8Contracting.Domain.Administrators.Administrator.Name.set*?
+ (31
+/Contracting.Domain.Administrators.Administrator*
+
+namestring–
+Õ
+ (0
+%3*Contracting.Domain.Shared.PhoneNumberValue"9Contracting.Domain.Administrators.Administrator.Phone.set*?
+ (31
+/Contracting.Domain.Administrators.Administrator*
+
+phonestring*
+2*.
+2 ("
+ (
+implicit return:
+ ($
+namestring:
+& (2
+phonestringB31
+/Contracting.Domain.Administrators.AdministratorXµ
+/Contracting.Domain.Abstractions.Entity.Entity()w
+mC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\Entity.cs ("0*
+0 (*
+1*ì
+1 (0a
+_
+  (
+
+%0void"object.Object()*6
+  (*(
+&Contracting.Domain.Abstractions.EntityZX
+ (/(
+%1"System.Collections.Generic.List<T>""System.Collections.Generic.List<T>ö
+ó
+ (/(
+%2"System.Collections.Generic.List<T>")System.Collections.Generic.List<T>.List()*6
+ (/*
+(
+%1"System.Collections.Generic.List<T>¢
+ü
+ (/_(
+&Contracting.Domain.Abstractions.Entity"3
+_domainEvents"System.Collections.Generic.List<T>"__id*,*
+(
+%1"System.Collections.Generic.List<T>*
+2*.
+2   ("
+   (
+implicit returnB*(
+&Contracting.Domain.Abstractions.EntityX∆
+-Contracting.Domain.Patients.Patient.Patient()t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Patients\Patient.cs ("0*
+0 (*
+1*¨
+1 (ó
+î
+ (
+
+%0void"=Contracting.Domain.Abstractions.AggregateRoot.AggregateRoot()*=
+ (1/
+-Contracting.Domain.Abstractions.AggregateRoot*
+2*.
+2 ("
+ (
+implicit returnB'%
+#Contracting.Domain.Patients.PatientXÙ
+2Contracting.Domain.Abstractions.DomainEvent.Id.get|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs ("0*ã
+0 („
+‡
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs (
+%retSystem.Guid"__id*ƒ
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs (D*B-
++Contracting.Domain.Abstractions.DomainEvent"
+IdSystem.Guid"ï
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs (
+
+%retSystem.GuidB/-
++Contracting.Domain.Abstractions.DomainEvent®
+9Contracting.Domain.Abstractions.DomainEvent.OcurredOn.set|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs% (("0*ö
+0) ()Ù
+Ò
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs% ((M-
++Contracting.Domain.Abstractions.DomainEvent"
+	OcurredOnSystem.DateTime"__id*
+
+valueSystem.DateTime"ì
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs% ((
+implicit return:
+valueSystem.DateTimeB/-
++Contracting.Domain.Abstractions.DomainEventXÒ
+?Contracting.Domain.Administrators.Administrator.Administrator()Ä
+vC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Administrators\Administrator.cs ("0*
+0 (*
+1*¨
+1 (ó
+î
+ (
+
+%0void"=Contracting.Domain.Abstractions.AggregateRoot.AggregateRoot()*=
+ (1/
+-Contracting.Domain.Abstractions.AggregateRoot*
+2*.
+2 ("
+ (
+implicit returnB31
+/Contracting.Domain.Administrators.AdministratorXé
+2Contracting.Domain.Abstractions.DomainEvent.Id.set|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs ("0*ã
+0 (Â
+‚
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs (B-
++Contracting.Domain.Abstractions.DomainEvent"
+IdSystem.Guid"__id*
+
+valueSystem.Guid"ì
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs (
+implicit return:
+valueSystem.GuidB/-
++Contracting.Domain.Abstractions.DomainEventXó
+9Contracting.Domain.Abstractions.DomainEvent.DomainEvent()|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs
+ 
+("0*
+0
+ 
+(*
+1*·
+1
+ (!f
+d
+
+ (
+
+%0void"object.Object()*;
+
+ (/-
++Contracting.Domain.Abstractions.DomainEvent<
+:
+ (
+%1System.Guid"System.Guid.NewGuid()* ®
+•
+ (
+%2System.Guid"2Contracting.Domain.Abstractions.DomainEvent.Id.set*;
+ (
+/-
++Contracting.Domain.Abstractions.DomainEvent*
+
+%1System.GuidB
+@
+ ( 
+%3System.DateTime"System.DateTime.Now.get* ∑
+¥
+ ( 
+%4System.DateTime"9Contracting.Domain.Abstractions.DomainEvent.OcurredOn.set*;
+ (/-
++Contracting.Domain.Abstractions.DomainEvent*
+
+%3System.DateTime*
+2*.
+2 ("
+ (
+implicit returnB/-
++Contracting.Domain.Abstractions.DomainEventXé
+9Contracting.Domain.Abstractions.DomainEvent.OcurredOn.get|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs  (#"0*û
+0$ ($Ú
+Ô
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs  (#
+%retSystem.DateTime"__id*œ
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs  (#O*M-
++Contracting.Domain.Abstractions.DomainEvent"
+	OcurredOnSystem.DateTime"ô
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\DomainEvent.cs  (#
+
+%retSystem.DateTimeB/-
++Contracting.Domain.Abstractions.DomainEventî
+oContracting.Domain.Shared.PhoneNumberValue.implicit operator Contracting.Domain.Shared.PhoneNumberValue(string){
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs (#"0*
+0 (*
+1*Ó
+1   (*jh
+   (*0
+%0*Contracting.Domain.Shared.PhoneNumberValue"*Contracting.Domain.Shared.PhoneNumberValue„
+‡
+   (*0
+%1*Contracting.Domain.Shared.PhoneNumberValue"CContracting.Domain.Shared.PhoneNumberValue.PhoneNumberValue(string)*>
+   (*2
+0
+%0*Contracting.Domain.Shared.PhoneNumberValue*
+ $  ()
+
+phonestringá
+Ñ
+   (*2
+%ret*Contracting.Domain.Shared.PhoneNumberValue"__id*>
+   (*2
+0
+%0*Contracting.Domain.Shared.PhoneNumberValue*
+2*O
+2! !("@
+! !(4
+2
+%ret*Contracting.Domain.Shared.PhoneNumberValue:
+5 (A
+phonestringB.",
+*Contracting.Domain.Shared.PhoneNumberValueÙ
+oContracting.Domain.Shared.PhoneNumberValue.implicit operator string(Contracting.Domain.Shared.PhoneNumberValue){
+qC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\PhoneNumberValue.cs (#"0*
+0 (*
+1*…
+1 (±
+Æ
+ (
+
+%0bool"êContracting.Domain.Shared.PhoneNumberValue.operator ==(Contracting.Domain.Shared.PhoneNumberValue?, Contracting.Domain.Shared.PhoneNumberValue?)*0.",
+*Contracting.Domain.Shared.PhoneNumberValue*A
+ (5
+3
+phone*Contracting.Domain.Shared.PhoneNumberValue*
+ ( *
+2
+3*A
+2 (!-
++
+ (!
+	%capture0string"__id* *
+4*‰
+3$ (/î
+ë
+$ (/
+%1string"4Contracting.Domain.Shared.PhoneNumberValue.Phone.get*A
+$ ()5
+3
+phone*Contracting.Domain.Shared.PhoneNumberValue9
+7
+$ (/
+	%capture0string"__id*
+
+%1string*
+4*Y
+4 (/E
+C
+ (/
+%retstring"__id*!
+ (/
+
+	%capture0string*
+5*+
+5 ("
+ (
+
+%retstring:?
++ (A3
+phone*Contracting.Domain.Shared.PhoneNumberValueB.",
+*Contracting.Domain.Shared.PhoneNumberValueÕ
+0Contracting.Domain.Shared.FullNameValue.Name.getx
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs ("0*Ó
+0 (œ
+Ã
+x
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs (
+%retstring"__id*π
+x
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs (=*;)
+'Contracting.Domain.Shared.FullNameValue"
+Namestring"å
+x
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs (
+
+%retstringB+)
+'Contracting.Domain.Shared.FullNameValue‰
+9Contracting.Domain.Contracts.Contract.AdministratorId.getv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs
+" 
+(%"0*Ä
+0
+& 
+(&ﬁ
+€
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs
+" 
+(%
+%retSystem.Guid"__id*≈
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs
+" 
+(%K*I'
+%Contracting.Domain.Contracts.Contract"
+AdministratorIdSystem.Guid"è
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs
+" 
+(%
+
+%retSystem.GuidB)'
+%Contracting.Domain.Contracts.ContractÑ
+9Contracting.Domain.Contracts.Contract.AdministratorId.setv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs
+' 
+(*"0*Ü
+0
++ 
+(+Ê
+„
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs
+' 
+(*I'
+%Contracting.Domain.Contracts.Contract"
+AdministratorIdSystem.Guid"__id*
+
+valueSystem.Guid"ç
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs
+' 
+(*
+implicit return:
+valueSystem.GuidB)'
+%Contracting.Domain.Contracts.ContractXÿ
+3Contracting.Domain.Contracts.Contract.PatientId.getv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs ("0*˙
+0  ( ÿ
+’
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs (
+%retSystem.Guid"__id*ø
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs (E*C'
+%Contracting.Domain.Contracts.Contract"
+	PatientIdSystem.Guid"è
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs (
+
+%retSystem.GuidB)'
+%Contracting.Domain.Contracts.Contract¯
+3Contracting.Domain.Contracts.Contract.PatientId.setv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs! ($"0*Ä
+0% (%‡
+›
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs! ($C'
+%Contracting.Domain.Contracts.Contract"
+	PatientIdSystem.Guid"__id*
+
+valueSystem.Guid"ç
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs! ($
+implicit return:
+valueSystem.GuidB)'
+%Contracting.Domain.Contracts.ContractX™
+.Contracting.Domain.Contracts.Contract.Type.getv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs (""0*œ
+0# (#è
+å
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs ("1
+%ret)Contracting.Domain.Contracts.ContractType"__id*ÿ
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs ("^*\'
+%Contracting.Domain.Contracts.Contract"1
+Type)Contracting.Domain.Contracts.ContractType"≠
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs ("3
+1
+%ret)Contracting.Domain.Contracts.ContractTypeB)'
+%Contracting.Domain.Contracts.ContractXÏ
+1Contracting.Domain.Shared.FullNameValue.Name.initx
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs (""0*˜
+0# (#’
+“
+x
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs (";)
+'Contracting.Domain.Shared.FullNameValue"
+Namestring"__id*
+
+valuestring"è
+x
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs ("
+implicit return:
+valuestringB+)
+'Contracting.Domain.Shared.FullNameValueX»
+.Contracting.Domain.Contracts.Contract.Type.setv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs$ ('"0*∑
+0( ((ó
+î
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs$ ('\'
+%Contracting.Domain.Contracts.Contract"1
+Type)Contracting.Domain.Contracts.ContractType"__id*64
+2
+value)Contracting.Domain.Contracts.ContractType"ç
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs$ ('
+implicit return:42
+value)Contracting.Domain.Contracts.ContractTypeB)'
+%Contracting.Domain.Contracts.ContractX“
+0Contracting.Domain.Contracts.Contract.Status.setv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs( (+"0*Ω
+0, (,ù
+ö
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs( (+`'
+%Contracting.Domain.Contracts.Contract"5
+Status+Contracting.Domain.Contracts.ContractStatus"__id*86
+4
+value+Contracting.Domain.Contracts.ContractStatus"ç
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs( (+
+implicit return:64
+value+Contracting.Domain.Contracts.ContractStatusB)'
+%Contracting.Domain.Contracts.ContractX´
+HContracting.Domain.Abstractions.AggregateRoot.AggregateRoot(System.Guid)~
+tC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\AggregateRoot.cs ("0*
+0 (*
+1*√
+1% (/Æ
+´
+% (/
+
+%0void":Contracting.Domain.Abstractions.Entity.Entity(System.Guid)*6
+% (/*(
+&Contracting.Domain.Abstractions.Entity*
+, (.
+
+idSystem.Guid*
+2*.
+2 ("
+ (
+implicit return:
+ (#
+idSystem.GuidB1/
+-Contracting.Domain.Abstractions.AggregateRootX«
+6Contracting.Domain.Contracts.Contract.CreationDate.getv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs ("0*
+0 (*
+1*ú
+1 (á
+Ñ
+ (
+%retSystem.DateTime"__id*Y
+ (M*K'
+%Contracting.Domain.Contracts.Contract" 
+_creationDateSystem.DateTime*
+2*4
+2 ("%
+ (
+
+%retSystem.DateTimeB)'
+%Contracting.Domain.Contracts.Contractﬂ
+oContracting.Domain.Contracts.ContractFactory.CreateFullMonthContract(System.Guid, System.Guid, System.DateTime)}
+sC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\ContractFactory.cs (+"0*
+0 (*
+1*⁄
+1 ()¬
+ø
+ ()
+
+%0bool"1System.Guid.operator ==(System.Guid, System.Guid)*"
+System.Guid*,
+ ( 
+
+administratorIdSystem.Guid*3
+ ()'*%
+System.Guid"
+EmptySystem.Guid*
+2
+3*î
+2	 	(cNL
+	 	(c"
+%1System.ArgumentNullException"System.ArgumentNullException˜
+Ù
+	 	(c"
+%2System.ArgumentNullException"DSystem.ArgumentNullException.ArgumentNullException(string?, string?)*0
+	 	(c$
+"
+%1System.ArgumentNullException*+
+	, 	(I
+AdministratorId is required*
+	K 	(b
+administratorId";
+ (/
+-
+%ret%Contracting.Domain.Contracts.Contract*‘
+3 (#º
+π
+ (#
+
+%3bool"1System.Guid.operator ==(System.Guid, System.Guid)*"
+System.Guid*&
+ (
+
+	patientIdSystem.Guid*3
+ (#'*%
+System.Guid"
+EmptySystem.Guid*
+4
+5*à
+4 (WNL
+ (W"
+%4System.ArgumentNullException"System.ArgumentNullExceptionÎ
+Ë
+ (W"
+%5System.ArgumentNullException"DSystem.ArgumentNullException.ArgumentNullException(string?, string?)*0
+ (W$
+"
+%4System.ArgumentNullException*%
+, (C
+PatientId is required*
+E (V
+	patientId";
+ (/
+-
+%ret%Contracting.Domain.Contracts.Contract*Ö
+5 (Z`^
+ (Z+
+%6%Contracting.Domain.Contracts.Contract"%Contracting.Domain.Contracts.Contractê
+ç
+ (Z+
+%7%Contracting.Domain.Contracts.Contract"ÑContracting.Domain.Contracts.Contract.Contract(System.Guid, System.Guid, Contracting.Domain.Contracts.ContractType, System.DateTime)*9
+ (Z-
++
+%6%Contracting.Domain.Contracts.Contract*,
+ (+ 
+
+administratorIdSystem.Guid*&
+- (6
+
+	patientIdSystem.Guid*
+8 (N2**
+P (Y
+
+	startDateSystem.DateTime|
+z
+ (Z-
+%ret%Contracting.Domain.Contracts.Contract"__id*9
+ (Z-
++
+%6%Contracting.Domain.Contracts.Contract*
+6*J
+6 (";
+ (/
+-
+%ret%Contracting.Domain.Contracts.Contract:*
+, (@
+administratorIdSystem.Guid:$
+B (P
+	patientIdSystem.Guid:(
+R (d
+	startDateSystem.DateTimeB0.
+,Contracting.Domain.Contracts.ContractFactory›
+oContracting.Domain.Contracts.ContractFactory.CreateHalfMonthContract(System.Guid, System.Guid, System.DateTime)}
+sC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\ContractFactory.cs (+"0*
+0 (*
+1*⁄
+1 ()¬
+ø
+ ()
+
+%0bool"1System.Guid.operator ==(System.Guid, System.Guid)*"
+System.Guid*,
+ ( 
+
+administratorIdSystem.Guid*3
+ ()'*%
+System.Guid"
+EmptySystem.Guid*
+2
+3*î
+2 (cNL
+ (c"
+%1System.ArgumentNullException"System.ArgumentNullException˜
+Ù
+ (c"
+%2System.ArgumentNullException"DSystem.ArgumentNullException.ArgumentNullException(string?, string?)*0
+ (c$
+"
+%1System.ArgumentNullException*+
+, (I
+AdministratorId is required*
+K (b
+administratorId";
+ (/
+-
+%ret%Contracting.Domain.Contracts.Contract*‘
+3 (#º
+π
+ (#
+
+%3bool"1System.Guid.operator ==(System.Guid, System.Guid)*"
+System.Guid*&
+ (
+
+	patientIdSystem.Guid*3
+ (#'*%
+System.Guid"
+EmptySystem.Guid*
+4
+5*à
+4 (WNL
+ (W"
+%4System.ArgumentNullException"System.ArgumentNullExceptionÎ
+Ë
+ (W"
+%5System.ArgumentNullException"DSystem.ArgumentNullException.ArgumentNullException(string?, string?)*0
+ (W$
+"
+%4System.ArgumentNullException*%
+, (C
+PatientId is required*
+E (V
+	patientId";
+ (/
+-
+%ret%Contracting.Domain.Contracts.Contract*É
+5 (Z`^
+ (Z+
+%6%Contracting.Domain.Contracts.Contract"%Contracting.Domain.Contracts.Contracté
+ã
+ (Z+
+%7%Contracting.Domain.Contracts.Contract"ÑContracting.Domain.Contracts.Contract.Contract(System.Guid, System.Guid, Contracting.Domain.Contracts.ContractType, System.DateTime)*9
+ (Z-
++
+%6%Contracting.Domain.Contracts.Contract*,
+ (+ 
+
+administratorIdSystem.Guid*&
+- (6
+
+	patientIdSystem.Guid*
+8 (N2 **
+P (Y
+
+	startDateSystem.DateTime|
+z
+ (Z-
+%ret%Contracting.Domain.Contracts.Contract"__id*9
+ (Z-
++
+%6%Contracting.Domain.Contracts.Contract*
+6*J
+6 (";
+ (/
+-
+%ret%Contracting.Domain.Contracts.Contract:*
+, (@
+administratorIdSystem.Guid:$
+B (P
+	patientIdSystem.Guid:(
+R (d
+	startDateSystem.DateTimeB0.
+,Contracting.Domain.Contracts.ContractFactory‘
+=Contracting.Domain.Abstractions.AggregateRoot.AggregateRoot()~
+tC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Abstractions\AggregateRoot.cs	 	("0*
+0	 	(*
+1*ñ
+1	 (Å
+
+	 (
+
+%0void"/Contracting.Domain.Abstractions.Entity.Entity()*6
+	 (*(
+&Contracting.Domain.Abstractions.Entity*
+2*.
+2 ("
+ (
+implicit returnB1/
+-Contracting.Domain.Abstractions.AggregateRootXﬁ
+=Contracting.Domain.Shared.FullNameValue.FullNameValue(string)x
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs ("0*
+0 (*
+1*÷
+1 (&b
+`
+ (
+
+%0void"object.Object()*7
+ (+)
+'Contracting.Domain.Shared.FullNameValue[
+Y
+ (&
+
+%1bool"string.IsNullOrEmpty(string?)* *
+! (%
+
+namestring*
+2
+3*Î
+2 (VNL
+ (V"
+%2System.ArgumentNullException"System.ArgumentNullExceptionÍ
+Á
+ (V"
+%3System.ArgumentNullException"DSystem.ArgumentNullException.ArgumentNullException(string?, string?)*0
+ (V$
+"
+%2System.ArgumentNullException*)
+, (G
+Full name cannot be empty*
+I (U
+name"
+ (
+implicit return*∏
+3 (#H
+F
+ (	
+%4int"string.Length.get*
+ (
+
+namestringW
+U
+ (#
+
+%5bool"	__compare*
+>*
+ (
+	
+%4int*
+ (#2d*
+4
+5*√
+4 (h}
+{
+( (Y
+%6string"__concat*(
+* (B
+Full name cannot exceed *
+B (M2d*
+M (X
+ charactersFD
+ (h
+%7System.ArgumentException"System.ArgumentExceptionÀ
+»
+ (h
+%8System.ArgumentException"<System.ArgumentException.ArgumentException(string?, string?)*,
+ (h 
+
+%7System.ArgumentException*
+( (Y
+
+%6string*
+[ (g
+name"
+ (
+implicit return*Û
+5 ($€
+ÿ
+ ($
+
+%9bool"4System.Text.RegularExpressions.Regex.IsMatch(string)*l
+ (`*^)
+'Contracting.Domain.Shared.FullNameValue"1
+	NameRegex$System.Text.RegularExpressions.Regex*
+ (#
+
+namestring*
+6
+7*Í
+6 (fGE
+ (f
+%10System.ArgumentException"System.ArgumentException
+Ì
+ (f
+%11System.ArgumentException"<System.ArgumentException.ArgumentException(string?, string?)*-
+ (f!
+
+%10System.ArgumentException*=
+( (W1/
+-Full name can only contain letters and spaces*
+Y (e
+name"
+ (
+implicit return*Â
+7 (#≤
+Ø
+ ("
+%12string"=Contracting.Domain.Shared.FullNameValue.NormalizeName(string)*7
+ (+)
+'Contracting.Domain.Shared.FullNameValue*
+ (!
+
+namestringõ
+ò
+ ("
+%13string"1Contracting.Domain.Shared.FullNameValue.Name.init*7
+ (+)
+'Contracting.Domain.Shared.FullNameValue*
+
+%12string*
+8*.
+8 ("
+ (
+implicit return:
+ ($
+namestringB+)
+'Contracting.Domain.Shared.FullNameValueX¥
+0Contracting.Domain.Contracts.Contract.Status.getv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs# (&"0*◊
+0' ('ï
+í
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs# (&3
+%ret+Contracting.Domain.Contracts.ContractStatus"__id*‹
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs# (&b*`'
+%Contracting.Domain.Contracts.Contract"5
+Status+Contracting.Domain.Contracts.ContractStatus"Ø
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs# (&5
+3
+%ret+Contracting.Domain.Contracts.ContractStatusB)'
+%Contracting.Domain.Contracts.ContractXÄ	
+6Contracting.Domain.Contracts.Contract.CreationDate.setv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs ("0*
+0 (*
+1*Ó
+1 (=Å
+
+ (
+	%capture0System.DateTime"__id*OM*K'
+%Contracting.Domain.Contracts.Contract" 
+_creationDateSystem.DateTimei
+g
+ ()
+%0System.DateTimeKind"System.DateTime.Kind.get*&
+ ($
+
+valueSystem.DateTimeh
+f
+ (=
+
+%1bool"	__compare*
+==*'
+ ()
+
+%0System.DateTimeKind*
+- (=2*
+2
+3*b
+2@ (EN
+L
+@ (E
+	%capture1System.DateTime"__id*
+
+valueSystem.DateTime*
+4*œ
+3H (_n
+l
+H (_
+%2System.DateTime"!System.DateTime.ToUniversalTime()*&
+H (M
+
+valueSystem.DateTimeK
+I
+H (_
+	%capture1System.DateTime"__id*
+
+%2System.DateTime*
+4*ñ
+4 (_Å
+
+ (_K'
+%Contracting.Domain.Contracts.Contract" 
+_creationDateSystem.DateTime"__id* 
+
+	%capture1System.DateTime*
+5*.
+5` (`"
+_ (`
+implicit return:
+valueSystem.DateTimeB)'
+%Contracting.Domain.Contracts.ContractXÙ
+0Contracting.Domain.Delivery.DeliveryDay.Date.set|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs ("0*
+0 (*
+1*Á
+1 (5{
+y
+ (
+	%capture0System.DateTime"__id*IG*E)
+'Contracting.Domain.Delivery.DeliveryDay"
+_dateSystem.DateTimei
+g
+ (!
+%0System.DateTimeKind"System.DateTime.Kind.get*&
+ (
+
+valueSystem.DateTimeh
+f
+ (5
+
+%1bool"	__compare*
+==*'
+ (!
+
+%0System.DateTimeKind*
+% (52*
+2
+3*b
+28 (=N
+L
+8 (=
+	%capture1System.DateTime"__id*
+
+valueSystem.DateTime*
+4*œ
+3@ (Wn
+l
+@ (W
+%2System.DateTime"!System.DateTime.ToUniversalTime()*&
+@ (E
+
+valueSystem.DateTimeK
+I
+@ (W
+	%capture1System.DateTime"__id*
+
+%2System.DateTime*
+4*è
+4 (W{
+y
+ (WE)
+'Contracting.Domain.Delivery.DeliveryDay"
+_dateSystem.DateTime"__id* 
+
+	%capture1System.DateTime*
+5*.
+5X (X"
+W (X
+implicit return:
+valueSystem.DateTimeB+)
+'Contracting.Domain.Delivery.DeliveryDayX·
+2Contracting.Domain.Delivery.DeliveryDay.Street.get|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs ("0*¸
+0 (Ÿ
+÷
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs (
+%retstring"__id*ø
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs (?*=)
+'Contracting.Domain.Delivery.DeliveryDay"
+Streetstring"ê
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs (
+
+%retstringB+)
+'Contracting.Domain.Delivery.DeliveryDay˚
+2Contracting.Domain.Delivery.DeliveryDay.Street.set|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs( (+"0*Å
+0, (,€
+ÿ
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs( (+=)
+'Contracting.Domain.Delivery.DeliveryDay"
+Streetstring"__id*
+
+valuestring"ì
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs( (+
+implicit return:
+valuestringB+)
+'Contracting.Domain.Delivery.DeliveryDayXÃ
+iContracting.Domain.Shared.FullNameValue.implicit operator string(Contracting.Domain.Shared.FullNameValue)x
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs! !(#"0*
+0! !(*
+1*π
+1# #(°
+û
+# #(
+
+%0bool"áContracting.Domain.Shared.FullNameValue.operator ==(Contracting.Domain.Shared.FullNameValue?, Contracting.Domain.Shared.FullNameValue?)*-+")
+'Contracting.Domain.Shared.FullNameValue*=
+# #(1
+/
+name'Contracting.Domain.Shared.FullNameValue*
+# #( *
+2
+3*A
+2# #( -
++
+# #( 
+	%capture0string"__id* *
+4*‹
+3## #(,å
+â
+## #(,
+%1string"0Contracting.Domain.Shared.FullNameValue.Name.get*=
+## #('1
+/
+name'Contracting.Domain.Shared.FullNameValue9
+7
+## #(,
+	%capture0string"__id*
+
+%1string*
+4*Y
+4# #(,E
+C
+# #(,
+%retstring"__id*!
+# #(,
+
+	%capture0string*
+5*+
+5$ $("
+$ $(
+
+%retstring:;
+!+ !(=/
+name'Contracting.Domain.Shared.FullNameValueB+")
+'Contracting.Domain.Shared.FullNameValue¡
+3Contracting.Domain.Contracts.Contract.StartDate.getv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs ("0*
+0 (*
+1*ô
+1 (Ñ
+Å
+ (
+%retSystem.DateTime"__id*V
+ (J*H'
+%Contracting.Domain.Contracts.Contract"
+
+_startDateSystem.DateTime*
+2*4
+2 ("%
+ (
+
+%retSystem.DateTimeB)'
+%Contracting.Domain.Contracts.Contract⁄
+2Contracting.Domain.Delivery.DeliveryDay.Number.get|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs ("0*Û
+0 (”
+–
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs (
+%retint"__id*º
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs (<*:)
+'Contracting.Domain.Delivery.DeliveryDay"
+Numberint"ç
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs (
+
+%retintB+)
+'Contracting.Domain.Delivery.DeliveryDayXÚ
+2Contracting.Domain.Delivery.DeliveryDay.Number.set|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs% (("0*˚
+0) ()’
+“
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs% ((:)
+'Contracting.Domain.Delivery.DeliveryDay"
+Numberint"__id*
+
+valueint"ì
+|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs% ((
+implicit return:
+valueintB+)
+'Contracting.Domain.Delivery.DeliveryDayXÍ
+iContracting.Domain.Shared.FullNameValue.implicit operator Contracting.Domain.Shared.FullNameValue(string)x
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs& &(#"0*
+0& &(*
+1*‘
+1( ((&db
+( ((&-
+%0'Contracting.Domain.Shared.FullNameValue"'Contracting.Domain.Shared.FullNameValue÷
+”
+( ((&-
+%1'Contracting.Domain.Shared.FullNameValue"=Contracting.Domain.Shared.FullNameValue.FullNameValue(string)*;
+( ((&/
+-
+%0'Contracting.Domain.Shared.FullNameValue*
+(! ((%
+
+namestringÄ
+~
+( ((&/
+%ret'Contracting.Domain.Shared.FullNameValue"__id*;
+( ((&/
+-
+%0'Contracting.Domain.Shared.FullNameValue*
+2*L
+2) )("=
+) )(1
+/
+%ret'Contracting.Domain.Shared.FullNameValue:
+&2 &(=
+namestringB+")
+'Contracting.Domain.Shared.FullNameValueÉ
+6Contracting.Domain.Shared.CostValue.CostValue(decimal)t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs ("0*
+0 (*
+1*”
+1 	(^
+\
+ (
+
+%0void"object.Object()*3
+ ('%
+#Contracting.Domain.Shared.CostValue\
+Z
+	 	(
+
+%1bool"	__compare*
+<*
+	 	(
+
+valuedecimal*
+	 	( *
+2
+3*ÿ
+2 (WFD
+ (W
+%2System.ArgumentException"System.ArgumentExceptionﬂ
+‹
+ (W
+%3System.ArgumentException"<System.ArgumentException.ArgumentException(string?, string?)*,
+ (W 
+
+%2System.ArgumentException*-
+( (G!
+Cost value cannot be negative*
+I (V	
+value"
+ (
+implicit return*t
+3 (]
+[
+ (
+
+%4bool"	__compare*
+==*
+ (
+
+valuedecimal*
+ ( *
+4
+5*Ï
+4 (WNL
+ (W"
+%5System.ArgumentNullException"System.ArgumentNullExceptionÎ
+Ë
+ (W"
+%6System.ArgumentNullException"DSystem.ArgumentNullException.ArgumentNullException(string?, string?)*0
+ (W$
+"
+%5System.ArgumentNullException*)
+, (G
+Cost value cannot be null*
+I (V	
+value"
+ (
+implicit return*¨
+5 (ó
+î
+ (
+%7decimal".Contracting.Domain.Shared.CostValue.Value.init*3
+ ('%
+#Contracting.Domain.Shared.CostValue*
+
+valuedecimal*
+6*.
+6 ("
+ (
+implicit return:
+ ("
+valuedecimalB'%
+#Contracting.Domain.Shared.CostValueXı
+3Contracting.Domain.Contracts.Contract.StartDate.setv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs ("0*
+0 (*
+1*Í
+1 (:~
+|
+ (
+	%capture0System.DateTime"__id*LJ*H'
+%Contracting.Domain.Contracts.Contract"
+
+_startDateSystem.DateTimei
+g
+ (&
+%0System.DateTimeKind"System.DateTime.Kind.get*&
+ (!
+
+valueSystem.DateTimeh
+f
+ (:
+
+%1bool"	__compare*
+==*'
+ (&
+
+%0System.DateTimeKind*
+* (:2*
+2
+3*b
+2= (BN
+L
+= (B
+	%capture1System.DateTime"__id*
+
+valueSystem.DateTime*
+4*œ
+3E (\n
+l
+E (\
+%2System.DateTime"!System.DateTime.ToUniversalTime()*&
+E (J
+
+valueSystem.DateTimeK
+I
+E (\
+	%capture1System.DateTime"__id*
+
+%2System.DateTime*
+4*í
+4 (\~
+|
+ (\H'
+%Contracting.Domain.Contracts.Contract"
+
+_startDateSystem.DateTime"__id* 
+
+	%capture1System.DateTime*
+5*.
+5] (]"
+\ (]
+implicit return:
+valueSystem.DateTimeB)'
+%Contracting.Domain.Contracts.ContractXÀ
+7Contracting.Domain.Contracts.Contract.CompletedDate.getv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs ("0*
+0 (*
+1*û
+1 (â
+Ü
+ (
+%retSystem.DateTime?"__id*Z
+ (N*L'
+%Contracting.Domain.Contracts.Contract"!
+_completedDateSystem.DateTime*
+2*5
+2 ("&
+ (
+
+%retSystem.DateTime?B)'
+%Contracting.Domain.Contracts.Contract¶
+bContracting.Domain.Shared.CostValue.implicit operator decimal(Contracting.Domain.Shared.CostValue)t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs (#"0*
+0 (*
+1*§
+1 (å
+â
+ (
+
+%0bool"{Contracting.Domain.Shared.CostValue.operator ==(Contracting.Domain.Shared.CostValue?, Contracting.Domain.Shared.CostValue?)*)'"%
+#Contracting.Domain.Shared.CostValue*9
+ (-
++
+cost#Contracting.Domain.Shared.CostValue*
+ ( *
+2
+3*B
+2 (.
+,
+ (
+	%capture0decimal"__id* *
+4*ÿ
+3" (,Ü
+É
+" (,
+%1decimal"-Contracting.Domain.Shared.CostValue.Value.get*9
+" (&-
++
+cost#Contracting.Domain.Shared.CostValue;
+9
+" (,
+	%capture0decimal"__id*
+
+%1decimal*
+4*[
+4 (,G
+E
+ (,
+%retdecimal"__id*"
+ (,
+
+	%capture0decimal*
+5*,
+5 ("
+ (
+
+%retdecimal:7
+, (:+
+cost#Contracting.Domain.Shared.CostValueB'"%
+#Contracting.Domain.Shared.CostValueX–
+^Contracting.Domain.Delivery.DeliveryDay.DeliveryDay(System.Guid, System.DateTime, string, int)|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs ("0*
+0 (*
+1*¥
+1R ( <
+:
+Y (g
+%0System.Guid"System.Guid.NewGuid()* Æ
+´
+R (h
+
+%1void":Contracting.Domain.Abstractions.Entity.Entity(System.Guid)*6
+R (h*(
+&Contracting.Domain.Abstractions.Entity*
+Y (g
+
+%0System.Guid∞
+≠
+ (
+%2System.Guid"6Contracting.Domain.Delivery.DeliveryDay.ContractId.set*7
+ (+)
+'Contracting.Domain.Delivery.DeliveryDay*
+
+
+contractIdSystem.Guid*
+2*∆
+2 (4è
+å
+ (
+%3System.DateTime"0Contracting.Domain.Delivery.DeliveryDay.Date.get*7
+ (+)
+'Contracting.Domain.Delivery.DeliveryDayK
+I
+ (
+	%capture0System.DateTime"__id*
+
+%3System.DateTimeh
+f
+ (
+%4System.DateTimeKind"System.DateTime.Kind.get*%
+ (
+
+dateSystem.DateTimef
+d
+ (4
+
+%5bool"	__compare*
+==*'
+ (
+
+%4System.DateTimeKind*
+ (42 *
+3
+4*à
+37 (c¶
+£
+7 (c
+%6System.DateTime"ASystem.DateTime.SpecifyKind(System.DateTime, System.DateTimeKind)* *%
+L (P
+
+dateSystem.DateTime*
+R (b2K
+I
+7 (c
+	%capture1System.DateTime"__id*
+
+%6System.DateTime*
+5*Œ
+4f (|m
+k
+f (|
+%7System.DateTime"!System.DateTime.ToUniversalTime()*%
+f (j
+
+dateSystem.DateTimeK
+I
+f (|
+	%capture1System.DateTime"__id*
+
+%7System.DateTime*
+5*∆
+5 (}±
+Æ
+ (|
+%8System.DateTime"0Contracting.Domain.Delivery.DeliveryDay.Date.set*7
+ (+)
+'Contracting.Domain.Delivery.DeliveryDay* 
+
+	%capture1System.DateTime*
+6*œ
+6 (û
+õ
+ (
+%9string"2Contracting.Domain.Delivery.DeliveryDay.Street.set*7
+ (+)
+'Contracting.Domain.Delivery.DeliveryDay*
+
+streetstringô
+ñ
+ (
+
+%10int"2Contracting.Domain.Delivery.DeliveryDay.Number.set*7
+ (+)
+'Contracting.Domain.Delivery.DeliveryDay*
+
+numberint*
+7*.
+7 ("
+ (
+implicit return:%
+ (&
+
+contractIdSystem.Guid:#
+( (5
+dateSystem.DateTime:
+7 (D
+streetstring:
+F (P
+numberintB+)
+'Contracting.Domain.Delivery.DeliveryDayX≥
+bContracting.Domain.Shared.CostValue.implicit operator Contracting.Domain.Shared.CostValue(decimal)t
+jC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\CostValue.cs (#"0*
+0 (*
+1*≤
+1 (\Z
+ ()
+%0#Contracting.Domain.Shared.CostValue"#Contracting.Domain.Shared.CostValue≈
+¬
+ ()
+%1#Contracting.Domain.Shared.CostValue"6Contracting.Domain.Shared.CostValue.CostValue(decimal)*7
+ (+
+)
+%0#Contracting.Domain.Shared.CostValue*
+ (
+
+adecimalx
+v
+ (+
+%ret#Contracting.Domain.Shared.CostValue"__id*7
+ (+
+)
+%0#Contracting.Domain.Shared.CostValue*
+2*H
+2 ("9
+ (-
++
+%ret#Contracting.Domain.Shared.CostValue:
+. (7
+adecimalB'"%
+#Contracting.Domain.Shared.CostValueÖ
+
+=Contracting.Domain.Shared.FullNameValue.NormalizeName(string)x
+nC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Shared\FullNameValue.cs+ +("0*
+0+ +(*
+1*º
+1- 1(G
+E
+- -((
+%0string"string.Trim()*
+- -(!
+
+namestring´
+®
+- -(6
+%1string"DSystem.Text.RegularExpressions.Regex.Replace(string, string, string)* *
+- -((
+
+%0string*
+-* -(0
+\s+*
+-2 -(5
+ 4
+2
+- -(6
+namestring"__id*
+
+%1stringo
+m
+/ /()&
+%2 System.Globalization.CultureInfo"3System.Globalization.CultureInfo.CurrentCulture.get* •¢
+/ /(2#
+%3System.Globalization.TextInfo"-System.Globalization.CultureInfo.TextInfo.get*4
+/ /()(
+&
+%2 System.Globalization.CultureInfo2TextInfo.getJ
+H
+/? /(M
+%4string"string.ToLower()*
+/? /(C
+
+namestringù
+ö
+/ /(N
+%5string"1System.Globalization.TextInfo.ToTitleCase(string)*1
+/ /(2%
+#
+%3System.Globalization.TextInfo*
+/? /(M
+
+%4string4
+2
+/ /(N
+namestring"__id*
+
+%5string@
+>
+1 1(
+%retstring"__id*
+1 1(
+
+namestring*
+2*+
+22 2("
+2 2(
+
+%retstring:
++  +(+
+namestringB+)
+'Contracting.Domain.Shared.FullNameValueÇ
+;Contracting.Domain.Delivery.DeliveryDay.Update(string, int)|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs ("0*
+0 (*
+1*ï
+1 (Iû
+õ
+ (
+%0string"2Contracting.Domain.Delivery.DeliveryDay.Street.set*7
+ (+)
+'Contracting.Domain.Delivery.DeliveryDay*
+
+streetstringò
+ï
+ (	
+%1int"2Contracting.Domain.Delivery.DeliveryDay.Number.set*7
+ (+)
+'Contracting.Domain.Delivery.DeliveryDay*
+
+numberintë
+é
+( (2
+%2System.Guid"6Contracting.Domain.Delivery.DeliveryDay.ContractId.get*7
+( (2+)
+'Contracting.Domain.Delivery.DeliveryDayà
+Ö
+4 (6
+%3System.Guid"-Contracting.Domain.Abstractions.Entity.Id.get*7
+4 (6+)
+'Contracting.Domain.Delivery.DeliveryDayâÜ
+ (G?
+%49Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdatedë
+é
+ (G?
+%59Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated"sContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.DeliveryDayUpdated(System.Guid, System.Guid, string, int)*M
+ (GA
+?
+%49Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated*
+( (2
+
+%2System.Guid*
+4 (6
+
+%3System.Guid*
+8 (>
+
+streetstring*
+@ (F
+
+numberintÖ
+Ç
+ (H
+
+%6void"bContracting.Domain.Abstractions.Entity.AddDomainEvent(Contracting.Domain.Abstractions.DomainEvent)*7
+ (+)
+'Contracting.Domain.Delivery.DeliveryDay*M
+ (GA
+?
+%49Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated*
+2*.
+2   ("
+   (
+implicit return:
+ ($
+streetstring:
+& (0
+numberintB+)
+'Contracting.Domain.Delivery.DeliveryDayX—
+7Contracting.Domain.Contracts.Contract.CompletedDate.setv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs ("0*
+0 (*
+1*ˇ
+1 (.É
+Ä
+ (
+	%capture0System.DateTime"__id*PN*L'
+%Contracting.Domain.Contracts.Contract"!
+_completedDateSystem.DateTimeb
+`
+  (.
+
+%0bool"System.Nullable<T>.HasValue.get*'
+  (%
+
+valueSystem.DateTime?*
+2
+4*”
+22 (Vj
+h
+2 (=
+%1System.DateTime"System.Nullable<T>.Value.get*'
+2 (7
+
+valueSystem.DateTime?f
+d
+2 (B
+%2System.DateTimeKind"System.DateTime.Kind.get*#
+2 (=
+
+%1System.DateTimeh
+f
+2 (V
+
+%3bool"	__compare*
+!=*'
+2 (B
+
+%2System.DateTimeKind*
+F (V2*
+3
+4*∏
+3Y (vj
+h
+Y (d
+%4System.DateTime"System.Nullable<T>.Value.get*'
+Y (^
+
+valueSystem.DateTime?k
+i
+Y (v
+%5System.DateTime"!System.DateTime.ToUniversalTime()*#
+Y (d
+
+%4System.DateTimeK
+I
+Y (v
+	%capture1System.DateTime"__id*
+
+%5System.DateTime*
+5*ÿ
+4	y (íu
+s
+	y (í
+%6System.DateTime"&System.Nullable<T>.GetValueOrDefault()*'
+y (~
+
+valueSystem.DateTime?L
+J
+	y (í
+	%capture1System.DateTime"__id*
+
+%6System.DateTime*
+5*ö
+5	 (íÑ
+Å
+	 (íL'
+%Contracting.Domain.Contracts.Contract"!
+_completedDateSystem.DateTime"__id* 
+
+	%capture1System.DateTime*
+6*2
+6
+ì (ì"!
+
+í (ì
+implicit return:
+valueSystem.DateTime?B)'
+%Contracting.Domain.Contracts.ContractXñ
+.Contracting.Domain.Contracts.Contract.Cost.getv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs   ("0*Ω
+0    ( É
+Ä
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs   (+
+%ret#Contracting.Domain.Shared.CostValue"__id*“
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs   (X*V'
+%Contracting.Domain.Contracts.Contract"+
+Cost#Contracting.Domain.Shared.CostValue"ß
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs   (-
++
+%ret#Contracting.Domain.Shared.CostValueB)'
+%Contracting.Domain.Contracts.Contract∂
+.Contracting.Domain.Contracts.Contract.Cost.setv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs !  ($"0*´
+0 %  (%ã
+à
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs !  ($V'
+%Contracting.Domain.Contracts.Contract"+
+Cost#Contracting.Domain.Shared.CostValue"__id*0.
+,
+value#Contracting.Domain.Shared.CostValue"ç
+v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs !  ($
+implicit return:.,
+value#Contracting.Domain.Shared.CostValueB)'
+%Contracting.Domain.Contracts.ContractX∏
+
+0Contracting.Domain.Delivery.DeliveryDay.Delete()|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs" "("0*
+0" "(*
+1*è
+1$ $(9ë
+é
+$( $(2
+%0System.Guid"6Contracting.Domain.Delivery.DeliveryDay.ContractId.get*7
+$( $(2+)
+'Contracting.Domain.Delivery.DeliveryDayà
+Ö
+$4 $(6
+%1System.Guid"-Contracting.Domain.Abstractions.Entity.Id.get*7
+$4 $(6+)
+'Contracting.Domain.Delivery.DeliveryDayâÜ
+$ $(7?
+%29Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted"9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted«
+ƒ
+$ $(7?
+%39Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted"fContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.DeliveryDayDeleted(System.Guid, System.Guid)*M
+$ $(7A
+?
+%29Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted*
+$( $(2
+
+%0System.Guid*
+$4 $(6
+
+%1System.GuidÖ
+Ç
+$ $(8
+
+%4void"bContracting.Domain.Abstractions.Entity.AddDomainEvent(Contracting.Domain.Abstractions.DomainEvent)*7
+$ $(+)
+'Contracting.Domain.Delivery.DeliveryDay*M
+$ $(7A
+?
+%29Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted*
+2*.
+2% %("
+% %(
+implicit returnB+)
+'Contracting.Domain.Delivery.DeliveryDayX⁄
+6Contracting.Domain.Contracts.Contract.DeliveryDays.getv
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs$ $("0*
+0$ $(*
+1*Ô
+1& &( ⁄
+◊
+& &( W
+%retOSystem.Collections.Generic.ICollection<Contracting.Domain.Delivery.DeliveryDay>"__id*l
+& &( `*^'
+%Contracting.Domain.Contracts.Contract"3
+_deliveryDays"System.Collections.Generic.List<T>*
+2*t
+2'	 '(	"e
+' '(	Y
+W
+%retOSystem.Collections.Generic.ICollection<Contracting.Domain.Delivery.DeliveryDay>B)'
+%Contracting.Domain.Contracts.Contractƒ
+5Contracting.Domain.Delivery.DeliveryDay.DeliveryDay()|
+rC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\DeliveryDays\DeliveryDay.cs' '("0*
+0' '(*
+1*ñ
+1' '(Å
+
+' '(
+
+%0void"/Contracting.Domain.Abstractions.Entity.Entity()*6
+' '(*(
+&Contracting.Domain.Abstractions.Entity*
+2*.
+2' '("
+' '(
+implicit returnB+)
+'Contracting.Domain.Delivery.DeliveryDayX±
+ÑContracting.Domain.Contracts.Contract.Contract(System.Guid, System.Guid, Contracting.Domain.Contracts.ContractType, System.DateTime)v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs* *("0*
+0* *(*
+1*Ä
+1*a 3(<
+:
+*h *(v
+%0System.Guid"System.Guid.NewGuid()* √
+¿
+*a *(w
+
+%1void"HContracting.Domain.Abstractions.AggregateRoot.AggregateRoot(System.Guid)*=
+*a *(w1/
+-Contracting.Domain.Abstractions.AggregateRoot*
+*h *(v
+
+%0System.Guid∂
+≥
+, ,()
+%2System.Guid"9Contracting.Domain.Contracts.Contract.AdministratorId.set*5
+, ,()'
+%Contracting.Domain.Contracts.Contract*" 
+
+administratorIdSystem.Guid™
+ß
+- -(
+%3System.Guid"3Contracting.Domain.Contracts.Contract.PatientId.set*5
+- -()'
+%Contracting.Domain.Contracts.Contract*
+
+	patientIdSystem.Guid‹
+Ÿ
+. .(/
+%4)Contracting.Domain.Contracts.ContractType".Contracting.Domain.Contracts.Contract.Type.set*5
+. .()'
+%Contracting.Domain.Contracts.Contract*53
+1
+type)Contracting.Domain.Contracts.ContractTypeØ
+¨
+/ /('1
+%5+Contracting.Domain.Contracts.ContractStatus"0Contracting.Domain.Contracts.Contract.Status.set*5
+/ /()'
+%Contracting.Domain.Contracts.Contract*2 B
+@
+0 0(#
+%6System.DateTime"System.DateTime.Now.get* Æ
+´
+0 0(#
+%7System.DateTime"6Contracting.Domain.Contracts.Contract.CreationDate.set*5
+0 0()'
+%Contracting.Domain.Contracts.Contract*
+
+%6System.DateTime≤
+Ø
+1 1(
+%8System.DateTime"3Contracting.Domain.Contracts.Contract.StartDate.set*5
+1 1()'
+%Contracting.Domain.Contracts.Contract* 
+
+	startDateSystem.DateTime˘
+ˆ
+2 2('
+%9decimal"cContracting.Domain.Contracts.Contract.CalculateTotalCost(Contracting.Domain.Contracts.ContractType)*5
+2 2(!)'
+%Contracting.Domain.Contracts.Contract*?
+2" 2(&3
+1
+type)Contracting.Domain.Contracts.ContractType≥
+∞
+2 2('*
+%10#Contracting.Domain.Shared.CostValue".Contracting.Domain.Contracts.Contract.Cost.set*5
+2 2()'
+%Contracting.Domain.Contracts.Contract*
+
+%9decimalig
+3 3(0
+%11)Contracting.Domain.Delivery.DeliveryDay[]")Contracting.Domain.Delivery.DeliveryDay[]©
+¶
+3 3(^'
+%Contracting.Domain.Contracts.Contract"3
+_deliveryDays"System.Collections.Generic.List<T>"__id*42
+0
+%11)Contracting.Domain.Delivery.DeliveryDay[]*
+2*.
+24 4("
+4 4(
+implicit return:*
+* *((
+administratorIdSystem.Guid:$
+** *(8
+	patientIdSystem.Guid:=
+*: *(K1
+type)Contracting.Domain.Contracts.ContractType:(
+*M *(_
+	startDateSystem.DateTimeB)'
+%Contracting.Domain.Contracts.ContractXª
+cContracting.Domain.Contracts.Contract.CalculateTotalCost(Contracting.Domain.Contracts.ContractType)v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs6 6(""0*
+06 6(*
+1*ò
+18 8(*Ä
+~
+8 8(*
+
+%0bool"	__compare*
+==*?
+8 8(3
+1
+type)Contracting.Domain.Contracts.ContractType*
+8 8(*2*
+2
+3*G
+2: :(3
+1
+: :(
+%retdecimal"__id*
+: :( *
+4*G
+3< <(3
+1
+< <(
+%retdecimal"__id*
+< <( *
+4*,
+4= =("
+= =(
+
+%retdecimal:=
+6# 6(41
+type)Contracting.Domain.Contracts.ContractTypeB)'
+%Contracting.Domain.Contracts.ContractX∞
+~Contracting.Domain.Contracts.Contract.CreateCalendar(System.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>)v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs? ?("0*
+0? ?(*
+1*˜
+1A A(á
+Ñ
+A A(	
+%0int"3System.Collections.Generic.ICollection<T>.Count.get*8
+A A(,
+*
+days"System.Collections.Generic.List<T>V
+T
+A A(
+
+%1bool"	__compare*
+==*
+A A(
+	
+%0int*
+A A(2 *
+2
+3*Â
+2C C(PNL
+C C(P"
+%2System.ArgumentNullException"System.ArgumentNullException‰
+·
+C C(P"
+%3System.ArgumentNullException"DSystem.ArgumentNullException.ArgumentNullException(string?, string?)*0
+C C(P$
+"
+%2System.ArgumentNullException*
+C, C(8
+days*#
+C: C(O
+Days cannot be null"
+H H(
+implicit return*ß
+3E G(]£
+†
+E E(^'
+%Contracting.Domain.Contracts.Contract"3
+_deliveryDays"System.Collections.Generic.List<T>"__id*.,
+*
+days"System.Collections.Generic.List<T>Ü
+É
+G$ G(&
+%4System.Guid"-Contracting.Domain.Abstractions.Entity.Id.get*5
+G$ G(&)'
+%Contracting.Domain.Contracts.Contractå
+â
+G( G(1
+%5System.Guid"3Contracting.Domain.Contracts.Contract.PatientId.get*5
+G( G(1)'
+%Contracting.Domain.Contracts.Contractê
+ç
+G3 G(<
+%6System.DateTime"3Contracting.Domain.Contracts.Contract.StartDate.get*5
+G3 G(<)'
+%Contracting.Domain.Contracts.Contractp
+n
+G> G(K
+%7System.DateTime"0Contracting.Domain.Delivery.DeliveryDay.Date.get*
+G> G(F
+	{unknown}zx
+G G([8
+%82Contracting.Domain.Contracts.Events.CreateCalendar"2Contracting.Domain.Contracts.Events.CreateCalendar”
+–
+G G([8
+%92Contracting.Domain.Contracts.Events.CreateCalendar"«Contracting.Domain.Contracts.Events.CreateCalendar.CreateCalendar(System.Guid, System.Guid, System.DateTime, System.DateTime, System.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>)*F
+G G([:
+8
+%82Contracting.Domain.Contracts.Events.CreateCalendar*
+G$ G(&
+
+%4System.Guid*
+G( G(1
+
+%5System.Guid*#
+G3 G(<
+
+%6System.DateTime*#
+G> G(K
+
+%7System.DateTime*l
+GM G(Z`*^'
+%Contracting.Domain.Contracts.Contract"3
+_deliveryDays"System.Collections.Generic.List<T>˝
+˙
+G G(\
+%10void"bContracting.Domain.Abstractions.Entity.AddDomainEvent(Contracting.Domain.Abstractions.DomainEvent)*5
+G G()'
+%Contracting.Domain.Contracts.Contract*F
+G G([:
+8
+%82Contracting.Domain.Contracts.Events.CreateCalendar*
+4*.
+4H H("
+H H(
+implicit return:6
+? ?(5*
+days"System.Collections.Generic.List<T>B)'
+%Contracting.Domain.Contracts.ContractX¶	
+2Contracting.Domain.Contracts.Contract.InProgress()v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.csJ J("0*
+0J J(*
+1*¡
+1L L(,©
+¶
+L L(1
+%0+Contracting.Domain.Contracts.ContractStatus"0Contracting.Domain.Contracts.Contract.Status.get*5
+L L()'
+%Contracting.Domain.Contracts.Contract~
+|
+L L(,
+
+%1bool"	__compare*
+!=*?
+L L(3
+1
+%0+Contracting.Domain.Contracts.ContractStatus*
+L L(,2 *
+2
+3*ˆ
+2N N(^VT
+N N(^&
+%2 System.InvalidOperationException" System.InvalidOperationExceptionÌ
+Í
+N N(^&
+%3 System.InvalidOperationException"CSystem.InvalidOperationException.InvalidOperationException(string?)*4
+N N(^(
+&
+%2 System.InvalidOperationException*;
+N0 N(]/-
++Cannot progress without creating a contract"
+Q Q(
+implicit return*∆
+3P P(+±
+Æ
+P P(*1
+%4+Contracting.Domain.Contracts.ContractStatus"0Contracting.Domain.Contracts.Contract.Status.set*5
+P P()'
+%Contracting.Domain.Contracts.Contract*2*
+4*.
+4Q Q("
+Q Q(
+implicit returnB)'
+%Contracting.Domain.Contracts.ContractXÆ
+0Contracting.Domain.Contracts.Contract.Complete()v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.csS S("0*
+0S S(*
+1*ƒ
+1U U(/©
+¶
+U U(1
+%0+Contracting.Domain.Contracts.ContractStatus"0Contracting.Domain.Contracts.Contract.Status.get*5
+U U()'
+%Contracting.Domain.Contracts.ContractÄ
+~
+U U(/
+
+%1bool"	__compare*
+!=*?
+U U(3
+1
+%0+Contracting.Domain.Contracts.ContractStatus*
+U U(/2*
+2
+3*Ü
+2W W(nVT
+W W(n&
+%2 System.InvalidOperationException" System.InvalidOperationException˝
+˙
+W W(n&
+%3 System.InvalidOperationException"CSystem.InvalidOperationException.InvalidOperationException(string?)*4
+W W(n(
+&
+%2 System.InvalidOperationException*K
+W0 W(m?=
+;Cannot complete without contract beign in progress contract"
+[ [(
+implicit return*Ω
+3Y Z(%±
+Æ
+Y Y()1
+%4+Contracting.Domain.Contracts.ContractStatus"0Contracting.Domain.Contracts.Contract.Status.set*5
+Y Y()'
+%Contracting.Domain.Contracts.Contract*2B
+@
+Z Z($
+%5System.DateTime"System.DateTime.Now.get* ∞
+≠
+Z Z($
+%6System.DateTime?"7Contracting.Domain.Contracts.Contract.CompletedDate.set*5
+Z Z()'
+%Contracting.Domain.Contracts.Contract*
+
+%5System.DateTime*
+4*.
+4[ [("
+[ [(
+implicit returnB)'
+%Contracting.Domain.Contracts.ContractXÕ
+0Contracting.Domain.Contracts.Contract.Contract()v
+lC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracts\Contract.cs]	 ]("0*
+0] ](*
+1*¨
+1] ](ó
+î
+] ](
+
+%0void"=Contracting.Domain.Abstractions.AggregateRoot.AggregateRoot()*=
+] ](1/
+-Contracting.Domain.Abstractions.AggregateRoot*
+2*.
+2] ]("
+] ](
+implicit returnB)'
+%Contracting.Domain.Contracts.ContractX

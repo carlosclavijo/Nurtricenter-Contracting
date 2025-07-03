@@ -20,8 +20,8 @@ public static class SecretExtensions
 	public static IServiceCollection AddSecrets(this IServiceCollection services, IConfiguration configuration, IHostEnvironment environment)
 	{
 		bool useSecretManager = configuration.GetValue<bool>("UseSecretManager", false);
-		if (environment.IsDevelopment() && !useSecretManager)
-		{
+		/*if (environment.IsDevelopment() && !useSecretManager)
+		{*/
 			configuration
 				.LoadAndRegister<RabbitMqSettings>(services, RabbitMqSettingsSecretName)
 				.LoadAndRegister<DatabaseSettings>(services, ContractingDatabaseConnectionStringSecretName)
@@ -29,7 +29,7 @@ public static class SecretExtensions
 				.LoadAndRegister<JeagerSettings>(services, JeagerSettingsSecretName);
 
 			return services;
-		}
+		/*}
 
 		string? vaultUrl = Environment.GetEnvironmentVariable("VAULT_URL");
 		string? vaultToken = Environment.GetEnvironmentVariable("VAULT_TOKEN");
@@ -48,7 +48,7 @@ public static class SecretExtensions
 		services.AddHashicorpVault(settings)
 			.LoadSecretsFromVault();
 
-		return services;
+		return services;*/
 	}
 
 	public static void LoadSecretsFromVault(this IServiceCollection services)

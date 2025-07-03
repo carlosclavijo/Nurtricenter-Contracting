@@ -1,0 +1,7 @@
+organization=carlosclavijo
+projectKey=carlosclavijo_Nurtricenter-Contracting
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.64952
+dashboardUrl=https://sonarcloud.io/dashboard?id=carlosclavijo_Nurtricenter-Contracting
+ceTaskId=AZetaNcAHz16DA5eaWfW
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZetaNcAHz16DA5eaWfW

@@ -1,0 +1,252 @@
+Œ
+1Contracting.Domain.Patients.Events.PatientCreated+Contracting.Domain.Abstractions.DomainEventobjectSystem.IEquatable<T>Œ
++PatientCreated(System.Guid, string, string)]Contracting.Domain.Patients.Events.PatientCreated.PatientCreated(System.Guid, string, string)J
+
+ToString()<Contracting.Domain.Patients.Events.PatientCreated.ToString()„
+'PrintMembers(System.Text.StringBuilder)YContracting.Domain.Patients.Events.PatientCreated.PrintMembers(System.Text.StringBuilder)P
+GetHashCode()?Contracting.Domain.Patients.Events.PatientCreated.GetHashCode()T
+Equals(object?)AContracting.Domain.Patients.Events.PatientCreated.Equals(object?)ž
+4Equals(Contracting.Domain.Abstractions.DomainEvent?)fContracting.Domain.Patients.Events.PatientCreated.Equals(Contracting.Domain.Abstractions.DomainEvent?)ª
+:Equals(Contracting.Domain.Patients.Events.PatientCreated?)lContracting.Domain.Patients.Events.PatientCreated.Equals(Contracting.Domain.Patients.Events.PatientCreated?)J
+
+<Clone>$()<Contracting.Domain.Patients.Events.PatientCreated.<Clone>$()¸
+APatientCreated(Contracting.Domain.Patients.Events.PatientCreated)sContracting.Domain.Patients.Events.PatientCreated.PatientCreated(Contracting.Domain.Patients.Events.PatientCreated)ž
+4Deconstruct(out System.Guid, out string, out string)fContracting.Domain.Patients.Events.PatientCreated.Deconstruct(out System.Guid, out string, out string)^
+EqualityContract.getFContracting.Domain.Patients.Events.PatientCreated.EqualityContract.get^
+EqualityContract.setFContracting.Domain.Patients.Events.PatientCreated.EqualityContract.setP
+PatientId.get?Contracting.Domain.Patients.Events.PatientCreated.PatientId.getR
+PatientId.init@Contracting.Domain.Patients.Events.PatientCreated.PatientId.initF
+Name.get:Contracting.Domain.Patients.Events.PatientCreated.Name.getH
+	Name.init;Contracting.Domain.Patients.Events.PatientCreated.Name.initH
+	Phone.get;Contracting.Domain.Patients.Events.PatientCreated.Phone.getJ
+
+Phone.init<Contracting.Domain.Patients.Events.PatientCreated.Phone.init™
+-Contracting.Domain.Abstractions.AggregateRoot&Contracting.Domain.Abstractions.Entityobjectf
+AggregateRoot(System.Guid)HContracting.Domain.Abstractions.AggregateRoot.AggregateRoot(System.Guid)P
+AggregateRoot()=Contracting.Domain.Abstractions.AggregateRoot.AggregateRoot()ð
+/Contracting.Domain.Administrators.Administrator-Contracting.Domain.Abstractions.AggregateRoot&Contracting.Domain.Abstractions.Entityobjectn
+Administrator(string, string)MContracting.Domain.Administrators.Administrator.Administrator(string, string)R
+Administrator()?Contracting.Domain.Administrators.Administrator.Administrator()D
+Name.get8Contracting.Domain.Administrators.Administrator.Name.getD
+Name.set8Contracting.Domain.Administrators.Administrator.Name.setF
+	Phone.get9Contracting.Domain.Administrators.Administrator.Phone.getF
+	Phone.set9Contracting.Domain.Administrators.Administrator.Phone.set–
+
++Contracting.Domain.Abstractions.DomainEventobjectMediatR.INotificationSystem.IEquatable<T>J
+DomainEvent()9Contracting.Domain.Abstractions.DomainEvent.DomainEvent()D
+
+ToString()6Contracting.Domain.Abstractions.DomainEvent.ToString()~
+'PrintMembers(System.Text.StringBuilder)SContracting.Domain.Abstractions.DomainEvent.PrintMembers(System.Text.StringBuilder)J
+GetHashCode()9Contracting.Domain.Abstractions.DomainEvent.GetHashCode()N
+Equals(object?);Contracting.Domain.Abstractions.DomainEvent.Equals(object?)˜
+4Equals(Contracting.Domain.Abstractions.DomainEvent?)`Contracting.Domain.Abstractions.DomainEvent.Equals(Contracting.Domain.Abstractions.DomainEvent?) 
+8DomainEvent(Contracting.Domain.Abstractions.DomainEvent)dContracting.Domain.Abstractions.DomainEvent.DomainEvent(Contracting.Domain.Abstractions.DomainEvent)X
+EqualityContract.get@Contracting.Domain.Abstractions.DomainEvent.EqualityContract.getX
+EqualityContract.set@Contracting.Domain.Abstractions.DomainEvent.EqualityContract.set<
+Id.get2Contracting.Domain.Abstractions.DomainEvent.Id.get<
+Id.set2Contracting.Domain.Abstractions.DomainEvent.Id.setJ
+OcurredOn.get9Contracting.Domain.Abstractions.DomainEvent.OcurredOn.getJ
+OcurredOn.set9Contracting.Domain.Abstractions.DomainEvent.OcurredOn.setÃ
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted+Contracting.Domain.Abstractions.DomainEventobjectSystem.IEquatable<T>–
+,DeliveryDayDeleted(System.Guid, System.Guid)fContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.DeliveryDayDeleted(System.Guid, System.Guid)R
+
+ToString()DContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.ToString()Œ
+'PrintMembers(System.Text.StringBuilder)aContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.PrintMembers(System.Text.StringBuilder)X
+GetHashCode()GContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.GetHashCode()\
+Equals(object?)IContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.Equals(object?)¦
+4Equals(Contracting.Domain.Abstractions.DomainEvent?)nContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.Equals(Contracting.Domain.Abstractions.DomainEvent?)Â
+BEquals(Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted?)|Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.Equals(Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted?)R
+
+<Clone>$()DContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.<Clone>$()Ù
+MDeliveryDayDeleted(Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted)‡Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.DeliveryDayDeleted(Contracting.Domain.DeliveryDays.Events.DeliveryDayDeleted)˜
+-Deconstruct(out System.Guid, out System.Guid)gContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.Deconstruct(out System.Guid, out System.Guid)f
+EqualityContract.getNContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.EqualityContract.getf
+EqualityContract.setNContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.EqualityContract.setZ
+ContractId.getHContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.ContractId.get\
+ContractId.initIContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.ContractId.init`
+DeliveryDayId.getKContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.DeliveryDayId.getb
+DeliveryDayId.initLContracting.Domain.DeliveryDays.Events.DeliveryDayDeleted.DeliveryDayId.init¹
+#Contracting.Domain.Shared.CostValueobjectSystem.IEquatable<T>L
+CostValue(decimal)6Contracting.Domain.Shared.CostValue.CostValue(decimal)<
+
+ToString().Contracting.Domain.Shared.CostValue.ToString()v
+'PrintMembers(System.Text.StringBuilder)KContracting.Domain.Shared.CostValue.PrintMembers(System.Text.StringBuilder)B
+GetHashCode()1Contracting.Domain.Shared.CostValue.GetHashCode()F
+Equals(object?)3Contracting.Domain.Shared.CostValue.Equals(object?)€
+,Equals(Contracting.Domain.Shared.CostValue?)PContracting.Domain.Shared.CostValue.Equals(Contracting.Domain.Shared.CostValue?)<
+
+<Clone>$().Contracting.Domain.Shared.CostValue.<Clone>$()„
+.CostValue(Contracting.Domain.Shared.CostValue)RContracting.Domain.Shared.CostValue.CostValue(Contracting.Domain.Shared.CostValue)P
+EqualityContract.get8Contracting.Domain.Shared.CostValue.EqualityContract.getP
+EqualityContract.set8Contracting.Domain.Shared.CostValue.EqualityContract.set:
+	Value.get-Contracting.Domain.Shared.CostValue.Value.get<
+
+Value.init.Contracting.Domain.Shared.CostValue.Value.initæ
+'Contracting.Domain.Delivery.DeliveryDay&Contracting.Domain.Abstractions.Entityobject˜
+6DeliveryDay(System.Guid, System.DateTime, string, int)^Contracting.Domain.Delivery.DeliveryDay.DeliveryDay(System.Guid, System.DateTime, string, int)R
+Update(string, int);Contracting.Domain.Delivery.DeliveryDay.Update(string, int)<
+Delete()0Contracting.Domain.Delivery.DeliveryDay.Delete()F
+DeliveryDay()5Contracting.Domain.Delivery.DeliveryDay.DeliveryDay()H
+ContractId.get6Contracting.Domain.Delivery.DeliveryDay.ContractId.getH
+ContractId.set6Contracting.Domain.Delivery.DeliveryDay.ContractId.set<
+Date.get0Contracting.Domain.Delivery.DeliveryDay.Date.get<
+Date.set0Contracting.Domain.Delivery.DeliveryDay.Date.set@
+
+Street.get2Contracting.Domain.Delivery.DeliveryDay.Street.get@
+
+Street.set2Contracting.Domain.Delivery.DeliveryDay.Street.set@
+
+Number.get2Contracting.Domain.Delivery.DeliveryDay.Number.get@
+
+Number.set2Contracting.Domain.Delivery.DeliveryDay.Number.setÃ
+&Contracting.Domain.Abstractions.EntityobjectQ
+Entity(System.Guid):Contracting.Domain.Abstractions.Entity.Entity(System.Guid)¡
+;AddDomainEvent(Contracting.Domain.Abstractions.DomainEvent)bContracting.Domain.Abstractions.Entity.AddDomainEvent(Contracting.Domain.Abstractions.DomainEvent)Q
+ClearDomainEvents():Contracting.Domain.Abstractions.Entity.ClearDomainEvents();
+Entity()/Contracting.Domain.Abstractions.Entity.Entity()7
+Id.get-Contracting.Domain.Abstractions.Entity.Id.get7
+Id.set-Contracting.Domain.Abstractions.Entity.Id.setK
+DomainEvents.get7Contracting.Domain.Abstractions.Entity.DomainEvents.getK
+DomainEvents.set7Contracting.Domain.Abstractions.Entity.DomainEvents.set°
+%Contracting.Domain.Contracts.Contract-Contracting.Domain.Abstractions.AggregateRoot&Contracting.Domain.Abstractions.Entityobjectç
+^Contract(System.Guid, System.Guid, Contracting.Domain.Contracts.ContractType, System.DateTime)„Contracting.Domain.Contracts.Contract.Contract(System.Guid, System.Guid, Contracting.Domain.Contracts.ContractType, System.DateTime)¤
+=CalculateTotalCost(Contracting.Domain.Contracts.ContractType)cContracting.Domain.Contracts.Contract.CalculateTotalCost(Contracting.Domain.Contracts.ContractType)Ú
+XCreateCalendar(System.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>)~Contracting.Domain.Contracts.Contract.CreateCalendar(System.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>)B
+InProgress()2Contracting.Domain.Contracts.Contract.InProgress()>
+
+Complete()0Contracting.Domain.Contracts.Contract.Complete()>
+
+Contract()0Contracting.Domain.Contracts.Contract.Contract()P
+AdministratorId.get9Contracting.Domain.Contracts.Contract.AdministratorId.getP
+AdministratorId.set9Contracting.Domain.Contracts.Contract.AdministratorId.setD
+PatientId.get3Contracting.Domain.Contracts.Contract.PatientId.getD
+PatientId.set3Contracting.Domain.Contracts.Contract.PatientId.set:
+Type.get.Contracting.Domain.Contracts.Contract.Type.get:
+Type.set.Contracting.Domain.Contracts.Contract.Type.set>
+
+Status.get0Contracting.Domain.Contracts.Contract.Status.get>
+
+Status.set0Contracting.Domain.Contracts.Contract.Status.setJ
+CreationDate.get6Contracting.Domain.Contracts.Contract.CreationDate.getJ
+CreationDate.set6Contracting.Domain.Contracts.Contract.CreationDate.setD
+StartDate.get3Contracting.Domain.Contracts.Contract.StartDate.getD
+StartDate.set3Contracting.Domain.Contracts.Contract.StartDate.setL
+CompletedDate.get7Contracting.Domain.Contracts.Contract.CompletedDate.getL
+CompletedDate.set7Contracting.Domain.Contracts.Contract.CompletedDate.set:
+Cost.get.Contracting.Domain.Contracts.Contract.Cost.get:
+Cost.set.Contracting.Domain.Contracts.Contract.Cost.setJ
+DeliveryDays.get6Contracting.Domain.Contracts.Contract.DeliveryDays.getJ
+DeliveryDays.set6Contracting.Domain.Contracts.Contract.DeliveryDays.setÛ
+9Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated+Contracting.Domain.Abstractions.DomainEventobjectSystem.IEquatable<T>°
+9DeliveryDayUpdated(System.Guid, System.Guid, string, int)sContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.DeliveryDayUpdated(System.Guid, System.Guid, string, int)R
+
+ToString()DContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.ToString()Œ
+'PrintMembers(System.Text.StringBuilder)aContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.PrintMembers(System.Text.StringBuilder)X
+GetHashCode()GContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.GetHashCode()\
+Equals(object?)IContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Equals(object?)¦
+4Equals(Contracting.Domain.Abstractions.DomainEvent?)nContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Equals(Contracting.Domain.Abstractions.DomainEvent?)Â
+BEquals(Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated?)|Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Equals(Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated?)R
+
+<Clone>$()DContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.<Clone>$()Ù
+MDeliveryDayUpdated(Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated)‡Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.DeliveryDayUpdated(Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated)Â
+BDeconstruct(out System.Guid, out System.Guid, out string, out int)|Contracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Deconstruct(out System.Guid, out System.Guid, out string, out int)f
+EqualityContract.getNContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.EqualityContract.getf
+EqualityContract.setNContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.EqualityContract.setZ
+ContractId.getHContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.ContractId.get\
+ContractId.initIContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.ContractId.init`
+DeliveryDayId.getKContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.DeliveryDayId.getb
+DeliveryDayId.initLContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.DeliveryDayId.initR
+
+Street.getDContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Street.getT
+Street.initEContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Street.initR
+
+Number.getDContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Number.getT
+Number.initEContracting.Domain.DeliveryDays.Events.DeliveryDayUpdated.Number.initß	
+'Contracting.Domain.Shared.FullNameValueobjectSystem.IEquatable<T>V
+FullNameValue(string)=Contracting.Domain.Shared.FullNameValue.FullNameValue(string)V
+NormalizeName(string)=Contracting.Domain.Shared.FullNameValue.NormalizeName(string)@
+
+ToString()2Contracting.Domain.Shared.FullNameValue.ToString()z
+'PrintMembers(System.Text.StringBuilder)OContracting.Domain.Shared.FullNameValue.PrintMembers(System.Text.StringBuilder)F
+GetHashCode()5Contracting.Domain.Shared.FullNameValue.GetHashCode()J
+Equals(object?)7Contracting.Domain.Shared.FullNameValue.Equals(object?)Œ
+0Equals(Contracting.Domain.Shared.FullNameValue?)XContracting.Domain.Shared.FullNameValue.Equals(Contracting.Domain.Shared.FullNameValue?)@
+
+<Clone>$()2Contracting.Domain.Shared.FullNameValue.<Clone>$()˜
+6FullNameValue(Contracting.Domain.Shared.FullNameValue)^Contracting.Domain.Shared.FullNameValue.FullNameValue(Contracting.Domain.Shared.FullNameValue)T
+EqualityContract.get<Contracting.Domain.Shared.FullNameValue.EqualityContract.getT
+EqualityContract.set<Contracting.Domain.Shared.FullNameValue.EqualityContract.set<
+Name.get0Contracting.Domain.Shared.FullNameValue.Name.get>
+	Name.init1Contracting.Domain.Shared.FullNameValue.Name.initË
+6Contracting.Domain.Administrators.AdministratorFactoryobject7Contracting.Domain.Administrators.IAdministratorFactoryg
+Create(string, string)MContracting.Domain.Administrators.AdministratorFactory.Create(string, string)g
+AdministratorFactory()MContracting.Domain.Administrators.AdministratorFactory.AdministratorFactory()ª
+,Contracting.Domain.Contracts.ContractFactoryobject-Contracting.Domain.Contracts.IContractFactoryµ
+BCreateFullMonthContract(System.Guid, System.Guid, System.DateTime)oContracting.Domain.Contracts.ContractFactory.CreateFullMonthContract(System.Guid, System.Guid, System.DateTime)µ
+BCreateHalfMonthContract(System.Guid, System.Guid, System.DateTime)oContracting.Domain.Contracts.ContractFactory.CreateHalfMonthContract(System.Guid, System.Guid, System.DateTime)S
+ContractFactory()>Contracting.Domain.Contracts.ContractFactory.ContractFactory()9
+7Contracting.Domain.Administrators.IAdministratorFactory-
++Contracting.Domain.Abstractions.IUnitOfWork×
+2Contracting.Domain.Contracts.Events.CreateCalendar+Contracting.Domain.Abstractions.DomainEventobjectSystem.IEquatable<T>á
+”CreateCalendar(System.Guid, System.Guid, System.DateTime, System.DateTime, System.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>)ÇContracting.Domain.Contracts.Events.CreateCalendar.CreateCalendar(System.Guid, System.Guid, System.DateTime, System.DateTime, System.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>)K
+
+ToString()=Contracting.Domain.Contracts.Events.CreateCalendar.ToString()…
+'PrintMembers(System.Text.StringBuilder)ZContracting.Domain.Contracts.Events.CreateCalendar.PrintMembers(System.Text.StringBuilder)Q
+GetHashCode()@Contracting.Domain.Contracts.Events.CreateCalendar.GetHashCode()U
+Equals(object?)BContracting.Domain.Contracts.Events.CreateCalendar.Equals(object?)Ÿ
+4Equals(Contracting.Domain.Abstractions.DomainEvent?)gContracting.Domain.Contracts.Events.CreateCalendar.Equals(Contracting.Domain.Abstractions.DomainEvent?)­
+;Equals(Contracting.Domain.Contracts.Events.CreateCalendar?)nContracting.Domain.Contracts.Events.CreateCalendar.Equals(Contracting.Domain.Contracts.Events.CreateCalendar?)K
+
+<Clone>$()=Contracting.Domain.Contracts.Events.CreateCalendar.<Clone>$()»
+BCreateCalendar(Contracting.Domain.Contracts.Events.CreateCalendar)uContracting.Domain.Contracts.Events.CreateCalendar.CreateCalendar(Contracting.Domain.Contracts.Events.CreateCalendar)ƒ
+¥Deconstruct(out System.Guid, out System.Guid, out System.DateTime, out System.DateTime, out System.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>)ØContracting.Domain.Contracts.Events.CreateCalendar.Deconstruct(out System.Guid, out System.Guid, out System.DateTime, out System.DateTime, out System.Collections.Generic.List<Contracting.Domain.Delivery.DeliveryDay>)_
+EqualityContract.getGContracting.Domain.Contracts.Events.CreateCalendar.EqualityContract.get_
+EqualityContract.setGContracting.Domain.Contracts.Events.CreateCalendar.EqualityContract.setS
+ContractId.getAContracting.Domain.Contracts.Events.CreateCalendar.ContractId.getU
+ContractId.initBContracting.Domain.Contracts.Events.CreateCalendar.ContractId.initQ
+PatientId.get@Contracting.Domain.Contracts.Events.CreateCalendar.PatientId.getS
+PatientId.initAContracting.Domain.Contracts.Events.CreateCalendar.PatientId.initQ
+StartDate.get@Contracting.Domain.Contracts.Events.CreateCalendar.StartDate.getS
+StartDate.initAContracting.Domain.Contracts.Events.CreateCalendar.StartDate.initM
+EndDate.get>Contracting.Domain.Contracts.Events.CreateCalendar.EndDate.getO
+EndDate.init?Contracting.Domain.Contracts.Events.CreateCalendar.EndDate.initW
+DeliveryDays.getCContracting.Domain.Contracts.Events.CreateCalendar.DeliveryDays.getY
+DeliveryDays.initDContracting.Domain.Contracts.Events.CreateCalendar.DeliveryDays.init/
+-Contracting.Domain.Contracts.IContractFactory¦
++Contracting.Domain.Contracts.ContractStatusSystem.EnumSystem.ValueTypeobjectP
+ContractStatus()<Contracting.Domain.Contracts.ContractStatus.ContractStatus()ž
+)Contracting.Domain.Contracts.ContractTypeSystem.EnumSystem.ValueTypeobjectJ
+ContractType()8Contracting.Domain.Contracts.ContractType.ContractType().
+,Contracting.Domain.Patients.IPatienteFactoryè
+AContracting.Domain.Contracts.Exceptions.ContractCreationExceptionSystem.Exceptionobjectˆ
+!ContractCreationException(string)cContracting.Domain.Contracts.Exceptions.ContractCreationException.ContractCreationException(string)„
+#Contracting.Domain.Patients.Patient-Contracting.Domain.Abstractions.AggregateRoot&Contracting.Domain.Abstractions.EntityobjectV
+Patient(string, string);Contracting.Domain.Patients.Patient.Patient(string, string):
+	Patient()-Contracting.Domain.Patients.Patient.Patient()8
+Name.get,Contracting.Domain.Patients.Patient.Name.get8
+Name.set,Contracting.Domain.Patients.Patient.Name.set:
+	Phone.get-Contracting.Domain.Patients.Patient.Phone.get:
+	Phone.set-Contracting.Domain.Patients.Patient.Phone.set
+*Contracting.Domain.Patients.PatientFactoryobject,Contracting.Domain.Patients.IPatienteFactory[
+Create(string, string)AContracting.Domain.Patients.PatientFactory.Create(string, string)O
+PatientFactory();Contracting.Domain.Patients.PatientFactory.PatientFactory()Ê	
+*Contracting.Domain.Shared.PhoneNumberValueobjectSystem.IEquatable<T>_
+PhoneNumberValue(string)CContracting.Domain.Shared.PhoneNumberValue.PhoneNumberValue(string)C
+
+ToString()5Contracting.Domain.Shared.PhoneNumberValue.ToString()}
+'PrintMembers(System.Text.StringBuilder)RContracting.Domain.Shared.PhoneNumberValue.PrintMembers(System.Text.StringBuilder)I
+GetHashCode()8Contracting.Domain.Shared.PhoneNumberValue.GetHashCode()M
+Equals(object?):Contracting.Domain.Shared.PhoneNumberValue.Equals(object?)•
+3Equals(Contracting.Domain.Shared.PhoneNumberValue?)^Contracting.Domain.Shared.PhoneNumberValue.Equals(Contracting.Domain.Shared.PhoneNumberValue?)C
+
+<Clone>$()5Contracting.Domain.Shared.PhoneNumberValue.<Clone>$()§
+<PhoneNumberValue(Contracting.Domain.Shared.PhoneNumberValue)gContracting.Domain.Shared.PhoneNumberValue.PhoneNumberValue(Contracting.Domain.Shared.PhoneNumberValue)W
+EqualityContract.get?Contracting.Domain.Shared.PhoneNumberValue.EqualityContract.getW
+EqualityContract.set?Contracting.Domain.Shared.PhoneNumberValue.EqualityContract.setA
+	Phone.get4Contracting.Domain.Shared.PhoneNumberValue.Phone.getC
+
+Phone.init5Contracting.Domain.Shared.PhoneNumberValue.Phone.initr
+:Contracting.Domain.Administrators.IAdministratorRepository4Contracting.Domain.Abstractions.IRepository<TEntity>f
+.Contracting.Domain.Patients.IPatientRepository4Contracting.Domain.Abstractions.IRepository<TEntity>h
+0Contracting.Domain.Contracts.IContractRepository4Contracting.Domain.Abstractions.IRepository<TEntity>6
+4Contracting.Domain.Abstractions.IRepository<TEntity>

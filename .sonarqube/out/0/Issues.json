@@ -1,0 +1,1073 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Compilador de Microsoft (R) Visual C#",
+        "version": "4.12.0.0",
+        "fileVersion": "4.12.0-3.24570.6 (913fb4ec)",
+        "semanticVersion": "4.12.0",
+        "language": "es-MX"
+      },
+      "results": [
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Name\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Patients/Patient.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 13,
+                  "endLine": 20,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Patients/Patient.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 26,
+                  "endLine": 9,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Phone\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Patients/Patient.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 13,
+                  "endLine": 20,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Patients/Patient.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 29,
+                  "endLine": 10,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Name\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Administrators/Administrator.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 13,
+                  "endLine": 18,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Administrators/Administrator.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 26,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Phone\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Administrators/Administrator.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 13,
+                  "endLine": 18,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Administrators/Administrator.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 29,
+                  "endLine": 9,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS0472",
+          "level": "warning",
+          "message": "El resultado de la expresión siempre es 'false' porque un valor del tipo 'decimal' nunca es igual a 'NULL' de tipo 'decimal?'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/CostValue.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 18,
+                  "endLine": 13,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Street\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/DeliveryDays/DeliveryDay.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 13,
+                  "endLine": 39,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/DeliveryDays/DeliveryDay.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 19,
+                  "endLine": 15,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Cost\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/Contract.cs",
+                "region": {
+                  "startLine": 93,
+                  "startColumn": 10,
+                  "endLine": 93,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/Contract.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 22,
+                  "endLine": 32,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento campo \"_deliveryDays\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el campo como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/Contract.cs",
+                "region": {
+                  "startLine": 93,
+                  "startColumn": 10,
+                  "endLine": 93,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/Contract.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 31,
+                  "endLine": 33,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Abstractions/Entity.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 30,
+                  "endLine": 6,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6444",
+          "level": "warning",
+          "message": "Pass a timeout to limit the execution time.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/FullNameValue.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 47,
+                  "endLine": 8,
+                  "endColumn": 94
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6444",
+          "level": "warning",
+          "message": "Pass a timeout to limit the execution time.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/PhoneNumberValue.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 48,
+                  "endLine": 7,
+                  "endColumn": 90
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SYSLIB1045",
+          "level": "note",
+          "message": "Use 'GeneratedRegexAttribute' para generar la implementación de expresiones regulares en tiempo de compilación.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/FullNameValue.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 47,
+                  "endLine": 8,
+                  "endColumn": 94
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SYSLIB1045",
+          "level": "note",
+          "message": "Use 'GeneratedRegexAttribute' para generar la implementación de expresiones regulares en tiempo de compilación.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/PhoneNumberValue.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 48,
+                  "endLine": 7,
+                  "endColumn": 90
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3442",
+          "level": "warning",
+          "message": "Change the visibility of this constructor to 'protected'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Abstractions/Entity.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 5,
+                  "endLine": 9,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3928",
+          "level": "warning",
+          "message": "ArgumentException constructor arguments have been inverted.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/PhoneNumberValue.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 19,
+                  "endLine": 15,
+                  "endColumn": 91
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2208",
+          "level": "note",
+          "message": "El método .ctor pasa un nombre de parámetro \"phone\" como argumento message a un constructor ArgumentNullException. Reemplace este argumento por un mensaje descriptivo y pase el nombre del parámetro en la posición correcta.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/PhoneNumberValue.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 19,
+                  "endLine": 15,
+                  "endColumn": 91
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "MessagePosition": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "S3442",
+          "level": "warning",
+          "message": "Change the visibility of this constructor to 'protected'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Abstractions/DomainEvent.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 5,
+                  "endLine": 10,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3928",
+          "level": "warning",
+          "message": "ArgumentException constructor arguments have been inverted.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/ContractFactory.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 19,
+                  "endLine": 22,
+                  "endColumn": 100
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3928",
+          "level": "warning",
+          "message": "ArgumentException constructor arguments have been inverted.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/ContractFactory.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 19,
+                  "endLine": 9,
+                  "endColumn": 100
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3928",
+          "level": "warning",
+          "message": "ArgumentException constructor arguments have been inverted.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/ContractFactory.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 19,
+                  "endLine": 26,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3928",
+          "level": "warning",
+          "message": "ArgumentException constructor arguments have been inverted.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/ContractFactory.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 19,
+                  "endLine": 13,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3928",
+          "level": "warning",
+          "message": "ArgumentException constructor arguments have been inverted.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/FullNameValue.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 19,
+                  "endLine": 17,
+                  "endColumn": 87
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2208",
+          "level": "note",
+          "message": "El método CreateFullMonthContract pasa un nombre de parámetro \"administratorId\" como argumento message a un constructor ArgumentNullException. Reemplace este argumento por un mensaje descriptivo y pase el nombre del parámetro en la posición correcta.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/ContractFactory.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 19,
+                  "endLine": 9,
+                  "endColumn": 100
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "MessagePosition": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "CA2208",
+          "level": "note",
+          "message": "El método CreateFullMonthContract pasa un nombre de parámetro \"patientId\" como argumento message a un constructor ArgumentNullException. Reemplace este argumento por un mensaje descriptivo y pase el nombre del parámetro en la posición correcta.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/ContractFactory.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 19,
+                  "endLine": 13,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "MessagePosition": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "CA2208",
+          "level": "note",
+          "message": "El método CreateHalfMonthContract pasa un nombre de parámetro \"administratorId\" como argumento message a un constructor ArgumentNullException. Reemplace este argumento por un mensaje descriptivo y pase el nombre del parámetro en la posición correcta.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/ContractFactory.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 19,
+                  "endLine": 22,
+                  "endColumn": 100
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "MessagePosition": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "CA2208",
+          "level": "note",
+          "message": "El método CreateHalfMonthContract pasa un nombre de parámetro \"patientId\" como argumento message a un constructor ArgumentNullException. Reemplace este argumento por un mensaje descriptivo y pase el nombre del parámetro en la posición correcta.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/ContractFactory.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 19,
+                  "endLine": 26,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "MessagePosition": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "S3928",
+          "level": "warning",
+          "message": "ArgumentException constructor arguments have been inverted.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/CostValue.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 19,
+                  "endLine": 15,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2208",
+          "level": "note",
+          "message": "El método .ctor pasa un nombre de parámetro \"name\" como argumento message a un constructor ArgumentNullException. Reemplace este argumento por un mensaje descriptivo y pase el nombre del parámetro en la posición correcta.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/FullNameValue.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 19,
+                  "endLine": 17,
+                  "endColumn": 87
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "MessagePosition": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'NormalizeName' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/FullNameValue.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 19,
+                  "endLine": 43,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6444",
+          "level": "warning",
+          "message": "Pass a timeout to limit the execution time.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/FullNameValue.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 16,
+                  "endLine": 45,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2583",
+          "level": "warning",
+          "message": "Change this condition so that it does not always evaluate to 'False'. Some code paths are unreachable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/CostValue.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 18,
+                  "endLine": 13,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/CostValue.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 19,
+                  "endLine": 15,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null
+            }
+          }
+        },
+        {
+          "ruleId": "CA2208",
+          "level": "note",
+          "message": "El método .ctor pasa un nombre de parámetro \"value\" como argumento message a un constructor ArgumentNullException. Reemplace este argumento por un mensaje descriptivo y pase el nombre del parámetro en la posición correcta.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/CostValue.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 19,
+                  "endLine": 15,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "MessagePosition": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "SYSLIB1045",
+          "level": "note",
+          "message": "Use 'GeneratedRegexAttribute' para generar la implementación de expresiones regulares en tiempo de compilación.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/FullNameValue.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 16,
+                  "endLine": 45,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "El miembro \"NormalizeName\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Shared/FullNameValue.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 19,
+                  "endLine": 43,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
+          "message": "Make 'CalculateTotalCost' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/Contract.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 17,
+                  "endLine": 54,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "El miembro \"CalculateTotalCost\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/CARLOS/Desktop/Aprendizaje/CSharp/Nurtricenter-Contracting/Contracting.Domain/Contracts/Contract.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 17,
+                  "endLine": 54,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA1822": {
+          "id": "CA1822",
+          "shortDescription": "Marcar miembros como static",
+          "fullDescription": "Los miembros que no tienen acceso a datos de instancia o que llaman a métodos de instancia se pueden marcar como static. Después de marcar los métodos como static, el compilador emitirá los sitios de llamada no virtuales para estos miembros. Esto puede proporcionar una mejora apreciable del rendimiento del código sensible al rendimiento.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA2208": {
+          "id": "CA2208",
+          "shortDescription": "Crear instancias de las excepciones del argumento correctamente",
+          "fullDescription": "Se realiza una llamada al constructor predeterminado (sin parámetros) de un tipo de excepción que es o se deriva de ArgumentException, o se pasa un argumento de cadena incorrecto a un constructor con parámetros de un tipo de excepción que es o se deriva de ArgumentException.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2208",
+          "properties": {
+            "category": "Usage",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS0472": {
+          "id": "CS0472",
+          "shortDescription": "El resultado de la expresión siempre es el mismo ya que un valor de este tipo siempre es igual a \"null\"",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0472)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required\" o declararlo como un valor que acepta valores NULL.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1104": {
+          "id": "S1104",
+          "shortDescription": "Fields should not have public accessibility",
+          "fullDescription": "Public fields in public classes do not respect the encapsulation principle and have three main disadvantages:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1104",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S2325": {
+          "id": "S2325",
+          "shortDescription": "Methods and properties that don't access instance data should be static",
+          "fullDescription": "Methods and properties that don’t access instance data should be marked as static for the following reasons:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2325",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S2583": {
+          "id": "S2583",
+          "shortDescription": "Conditionally executed code should be reachable",
+          "fullDescription": "Conditional expressions which are always true or false can lead to unreachable code.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2583",
+          "properties": {
+            "category": "Major Bug",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3442": {
+          "id": "S3442",
+          "shortDescription": "\"abstract\" classes should not have \"public\" constructors",
+          "fullDescription": "The abstract modifier in a class declaration is used to indicate that a class is intended only to be a base class of other classes, not instantiated on its own.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3442",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3928": {
+          "id": "S3928",
+          "shortDescription": "Parameter names used into ArgumentException constructors should match an existing one ",
+          "fullDescription": "Some constructors of the ArgumentException, ArgumentNullException, ArgumentOutOfRangeException and DuplicateWaitObjectException classes must be fed with a valid parameter name. This rule raises an issue in two cases:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3928",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6444": {
+          "id": "S6444",
+          "shortDescription": "Not specifying a timeout for regular expressions is security-sensitive",
+          "fullDescription": "Not specifying a timeout for regular expressions can lead to a Denial-of-Service attack. Pass a timeout when using System.Text.RegularExpressions to process untrusted input because a malicious user might craft a value for which the evaluation lasts excessively long.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6444",
+          "properties": {
+            "category": "Major Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "SYSLIB1045": {
+          "id": "SYSLIB1045",
+          "shortDescription": "Convertir en 'GeneratedRegexAttribute'.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/syslib-diagnostics/syslib1045",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true
+          }
+        }
+      }
+    }
+  ]
+}

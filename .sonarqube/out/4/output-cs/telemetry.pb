@@ -1,0 +1,1 @@
+‚RlC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Test\Contracting.Test.csproj¢net8.0òCSharp12

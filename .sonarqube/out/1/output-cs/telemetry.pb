@@ -1,0 +1,1 @@
+êRzC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Application\Contracting.Application.csproj¢net8.0ÚCSharp12

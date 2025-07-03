@@ -1,0 +1,44 @@
+°
+9Catalog.WebApi.Middleware.RequestContextLoggingMiddlewareobject”
+JRequestContextLoggingMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)ÑCatalog.WebApi.Middleware.RequestContextLoggingMiddleware.RequestContextLoggingMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)Ö
+cInvoke(Microsoft.AspNetCore.Http.HttpContext, Nur.Store2025.Observability.Tracing.ITracingProvider)ùCatalog.WebApi.Middleware.RequestContextLoggingMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext, Nur.Store2025.Observability.Tracing.ITracingProvider)1
+Programobject
+	Program()Program.Program()Ú
++Catalog.WebApi.Middleware.TracingMiddlewareobject®
+<TracingMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)hCatalog.WebApi.Middleware.TracingMiddleware.TracingMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)Å
+hInvokeAsync(Microsoft.AspNetCore.Http.HttpContext, Nur.Store2025.Observability.Tracing.ITracingProvider)îCatalog.WebApi.Middleware.TracingMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext, Nur.Store2025.Observability.Tracing.ITracingProvider)ã
+mGetCorrelationId(Microsoft.AspNetCore.Http.HttpContext, Nur.Store2025.Observability.Tracing.ITracingProvider)ôCatalog.WebApi.Middleware.TracingMiddleware.GetCorrelationId(Microsoft.AspNetCore.Http.HttpContext, Nur.Store2025.Observability.Tracing.ITracingProvider)ë
+0Contracting.WebApi.Infrastructure.ResponseHelperobjectU
+ResponseHelper()AContracting.WebApi.Infrastructure.ResponseHelper.ResponseHelper()∫
+8Contracting.WebApi.Infrastructure.GlobalExceptionHandlerobject2Microsoft.AspNetCore.Diagnostics.IExceptionHandler™
+vGlobalExceptionHandler(Microsoft.Extensions.Logging.ILogger<Contracting.WebApi.Infrastructure.GlobalExceptionHandler>)ØContracting.WebApi.Infrastructure.GlobalExceptionHandler.GlobalExceptionHandler(Microsoft.Extensions.Logging.ILogger<Contracting.WebApi.Infrastructure.GlobalExceptionHandler>)î
+kTryHandleAsync(Microsoft.AspNetCore.Http.HttpContext, System.Exception, System.Threading.CancellationToken)§Contracting.WebApi.Infrastructure.GlobalExceptionHandler.TryHandleAsync(Microsoft.AspNetCore.Http.HttpContext, System.Exception, System.Threading.CancellationToken)§
+6Contracting.WebApi.Controllers.AdministratorController2Contracting.WebApi.Infrastructure.CustomController'Microsoft.AspNetCore.Mvc.ControllerBaseobjectè
+*AdministratorController(MediatR.IMediator)aContracting.WebApi.Controllers.AdministratorController.AdministratorController(MediatR.IMediator)ê
+jCreateAdministrator(Contracting.Application.Administrators.CreateAdministrator.CreateAdministratorCommand)°Contracting.WebApi.Controllers.AdministratorController.CreateAdministrator(Contracting.Application.Administrators.CreateAdministrator.CreateAdministratorCommand)a
+GetAdministrators()JContracting.WebApi.Controllers.AdministratorController.GetAdministrators()}
+!GetAdministratorById(System.Guid)XContracting.WebApi.Controllers.AdministratorController.GetAdministratorById(System.Guid)±
+0Contracting.WebApi.Controllers.PatientController2Contracting.WebApi.Infrastructure.CustomController'Microsoft.AspNetCore.Mvc.ControllerBaseobject}
+$PatientController(MediatR.IMediator)UContracting.WebApi.Controllers.PatientController.PatientController(MediatR.IMediator)⁄
+RCreatePatient(Contracting.Application.Patients.CreatePatient.CreatePatientCommand)ÉContracting.WebApi.Controllers.PatientController.CreatePatient(Contracting.Application.Patients.CreatePatient.CreatePatientCommand)O
+GetPatients()>Contracting.WebApi.Controllers.PatientController.GetPatients()k
+GetPatientById(System.Guid)LContracting.WebApi.Controllers.PatientController.GetPatientById(System.Guid)À
+5Contracting.WebApi.Infrastructure.ServiceRegistrationobject+Microsoft.Extensions.Hosting.IHostedService¨
+∏ServiceRegistration(Consul.ConsulClient, Microsoft.Extensions.Configuration.IConfiguration, Microsoft.Extensions.Logging.ILogger<Contracting.WebApi.Infrastructure.ServiceRegistration>)ÓContracting.WebApi.Infrastructure.ServiceRegistration.ServiceRegistration(Consul.ConsulClient, Microsoft.Extensions.Configuration.IConfiguration, Microsoft.Extensions.Logging.ILogger<Contracting.WebApi.Infrastructure.ServiceRegistration>)ñ
+.StartAsync(System.Threading.CancellationToken)dContracting.WebApi.Infrastructure.ServiceRegistration.StartAsync(System.Threading.CancellationToken)î
+-StopAsync(System.Threading.CancellationToken)cContracting.WebApi.Infrastructure.ServiceRegistration.StopAsync(System.Threading.CancellationToken)ü
+1Contracting.WebApi.Controllers.ContractController2Contracting.WebApi.Infrastructure.CustomController'Microsoft.AspNetCore.Mvc.ControllerBaseobjectÄ
+%ContractController(MediatR.IMediator)WContracting.WebApi.Controllers.ContractController.ContractController(MediatR.IMediator)„
+VCreateContract(Contracting.Application.Contracts.CreateContract.CreateContractCommand)àContracting.WebApi.Controllers.ContractController.CreateContract(Contracting.Application.Contracts.CreateContract.CreateContractCommand)R
+GetContracts()@Contracting.WebApi.Controllers.ContractController.GetContracts()n
+GetContractById(System.Guid)NContracting.WebApi.Controllers.ContractController.GetContractById(System.Guid)˚
+bInProgressContract(Contracting.Application.Contracts.InProgressContract.InProgressContractCommand)îContracting.WebApi.Controllers.ContractController.InProgressContract(Contracting.Application.Contracts.InProgressContract.InProgressContractCommand)Ô
+\CompleteContract(Contracting.Application.Contracts.CompleteContract.CompleteContractCommand)éContracting.WebApi.Controllers.ContractController.CompleteContract(Contracting.Application.Contracts.CompleteContract.CompleteContractCommand)l
+GetDeliveryDay(System.Guid)MContracting.WebApi.Controllers.ContractController.GetDeliveryDay(System.Guid)˚
+bUpdateDeliveryDays(Contracting.Application.Contracts.UpdateDeliveryDays.UpdateDeliveryDaysCommand)îContracting.WebApi.Controllers.ContractController.UpdateDeliveryDays(Contracting.Application.Contracts.UpdateDeliveryDays.UpdateDeliveryDaysCommand)É
+fUpdateDeliveryDay(Contracting.Application.Contracts.UpdateDeliveryDayById.UpdateDeliveyDayByIdCommand)òContracting.WebApi.Controllers.ContractController.UpdateDeliveryDay(Contracting.Application.Contracts.UpdateDeliveryDayById.UpdateDeliveyDayByIdCommand)ı
+_DeleteDeliveryDay(Contracting.Application.Contracts.DeleteDeliveryDay.DeleteDeliveryDayCommand)ëContracting.WebApi.Controllers.ContractController.DeleteDeliveryDay(Contracting.Application.Contracts.DeleteDeliveryDay.DeleteDeliveryDayCommand)Ê
+2Contracting.WebApi.Infrastructure.CustomController'Microsoft.AspNetCore.Mvc.ControllerBaseobjectô
+1BuildResult<T>(Joseco.DDD.Core.Results.Result<T>)dContracting.WebApi.Infrastructure.CustomController.BuildResult<T>(Joseco.DDD.Core.Results.Result<T>)Ö
+'Problem(Joseco.DDD.Core.Results.Result)ZContracting.WebApi.Infrastructure.CustomController.Problem(Joseco.DDD.Core.Results.Result)[
+CustomController()EContracting.WebApi.Infrastructure.CustomController.CustomController()

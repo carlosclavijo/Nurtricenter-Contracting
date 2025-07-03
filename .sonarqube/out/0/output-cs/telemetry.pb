@@ -1,0 +1,1 @@
+†RpC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Domain\Contracting.Domain.csproj¢net8.0òCSharp12

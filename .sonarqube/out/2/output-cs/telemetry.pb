@@ -1,0 +1,1 @@
+—R€C:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.Infrastructure\Contracting.Infrastructure.csproj¢net8.0òCSharp12

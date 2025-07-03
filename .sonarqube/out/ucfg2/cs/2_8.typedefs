@@ -1,0 +1,145 @@
+ı
+NContracting.Infrastructure.Handlers.Administrators.GetAdministratorByIdHandlerobject,MediatR.IRequestHandler<TRequest, TResponse>í
+_GetAdministratorByIdHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)ÆContracting.Infrastructure.Handlers.Administrators.GetAdministratorByIdHandler.GetAdministratorByIdHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)◊
+ÅHandle(Contracting.Application.Administrators.GetAdministratorById.GetAdministratorByIdQuery, System.Threading.CancellationToken)–Contracting.Infrastructure.Handlers.Administrators.GetAdministratorByIdHandler.Handle(Contracting.Application.Administrators.GetAdministratorById.GetAdministratorByIdQuery, System.Threading.CancellationToken)Ô
+7Contracting.Infrastructure.Persistence.DatabaseSettingsobject`
+DatabaseSettings()JContracting.Infrastructure.Persistence.DatabaseSettings.DatabaseSettings()d
+ConnectionString.getLContracting.Infrastructure.Persistence.DatabaseSettings.ConnectionString.getd
+ConnectionString.setLContracting.Infrastructure.Persistence.DatabaseSettings.ConnectionString.setŸ
+KContracting.Infrastructure.Handlers.Administrators.GetAdministratorsHandlerobject,MediatR.IRequestHandler<TRequest, TResponse>â
+\GetAdministratorsHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)®Contracting.Infrastructure.Handlers.Administrators.GetAdministratorsHandler.GetAdministratorsHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)«
+{Handle(Contracting.Application.Administrators.GetAdministrators.GetAdministratorsQuery, System.Threading.CancellationToken)«Contracting.Infrastructure.Handlers.Administrators.GetAdministratorsHandler.Handle(Contracting.Application.Administrators.GetAdministrators.GetAdministratorsQuery, System.Threading.CancellationToken)Æ
+DContracting.Infrastructure.Handlers.Contracts.GetContractByIdHandlerobject,MediatR.IRequestHandler<TRequest, TResponse>˛
+ZGetContractByIdHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)üContracting.Infrastructure.Handlers.Contracts.GetContractByIdHandler.GetContractByIdHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)Æ
+rHandle(Contracting.Application.Contracts.GetContractById.GetContractByIdQuery, System.Threading.CancellationToken)∑Contracting.Infrastructure.Handlers.Contracts.GetContractByIdHandler.Handle(Contracting.Application.Contracts.GetContractById.GetContractByIdQuery, System.Threading.CancellationToken)F
+0Contracting.Infrastructure.Persistence.IDatabaseSystem.IDisposableÊ
+MContracting.Infrastructure.Persistence.DomainModel.Config.AdministratorConfigobject?Microsoft.EntityFrameworkCore.IEntityTypeConfiguration<TEntity>Õ
+}Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Contracting.Domain.Administrators.Administrator>)ÀContracting.Infrastructure.Persistence.DomainModel.Config.AdministratorConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Contracting.Domain.Administrators.Administrator>)|
+AdministratorConfig()cContracting.Infrastructure.Persistence.DomainModel.Config.AdministratorConfig.AdministratorConfig()ì
+AContracting.Infrastructure.Handlers.Contracts.GetContractsHandlerobject,MediatR.IRequestHandler<TRequest, TResponse>ı
+WGetContractsHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)ôContracting.Infrastructure.Handlers.Contracts.GetContractsHandler.GetContractsHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)ü
+lHandle(Contracting.Application.Contracts.GetContracts.GetContractsQuery, System.Threading.CancellationToken)ÆContracting.Infrastructure.Handlers.Contracts.GetContractsHandler.Handle(Contracting.Application.Contracts.GetContracts.GetContractsQuery, System.Threading.CancellationToken)µ
+HContracting.Infrastructure.Persistence.DomainModel.Config.ContractConfigobject?Microsoft.EntityFrameworkCore.IEntityTypeConfiguration<TEntity>?Microsoft.EntityFrameworkCore.IEntityTypeConfiguration<TEntity>¥
+sConfigure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Contracting.Domain.Contracts.Contract>)ºContracting.Infrastructure.Persistence.DomainModel.Config.ContractConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Contracting.Domain.Contracts.Contract>)∏
+uConfigure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Contracting.Domain.Delivery.DeliveryDay>)æContracting.Infrastructure.Persistence.DomainModel.Config.ContractConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Contracting.Domain.Delivery.DeliveryDay>)m
+ContractConfig()YContracting.Infrastructure.Persistence.DomainModel.Config.ContractConfig.ContractConfig()†
+BContracting.Infrastructure.Handlers.Patients.GetPatientByIdHandlerobject,MediatR.IRequestHandler<TRequest, TResponse>˙
+YGetPatientByIdHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)úContracting.Infrastructure.Handlers.Patients.GetPatientByIdHandler.GetPatientByIdHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)¶
+oHandle(Contracting.Application.Patients.GetPatientById.GetPatientByIdQuery, System.Threading.CancellationToken)≤Contracting.Infrastructure.Handlers.Patients.GetPatientByIdHandler.Handle(Contracting.Application.Patients.GetPatientById.GetPatientByIdQuery, System.Threading.CancellationToken)˚
+KContracting.Infrastructure.Persistence.Repositories.AdministratorRepositoryobject:Contracting.Domain.Administrators.IAdministratorRepositoryá
+[AdministratorRepository(Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext)ßContracting.Infrastructure.Persistence.Repositories.AdministratorRepository.AdministratorRepository(Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext)¡
+8AddSync(Contracting.Domain.Administrators.Administrator)ÑContracting.Infrastructure.Persistence.Repositories.AdministratorRepository.AddSync(Contracting.Domain.Administrators.Administrator)Ä
+DeleteAsync(System.Guid)dContracting.Infrastructure.Persistence.Repositories.AdministratorRepository.DeleteAsync(System.Guid)é
+GetByIdAsync(System.Guid, bool)kContracting.Infrastructure.Persistence.Repositories.AdministratorRepository.GetByIdAsync(System.Guid, bool)…
+<UpdateAsync(Contracting.Domain.Administrators.Administrator)àContracting.Infrastructure.Persistence.Repositories.AdministratorRepository.UpdateAsync(Contracting.Domain.Administrators.Administrator)2:Contracting.Domain.Administrators.IAdministratorRepository∞
+GContracting.Infrastructure.Persistence.DomainModel.Config.PatientConfigobject?Microsoft.EntityFrameworkCore.IEntityTypeConfiguration<TEntity>Ø
+qConfigure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Contracting.Domain.Patients.Patient>)πContracting.Infrastructure.Persistence.DomainModel.Config.PatientConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Contracting.Domain.Patients.Patient>)j
+PatientConfig()WContracting.Infrastructure.Persistence.DomainModel.Config.PatientConfig.PatientConfig()•
+CContracting.Infrastructure.Handlers.Contracts.GetDeliveryDayHandlerobject,MediatR.IRequestHandler<TRequest, TResponse>˚
+YGetDeliveryDayHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)ùContracting.Infrastructure.Handlers.Contracts.GetDeliveryDayHandler.GetDeliveryDayHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)©
+pHandle(Contracting.Application.Contracts.GetDeliveryDay.GetDeliveryDayQuery, System.Threading.CancellationToken)¥Contracting.Infrastructure.Handlers.Contracts.GetDeliveryDayHandler.Handle(Contracting.Application.Contracts.GetDeliveryDay.GetDeliveryDayQuery, System.Threading.CancellationToken)î
+FContracting.Infrastructure.Persistence.Repositories.ContractRepositoryobject0Contracting.Domain.Contracts.IContractRepository¯
+VContractRepository(Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext)ùContracting.Infrastructure.Persistence.Repositories.ContractRepository.ContractRepository(Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext)ß
+.AddSync(Contracting.Domain.Contracts.Contract)uContracting.Infrastructure.Persistence.Repositories.ContractRepository.AddSync(Contracting.Domain.Contracts.Contract){
+DeleteAsync(System.Guid)_Contracting.Infrastructure.Persistence.Repositories.ContractRepository.DeleteAsync(System.Guid)â
+GetByIdAsync(System.Guid, bool)fContracting.Infrastructure.Persistence.Repositories.ContractRepository.GetByIdAsync(System.Guid, bool)Ø
+2UpdateAsync(Contracting.Domain.Contracts.Contract)yContracting.Infrastructure.Persistence.Repositories.ContractRepository.UpdateAsync(Contracting.Domain.Contracts.Contract)20Contracting.Domain.Contracts.IContractRepositoryÖ
+?Contracting.Infrastructure.Handlers.Patients.GetPatientsHandlerobject,MediatR.IRequestHandler<TRequest, TResponse>Ò
+VGetPatientsHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)ñContracting.Infrastructure.Handlers.Patients.GetPatientsHandler.GetPatientsHandler(Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext)ó
+iHandle(Contracting.Application.Patients.GetPatients.GetPatientsQuery, System.Threading.CancellationToken)©Contracting.Infrastructure.Handlers.Patients.GetPatientsHandler.Handle(Contracting.Application.Patients.GetPatients.GetPatientsQuery, System.Threading.CancellationToken)∑
+BContracting.Infrastructure.Persistence.DomainModel.DomainDbContext'Microsoft.EntityFrameworkCore.DbContextobjectœ
+ÉDomainDbContext(Microsoft.EntityFrameworkCore.DbContextOptions<Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext>)∆Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext.DomainDbContext(Microsoft.EntityFrameworkCore.DbContextOptions<Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext>)Ω
+;OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)~Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)i
+Administrator.getTContracting.Infrastructure.Persistence.DomainModel.DomainDbContext.Administrator.geti
+Administrator.setTContracting.Infrastructure.Persistence.DomainModel.DomainDbContext.Administrator.set]
+Patient.getNContracting.Infrastructure.Persistence.DomainModel.DomainDbContext.Patient.get]
+Patient.setNContracting.Infrastructure.Persistence.DomainModel.DomainDbContext.Patient.set_
+Contract.getOContracting.Infrastructure.Persistence.DomainModel.DomainDbContext.Contract.get_
+Contract.setOContracting.Infrastructure.Persistence.DomainModel.DomainDbContext.Contract.setk
+OutboxMessages.getUContracting.Infrastructure.Persistence.DomainModel.DomainDbContext.OutboxMessages.getk
+OutboxMessages.setUContracting.Infrastructure.Persistence.DomainModel.DomainDbContext.OutboxMessages.setÿ
+TContracting.Infrastructure.Persistence.StoredModel.Entities.AdministratorStoredModelobjectç
+AdministratorStoredModel()oContracting.Infrastructure.Persistence.StoredModel.Entities.AdministratorStoredModel.AdministratorStoredModel()e
+Id.get[Contracting.Infrastructure.Persistence.StoredModel.Entities.AdministratorStoredModel.Id.gete
+Id.set[Contracting.Infrastructure.Persistence.StoredModel.Entities.AdministratorStoredModel.Id.setÉ
+AdministratorName.getjContracting.Infrastructure.Persistence.StoredModel.Entities.AdministratorStoredModel.AdministratorName.getÉ
+AdministratorName.setjContracting.Infrastructure.Persistence.StoredModel.Entities.AdministratorStoredModel.AdministratorName.setÖ
+AdministratorPhone.getkContracting.Infrastructure.Persistence.StoredModel.Entities.AdministratorStoredModel.AdministratorPhone.getÖ
+AdministratorPhone.setkContracting.Infrastructure.Persistence.StoredModel.Entities.AdministratorStoredModel.AdministratorPhone.set°
+KContracting.Infrastructure.Persistence.Repositories.OutboxTracingService<T>object8Joseco.Outbox.Contracts.Service.IOutboxService<TContent>À
+}OutboxTracingService(Joseco.Outbox.Contracts.Service.IOutboxService<T>, Nur.Store2025.Observability.Tracing.ITracingProvider)…Contracting.Infrastructure.Persistence.Repositories.OutboxTracingService<T>.OutboxTracingService(Joseco.Outbox.Contracts.Service.IOutboxService<T>, Nur.Store2025.Observability.Tracing.ITracingProvider)¡
+8AddAsync(Joseco.Outbox.Contracts.Model.OutboxMessage<T>)ÑContracting.Infrastructure.Persistence.Repositories.OutboxTracingService<T>.AddAsync(Joseco.Outbox.Contracts.Model.OutboxMessage<T>)ú
+1Contracting.Infrastructure.Persistence.UnitOfWorkobject+Contracting.Domain.Abstractions.IUnitOfWork3Joseco.Outbox.EFCore.Persistence.IOutboxDatabase<E>˚
+bUnitOfWork(Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext, MediatR.IPublisher)îContracting.Infrastructure.Persistence.UnitOfWork.UnitOfWork(Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext, MediatR.IPublisher)î
+/CommitAsync(System.Threading.CancellationToken)aContracting.Infrastructure.Persistence.UnitOfWork.CommitAsync(System.Threading.CancellationToken)\
+GetOutboxMessages()EContracting.Infrastructure.Persistence.UnitOfWork.GetOutboxMessages()2+Contracting.Domain.Abstractions.IUnitOfWork2]Joseco.Outbox.EFCore.Persistence.IOutboxDatabase<Contracting.Domain.Abstractions.DomainEvent>Ω
+OContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModelobject~
+ContractStoredModel()eContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.ContractStoredModel()`
+Id.getVContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.Id.get`
+Id.setVContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.Id.setz
+AdministratorId.getcContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.AdministratorId.getz
+AdministratorId.setcContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.AdministratorId.setv
+Administrator.getaContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.Administrator.getv
+Administrator.setaContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.Administrator.setn
+PatientId.get]Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.PatientId.getn
+PatientId.set]Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.PatientId.setj
+Patient.get[Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.Patient.getj
+Patient.set[Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.Patient.setz
+TransactionType.getcContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.TransactionType.getz
+TransactionType.setcContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.TransactionType.set~
+TransactionStatus.geteContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.TransactionStatus.get~
+TransactionStatus.seteContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.TransactionStatus.sett
+CreationDate.get`Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.CreationDate.gett
+CreationDate.set`Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.CreationDate.setn
+StartDate.get]Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.StartDate.getn
+StartDate.set]Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.StartDate.setv
+CompletedDate.getaContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.CompletedDate.getv
+CompletedDate.setaContracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.CompletedDate.setn
+TotalCost.get]Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.TotalCost.getn
+TotalCost.set]Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.TotalCost.sett
+DeliveryDays.get`Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.DeliveryDays.gett
+DeliveryDays.set`Contracting.Infrastructure.Persistence.StoredModel.Entities.ContractStoredModel.DeliveryDays.setÇ
+RContracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModelobjectá
+DeliveryDayStoredModel()kContracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.DeliveryDayStoredModel()c
+Id.getYContracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.Id.getc
+Id.setYContracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.Id.sets
+ContractId.getaContracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.ContractId.gets
+ContractId.setaContracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.ContractId.seto
+Contract.get_Contracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.Contract.geto
+Contract.set_Contracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.Contract.setg
+Date.get[Contracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.Date.getg
+Date.set[Contracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.Date.setk
+
+Street.get]Contracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.Street.getk
+
+Street.set]Contracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.Street.setk
+
+Number.get]Contracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.Number.getk
+
+Number.set]Contracting.Infrastructure.Persistence.StoredModel.Entities.DeliveryDayStoredModel.Number.setÄ
+EContracting.Infrastructure.Persistence.Repositories.PatientRepositoryobject.Contracting.Domain.Patients.IPatientRepositoryı
+UPatientRepository(Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext)õContracting.Infrastructure.Persistence.Repositories.PatientRepository.PatientRepository(Contracting.Infrastructure.Persistence.DomainModel.DomainDbContext)¢
+,AddSync(Contracting.Domain.Patients.Patient)rContracting.Infrastructure.Persistence.Repositories.PatientRepository.AddSync(Contracting.Domain.Patients.Patient)z
+DeleteAsync(System.Guid)^Contracting.Infrastructure.Persistence.Repositories.PatientRepository.DeleteAsync(System.Guid)à
+GetByIdAsync(System.Guid, bool)eContracting.Infrastructure.Persistence.Repositories.PatientRepository.GetByIdAsync(System.Guid, bool)™
+0UpdateAsync(Contracting.Domain.Patients.Patient)vContracting.Infrastructure.Persistence.Repositories.PatientRepository.UpdateAsync(Contracting.Domain.Patients.Patient)2.Contracting.Domain.Patients.IPatientRepositoryÍ
+BContracting.Infrastructure.Persistence.StoredModel.StoredDbContext'Microsoft.EntityFrameworkCore.DbContextobject0Contracting.Infrastructure.Persistence.IDatabaseœ
+ÉStoredDbContext(Microsoft.EntityFrameworkCore.DbContextOptions<Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext>)∆Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext.StoredDbContext(Microsoft.EntityFrameworkCore.DbContextOptions<Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext>)Ω
+;OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)~Contracting.Infrastructure.Persistence.StoredModel.StoredDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)Y
+	Migrate()LContracting.Infrastructure.Persistence.StoredModel.StoredDbContext.Migrate()i
+Administrator.getTContracting.Infrastructure.Persistence.StoredModel.StoredDbContext.Administrator.geti
+Administrator.setTContracting.Infrastructure.Persistence.StoredModel.StoredDbContext.Administrator.set]
+Patient.getNContracting.Infrastructure.Persistence.StoredModel.StoredDbContext.Patient.get]
+Patient.setNContracting.Infrastructure.Persistence.StoredModel.StoredDbContext.Patient.set_
+Contract.getOContracting.Infrastructure.Persistence.StoredModel.StoredDbContext.Contract.get_
+Contract.setOContracting.Infrastructure.Persistence.StoredModel.StoredDbContext.Contract.sete
+DeliveryDay.getRContracting.Infrastructure.Persistence.StoredModel.StoredDbContext.DeliveryDay.gete
+DeliveryDay.setRContracting.Infrastructure.Persistence.StoredModel.StoredDbContext.DeliveryDay.set20Contracting.Infrastructure.Persistence.IDatabaseÁ
+NContracting.Infrastructure.Persistence.StoredModel.Entities.PatientStoredModelobject{
+PatientStoredModel()cContracting.Infrastructure.Persistence.StoredModel.Entities.PatientStoredModel.PatientStoredModel()_
+Id.getUContracting.Infrastructure.Persistence.StoredModel.Entities.PatientStoredModel.Id.get_
+Id.setUContracting.Infrastructure.Persistence.StoredModel.Entities.PatientStoredModel.Id.setq
+PatientName.get^Contracting.Infrastructure.Persistence.StoredModel.Entities.PatientStoredModel.PatientName.getq
+PatientName.set^Contracting.Infrastructure.Persistence.StoredModel.Entities.PatientStoredModel.PatientName.sets
+PatientPhone.get_Contracting.Infrastructure.Persistence.StoredModel.Entities.PatientStoredModel.PatientPhone.gets
+PatientPhone.set_Contracting.Infrastructure.Persistence.StoredModel.Entities.PatientStoredModel.PatientPhone.set

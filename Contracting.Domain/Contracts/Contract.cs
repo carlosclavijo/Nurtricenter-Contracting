@@ -1,4 +1,5 @@
 ﻿using Contracting.Domain.Abstractions;
+using Contracting.Domain.Administrators;
 using Contracting.Domain.Contracts.Events;
 using Contracting.Domain.Delivery;
 using Contracting.Domain.Shared;
@@ -39,7 +40,9 @@ public class Contract : AggregateRoot
         }
     }
 
-    public Contract(Guid administratorId, Guid patientId, ContractType type, DateTime startDate) : base(Guid.NewGuid())
+	public Administrator Administrator { get; set; }
+
+	public Contract(Guid administratorId, Guid patientId, ContractType type, DateTime startDate) : base(Guid.NewGuid())
     {
         AdministratorId = administratorId;
         PatientId = patientId;

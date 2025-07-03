@@ -1,32 +1,42 @@
-version: "3.8"
-
 services:
-  database:
+  contracting-microservice:
+    image: carlosclavijo/contracting-microservice
+    container_name: contracting-microservice
+    ports:
+      - "5002:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ContractingDatabaseConnectionString__ConnectionString=Host=postgres_db;Port=5432;Database=contracting;Username=postgres;Password=abc12345;Include Error Detail=true
+      - RabbitMqSettings__Host=host.docker.internal
+      - RabbitMqSettings__UserName=storeUser
+      - RabbitMqSettings__Passwordt=storeUserPassword
+      - RabbitMqSettings__VirtualHost=/
+    depends_on:
+      - db_service
+    networks:
+      - nur-network
+
+  db_service:
     image: carlosclavijo/mipostgresql:latest
     container_name: postgres_db
-    restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: abc12345
       POSTGRES_DB: contracting
     ports:
       - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "contracting"]
+      interval: 10s
+      retries: 5
+      start_period: 20s
+    networks:
+      - nur-network
 
-  contracting-app:
-    image: carlosclavijo/contracting-app:latest
-    container_name: contracting_app
-    restart: always
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=database;Port=5432;Database=contracting;Username=postgres;Password=abc12345
-      - RabbitMqSettings__Host= host.docker.internal
-      - RabbitMqSettings__Port= 5672
-      - RabbitMqSettings__UserName= storeUser
-      - RabbitMqSettings__Password= storeUserPassword
-
-    ports:
-      - "8080:8080"
-    depends_on:
-      - database
-  
-  
+networks:
+  nur-network:
+    driver: bridge
+volumes:
+  postgres_data:

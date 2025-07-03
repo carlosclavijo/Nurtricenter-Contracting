@@ -15,8 +15,10 @@ public class GetContractsHandler(StoredDbContext DbContext) : IRequestHandler<Ge
             {
                 Id = c.Id,
                 AdministratorId = c.AdministratorId,
-                PatientId = c.PatientId,
-                Type = c.TransactionType,
+				AdministratorName = c.Administrator.AdministratorName,
+				PatientId = c.PatientId,
+				PatientName = c.Patient.PatientName,
+				Type = c.TransactionType,
                 Status = c.TransactionStatus,
                 CreationDate = c.CreationDate,
                 StartDate = c.StartDate,

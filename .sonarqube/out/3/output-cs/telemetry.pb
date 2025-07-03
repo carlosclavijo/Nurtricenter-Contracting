@@ -1,0 +1,1 @@
+†RpC:\Users\CARLOS\Desktop\Aprendizaje\CSharp\Nurtricenter-Contracting\Contracting.WebApi\Contracting.WebApi.csproj¢net8.0òCSharp12
