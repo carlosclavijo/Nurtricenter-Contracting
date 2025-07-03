@@ -3,7 +3,7 @@ services:
     image: carlosclavijo/contracting-microservice
     container_name: contracting-microservice
     ports:
-      - "5002:5000"
+      - "5005:5000"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ContractingDatabaseConnectionString__ConnectionString=Host=postgres_db;Port=5432;Database=contracting;Username=postgres;Password=abc12345;Include Error Detail=true
