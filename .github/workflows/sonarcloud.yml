@@ -21,10 +21,10 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Restore dependencies
+    - name: Install dependencies
       run: dotnet restore Contracting.sln
 
-    - name: Build solution
+    - name: Build the solution
       run: dotnet build Contracting.sln --no-restore --configuration Release
 
     - name: Run tests with coverage
@@ -37,16 +37,20 @@ jobs:
     - name: Install ReportGenerator
       run: dotnet tool install --global dotnet-reportgenerator-globaltool
 
-    - name: Convert coverage to OpenCover
+    - name: Convert cobertura to opencover
       run: |
-        reportgenerator -reports:TestResults/**/coverage.cobertura.xml \
-                        -targetdir:coverage-report \
-                        -reporttypes:OpenCover
+        reportgenerator \
+          -reports:TestResults/**/coverage.cobertura.xml \
+          -targetdir:coverage-report \
+          -reporttypes:OpenCover
 
-    - name: Install SonarScanner
-      run: dotnet tool install --global dotnet-sonarscanner
-
-    - name: Run SonarScanner
+    - name: Run SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      with:
+        projectBaseDir: .
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: dotnet-sonarscanner begin /k:"carlosclavijo_Nurtricenter-Contracting" /o:"carlosclavijo" /d:sonar.login=${{ secrets.SONAR_TOKEN }} /d:sonar.host.url=https://sonarcloud.io /d:sonar.cs.opencover.reportsPaths=coverage-report/coverage.opencover.xml && dotnet build Contracting.sln --no-restore && dotnet-sonarscanner end /d:sonar.login=${{ secrets.SONAR_TOKEN }}
+        SONAR_PROJECT_KEY: carlosclavijo_Nurtricenter-Contracting
+        SONAR_ORGANIZATION: carlosclavijo
+        SONAR_SCANNER_OPTS: >
+          -Dsonar.cs.opencover.reportsPaths=coverage-report/coverage.opencover.xml
