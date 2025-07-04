@@ -87,6 +87,23 @@ jobs:
             echo "✅ Copiando reporte de cobertura desde $COV"
             cp "$COV" ./coverage.opencover.xml
 
+      - name: Print contents of coverage.opencover.xml
+        run: cat $(find . -name "coverage.opencover.xml" | head -n 1)
+
+      - name: Install ReportGenerator
+        run: dotnet tool install --global dotnet-reportgenerator-globaltool
+
+      - name: Normalize coverage paths
+        run: |
+          reportgenerator \
+            -reports:**/coverage.opencover.xml \
+            -targetdir:coverage-report \
+            -reporttypes:SonarQube \
+            -assemblyfilters:+* \
+            -filefilters:+*
+
+      - name: Move normalized report
+        run: cp coverage-report/SonarQube.xml ./coverage.opencover.xml
 
       - name: End SonarCloud analysis
         env:

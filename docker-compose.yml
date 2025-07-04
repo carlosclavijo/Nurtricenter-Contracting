@@ -1,6 +1,9 @@
 services:
   contracting-microservice:
-    image: carlosclavijo/contracting-microservice
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: contracting-microservice:local
     container_name: contracting-microservice
     ports:
       - "5005:5000"
