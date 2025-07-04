@@ -64,6 +64,9 @@ jobs:
             /d:sonar.cs.vstest.reportsPaths="**/*.trx" \
             /d:sonar.exclusions="**/Migrations/**/*.cs"
 
+      - name: Restore NuGet packages
+        run: dotnet restore Contracting.sln
+
       - name: Build solution
         run: dotnet build Contracting.sln --no-restore
 
