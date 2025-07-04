@@ -28,7 +28,12 @@ jobs:
       run: dotnet build Contracting.sln --no-restore --configuration Release
 
     - name: Run tests with coverage
-      run: dotnet test Contracting.sln --no-build --collect:"XPlat Code Coverage" --results-directory ./TestResults
+      run: |
+        dotnet test Contracting.Test/Contracting.Test.csproj \
+        --collect:"XPlat Code Coverage" \
+        --results-directory ./TestResults \
+        --logger "trx"
+
 
     - name: Install ReportGenerator
       run: dotnet tool install --global dotnet-reportgenerator-globaltool
