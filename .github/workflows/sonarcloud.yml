@@ -37,6 +37,9 @@ jobs:
           /p:CoverletOutput=../TestResults/coverage/ \
           /p:UseSourceLink=true
 
+    - name: List TestResults folder recursively
+      run: ls -R Contracting.Test/TestResults
+
     - name: Install ReportGenerator
       run: dotnet tool install --global dotnet-reportgenerator-globaltool
 
