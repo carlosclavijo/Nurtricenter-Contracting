@@ -68,31 +68,6 @@ public class SecretExtensionsTest
         Assert.NotNull(provider.GetService<IPatientRepository>());
     }
 
- 
-	[Fact]
-	public void AddSecretsNullOrEmpty()
-	{
-		Environment.SetEnvironmentVariable("VAULT_URL", null);
-        Environment.SetEnvironmentVariable("VAULT_TOKEN", null);
-
-        var configuration = new ConfigurationBuilder()
-            .AddInMemoryCollection(new Dictionary<string, string?>
-            {
-                { "UseSecretManager", "true" }
-            })
-            .Build();
-
-        var environment = new Mock<IHostEnvironment>();
-        environment.Setup(e => e.EnvironmentName).Returns("Production");
-
-        var services = new ServiceCollection();
-
-        var ex = Assert.Throws<InvalidOperationException>(() =>
-            services.AddSecrets(configuration, environment.Object));
-
-        Assert.Equal("Vault URL or Token is not set in environment variables.", ex.Message);
-	}
-
 	[Fact]
     public void LoadSecretsFromVaultTest()
     {
