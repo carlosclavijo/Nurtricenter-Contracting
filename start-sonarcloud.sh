@@ -22,11 +22,11 @@ dotnet sonarscanner begin \
   /k:"carlosclavijo_Nurtricenter-Contracting" \
   /o:"carlosclavijo" \
   /d:sonar.token="$SONAR_TOKEN" \
-  /v:"$PROJECT_VERSION" \
-  /d:sonar.host.url="https://sonarcloud.io" \
-  /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" \
-  /d:sonar.cs.vstest.reportsPaths="**/*.trx" \
-  /d:sonar.exclusions="**/Migrations/**/*.cs"
+    /v:"$PROJECT_VERSION" \
+    /d:sonar.host.url="https://sonarcloud.io" \
+    /d:sonar.cs.opencover.reportsPaths="**/*/coverage.cobertura.xml" \
+    /d:sonar.cs.vstest.reportsPaths="**/*/*.trx" \
+    /d:sonar.exclusions="**/Migrations/**/*.cs"
 
 echo "### Building solution..."
 dotnet build Contracting.sln
