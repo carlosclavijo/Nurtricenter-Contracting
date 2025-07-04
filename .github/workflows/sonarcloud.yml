@@ -30,24 +30,18 @@ jobs:
     - name: Run tests with coverage
       run: |
         dotnet test Contracting.Test/Contracting.Test.csproj \
-        --no-build \
-        --configuration Release \
-        /p:CollectCoverage=true \
-        /p:CoverletOutputFormat=cobertura \
-        /p:CoverletOutput=../TestResults/ \
-        /p:UseSourceLink=true
+          --no-build \
+          --configuration Release \
+          /p:CollectCoverage=true \
+          /p:CoverletOutputFormat=cobertura \
+          /p:CoverletOutput=TestResults/ \
+          /p:UseSourceLink=true
 
     - name: Install ReportGenerator
       run: dotnet tool install --global dotnet-reportgenerator-globaltool
 
     - name: Convert coverage to OpenCover format
-      run: |
-        reportgenerator \
-        -reports:TestResults/coverage.cobertura.xml \
-        -targetdir:coverage-report \
-        -reporttypes:OpenCover \
-        -assemblyfilters:+Contracting.* \
-        -filefilters:+*.cs
+      run: reportgenerator -reports:TestResults/coverage.cobertura.xml -targetdir:coverage-report -reporttypes:OpenCover -assemblyfilters:+Contracting.* -filefilters:+*.cs
 
     - name: List coverage-report folder contents
       run: ls -l coverage-report/
