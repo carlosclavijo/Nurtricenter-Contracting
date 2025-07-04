@@ -72,28 +72,13 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          dotnet test Contracting.sln \
-            --no-build \
-            --collect:"XPlat Code Coverage" \
-            --results-directory TestResults \
-            --logger "trx;LogFileName=test-results.trx"
+          dotnet test Contracting.sln --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
 
-      - name: List coverage XML files
-        run: find . -name "*coverage*.xml"
-
-      - name: Copy coverage report
+      - name: Copy coverage report to root
         run: |
-          echo "Looking for coverage.opencover.xml or coverage.cobertura.xml..."
-          COV=$(find . -type f \( -name "coverage.opencover.xml" -o -name "coverage.cobertura.xml" \) | head -n 1)
-          if [ -z "$COV" ]; then
-            echo "❌ No coverage XML file found"
-            find . -type f
-            exit 1
-          else
-            echo "✅ Found: $COV"
-            cp "$COV" ./coverage.xml
-          fi
-
+          COV=$(find . -name "coverage.cobertura.xml" | head -n 1)
+          echo "Copying coverage report from $COV"
+          cp "$COV" ./coverage.cobertura.xml
 
       - name: End SonarCloud analysis
         env:
