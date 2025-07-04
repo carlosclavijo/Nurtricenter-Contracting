@@ -60,9 +60,11 @@ jobs:
             /d:sonar.token="${{ secrets.SONAR_TOKEN }}" \
             /v:"${{ github.sha }}" \
             /d:sonar.host.url="https://sonarcloud.io" \
-            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" \
+            # ----------------------------- MODIFICAR ESTA LÍNEA -----------------------------
+            /d:sonar.cs.opencover.reportsPaths="**/coverage.cobertura.xml" \
             /d:sonar.cs.vstest.reportsPaths="**/*.trx" \
             /d:sonar.exclusions="**/Migrations/**/*.cs"
+            # -------------------------------------------------------------------------------
 
       - name: Restore NuGet packages
         run: dotnet restore Contracting.sln
@@ -75,10 +77,16 @@ jobs:
           dotnet test Contracting.sln --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
 
       - name: Copy coverage report to root
+        # ----------------------------- MODIFICAR ESTA SECCIÓN ----------------------------
         run: |
           COV=$(find . -name "coverage.cobertura.xml" | head -n 1)
-          echo "Copying coverage report from $COV"
+          if [ -z "$COV" ]; then
+            echo "❌ No se encontró coverage.cobertura.xml"
+            exit 1
+          fi
+          echo "Copiando reporte de cobertura desde $COV"
           cp "$COV" ./coverage.cobertura.xml
+        # -------------------------------------------------------------------------------
 
       - name: End SonarCloud analysis
         env:
