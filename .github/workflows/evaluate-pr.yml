@@ -79,13 +79,14 @@ jobs:
 
       - name: Copy coverage report to root
         run: |
-          COV=$(find . -name "coverage.cobertura.xml" | head -n 1)
+          COV=$(find . -name "coverage.opencover.xml" | head -n 1)
           if [ -z "$COV" ]; then
-            echo "❌ No se encontró coverage.cobertura.xml"
+            echo "❌ No se encontró coverage.opencover.xml"
             exit 1
           fi
-          echo "Copiando reporte de cobertura desde $COV"
-          cp "$COV" ./coverage.cobertura.xml
+            echo "✅ Copiando reporte de cobertura desde $COV"
+            cp "$COV" ./coverage.opencover.xml
+
 
       - name: End SonarCloud analysis
         env:

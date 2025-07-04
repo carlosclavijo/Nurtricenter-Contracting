@@ -41,6 +41,6 @@ networks:
     external: true
   kong-net:
     external: true
-  
-  volumes:
+
+volumes:
   postgres_data:
