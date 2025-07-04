@@ -15,6 +15,7 @@ services:
       - db_service
     networks:
       - nur-network
+      - kong-net
 
   db_service:
     image: carlosclavijo/mipostgresql:latest
@@ -38,5 +39,8 @@ services:
 networks:
   nur-network:
     driver: bridge
-volumes:
+  kong-net:
+    external: true
+  
+  volumes:
   postgres_data:
