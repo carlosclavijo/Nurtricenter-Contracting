@@ -3,7 +3,7 @@ name: SonarCloud Analysis
 on:
   push:
     branches:
-      - main
+      - '**'
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -19,7 +19,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x' # Ajusta si usas otra versión
+        dotnet-version: '8.0.x'
 
     - name: Restore dependencies
       run: dotnet restore Contracting.sln
@@ -30,15 +30,14 @@ jobs:
     - name: Run tests with coverage
       run: |
         dotnet test Contracting.Test/Contracting.Test.csproj \
-        --collect:"XPlat Code Coverage" \
-        --results-directory ./TestResults \
-        --logger "trx"
-
+          --collect:"XPlat Code Coverage" \
+          --results-directory ./TestResults \
+          --logger "trx"
 
     - name: Install ReportGenerator
       run: dotnet tool install --global dotnet-reportgenerator-globaltool
 
-    - name: Convert coverage report to OpenCover
+    - name: Convert coverage to OpenCover
       run: |
         reportgenerator -reports:TestResults/**/coverage.cobertura.xml \
                         -targetdir:coverage-report \
@@ -51,6 +50,13 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
-        dotnet-sonarscanner begin /k:"carlosclavijo_contracting" /o:"carlosclavijo" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="coverage-report/coverage.opencover.xml"
+        dotnet-sonarscanner begin \
+          /k:"carlosclavijo_contracting" \
+          /o:"carlosclavijo" \
+          /d:sonar.login=${{ secrets.SONAR_TOKEN }} \
+          /d:sonar.host.url="https://sonarcloud.io" \
+          /d:sonar.cs.opencover.reportsPaths="coverage-report/coverage.opencover.xml"
+
         dotnet build Contracting.sln --no-restore
-        dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+
+        dotnet-sonarscanner end /d:sonar.login=${{ secrets.SONAR_TOKEN }}
