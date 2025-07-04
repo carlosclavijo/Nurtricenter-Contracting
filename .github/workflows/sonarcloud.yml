@@ -47,9 +47,6 @@ jobs:
     - name: List coverage-report folder contents
       run: ls -l coverage-report/
 
-    - name: Show first 30 lines of coverage.opencover.xml
-      run: head -30 coverage-report/coverage.opencover.xml
-
     - name: Run SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
       env:
