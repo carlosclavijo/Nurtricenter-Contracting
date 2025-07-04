@@ -80,15 +80,17 @@ jobs:
 
       - name: Copy coverage report
         run: |
-          echo "Looking for coverage.opencover.xml..."
-          COV=$(find . -name "coverage.opencover.xml" | head -n 1)
+          echo "Looking for coverage.opencover.xml or coverage.cobertura.xml..."
+          COV=$(find . -type f \( -name "coverage.opencover.xml" -o -name "coverage.cobertura.xml" \) | head -n 1)
           if [ -z "$COV" ]; then
-            echo "❌ coverage.opencover.xml not found"
+            echo "❌ No coverage XML file found"
+            find . -type f
             exit 1
           else
             echo "✅ Found: $COV"
-            cp "$COV" ./coverage.opencover.xml
+            cp "$COV" ./coverage.xml
           fi
+
 
       - name: End SonarCloud analysis
         env:
