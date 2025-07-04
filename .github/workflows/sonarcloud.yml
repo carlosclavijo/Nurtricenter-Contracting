@@ -21,10 +21,10 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Install dependencies
+    - name: Restore dependencies
       run: dotnet restore Contracting.sln
 
-    - name: Build the solution
+    - name: Build solution
       run: dotnet build Contracting.sln --no-restore --configuration Release
 
     - name: Run tests with coverage
@@ -37,12 +37,18 @@ jobs:
     - name: Install ReportGenerator
       run: dotnet tool install --global dotnet-reportgenerator-globaltool
 
-    - name: Convert cobertura to opencover
+    - name: Convert coverage to OpenCover format
       run: |
         reportgenerator \
           -reports:TestResults/**/coverage.cobertura.xml \
           -targetdir:coverage-report \
           -reporttypes:OpenCover
+
+    - name: List coverage-report folder contents
+      run: ls -l coverage-report/
+
+    - name: Show first 30 lines of coverage.opencover.xml
+      run: head -30 coverage-report/coverage.opencover.xml
 
     - name: Run SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
