@@ -74,6 +74,9 @@ jobs:
         run: |
           dotnet test Contracting.sln --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
 
+      - name: Debug coverage file path
+        run: find . -name "*coverage*.xml"
+
       - name: Copy coverage report to root
         run: |
           COV=$(find . -name "coverage.cobertura.xml" | head -n 1)
