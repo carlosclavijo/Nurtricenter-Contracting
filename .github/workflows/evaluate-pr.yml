@@ -78,6 +78,9 @@ jobs:
             --results-directory TestResults \
             --logger "trx;LogFileName=test-results.trx"
 
+      - name: List coverage XML files
+        run: find . -name "*coverage*.xml"
+
       - name: Copy coverage report
         run: |
           echo "Looking for coverage.opencover.xml or coverage.cobertura.xml..."
