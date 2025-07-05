@@ -2,4 +2,4 @@
 
 namespace Contracting.Application.Contracts.OutboxMessageHandlers;
 
-public record DeliberyDelete(Guid ContractId,Guid DeliveryDayId, string Street, int Number, string? CorrelationId = null, string? Source = null) : IntegrationMessage(CorrelationId, Source);
+public record DeliberyUpdate(Guid ContractId,Guid DeliveryDayId, string Street, int Number, string? CorrelationId = null, string? Source = null) : IntegrationMessage(CorrelationId, Source);
