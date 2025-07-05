@@ -3,14 +3,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: contracting-microservice:local
     container_name: contracting-microservice
     ports:
-      - "5005:5000"
+      - "5002:5000"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ContractingDatabaseConnectionString__ConnectionString=Host=postgres_db;Port=5432;Database=contracting;Username=postgres;Password=abc12345;Include Error Detail=true
-      - RabbitMqSettings__Host=rabbitmq
+      - RabbitMqSettings__Host=host.docker.internal
       - RabbitMqSettings__UserName=storeUser
       - RabbitMqSettings__Passwordt=storeUserPassword
       - RabbitMqSettings__VirtualHost=/
@@ -18,7 +17,6 @@ services:
       - db_service
     networks:
       - nur-network
-      - kong-net
 
   db_service:
     image: carlosclavijo/mipostgresql:latest
@@ -41,9 +39,6 @@ services:
 
 networks:
   nur-network:
-    external: true
-  kong-net:
-    external: true
-
+    driver: bridge
 volumes:
   postgres_data:

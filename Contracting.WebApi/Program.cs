@@ -23,7 +23,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwaggerWithUi();
-	app.ApplyMigrations();
+	//app.ApplyMigrations();
 }
 
 app.UseRouting();
