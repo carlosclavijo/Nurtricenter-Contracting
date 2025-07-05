@@ -1,6 +1,6 @@
 services:
   contracting-microservice:
-    image: carlosclavijo/contracting-webapi
+    image: carlosclavijo/contracting-webapi:v3
     container_name: contracting-microservice
     ports:
       - "5010:5000"
@@ -9,7 +9,7 @@ services:
       - ContractingDatabaseConnectionString__ConnectionString=Host=postgres_db;Port=5432;Database=contracting;Username=postgres;Password=abc12345;Include Error Detail=true
       - RabbitMqSettings__Host=rabbitmq
       - RabbitMqSettings__UserName=storeUser
-      - RabbitMqSettings__Passwordt=storeUserPassword
+      - RabbitMqSettings__Password=storeUserPassword
       - RabbitMqSettings__VirtualHost=/
     depends_on:
       - db_service
