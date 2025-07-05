@@ -1,6 +1,6 @@
 services:
   contracting-microservice:
-    image: carlosclavijo/contracting-webapi:v4
+    image: carlosclavijo/contracting-webapi:v5
     container_name: contracting-microservice
     ports:
       - "5010:5000"

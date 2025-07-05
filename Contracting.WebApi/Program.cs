@@ -16,6 +16,15 @@ builder.Services
 	.AddInfrastructure(builder.Configuration, builder.Environment, serviceName)
 	.AddPresentation(builder.Configuration, builder.Environment);
 
+builder.Services.AddCors(options =>
+{
+	options.AddPolicy("AllowFrontend", policy =>
+	{
+		policy.WithOrigins("http://localhost:5173") // frontend Vite
+			  .AllowAnyHeader()
+			  .AllowAnyMethod();
+	});
+});
 
 var app = builder.Build();
 
@@ -35,6 +44,8 @@ app.UseRequestCorrelationId();
 app.UseRequestContextLogging();
 
 app.UseExceptionHandler();
+
+app.UseCors("AllowFrontend");
 
 app.UseHttpsRedirection();
 
