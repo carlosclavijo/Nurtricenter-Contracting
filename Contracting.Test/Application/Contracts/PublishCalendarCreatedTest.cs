@@ -40,11 +40,11 @@ public class PublishCalendarCreatedTest
 
 		var cancellationToken = CancellationToken.None;
 
-		CalendarCreatedMessage? publishedMessage = null;
+		CalendarCreated? publishedMessage = null;
 
 		_integrationBusService
-			.Setup(p => p.PublishAsync(It.IsAny<CalendarCreatedMessage>(), It.IsAny<string?>(), It.IsAny<bool>()))
-			.Callback<CalendarCreatedMessage, string?, bool>((msg, _, _) => publishedMessage = msg)
+			.Setup(p => p.PublishAsync(It.IsAny<CalendarCreated>(), It.IsAny<string?>(), It.IsAny<bool>()))
+			.Callback<CalendarCreated, string?, bool>((msg, _, _) => publishedMessage = msg)
 			.Returns(Task.CompletedTask);
 
 		await _handler.Handle(outboxMessage, cancellationToken);

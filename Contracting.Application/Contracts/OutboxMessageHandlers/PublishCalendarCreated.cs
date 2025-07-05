@@ -9,7 +9,7 @@ public class PublishCalendarCreated(IExternalPublisher integrationBusService) : 
 {
 	public async Task Handle(OutboxMessage<CreateCalendar> notification, CancellationToken cancellationToken)
 	{
-		CalendarCreatedMessage message = new(
+		CalendarCreated message = new(
 			notification.Content.ContractId,
 			notification.Content.PatientId,
 			notification.Content.StartDate,

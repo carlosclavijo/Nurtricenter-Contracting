@@ -33,11 +33,11 @@ public class PublishDeliveryDayUpdatedTest
         };
 
 		var cancellationToken = CancellationToken.None;
-		DeliveryDayUpdatedMessage? publishedMessage = null;
+		DeliberyDelete? publishedMessage = null;
 
 		_integrationBusService
-			.Setup(p => p.PublishAsync(It.IsAny<DeliveryDayUpdatedMessage>(), It.IsAny<string?>(), It.IsAny<bool>()))
-			.Callback<DeliveryDayUpdatedMessage, string?, bool>((msg, _, _) => publishedMessage = msg)
+			.Setup(p => p.PublishAsync(It.IsAny<DeliberyDelete>(), It.IsAny<string?>(), It.IsAny<bool>()))
+			.Callback<DeliberyDelete, string?, bool>((msg, _, _) => publishedMessage = msg)
 			.Returns(Task.CompletedTask);
 
 		await _handler.Handle(outboxMessage, CancellationToken.None);

@@ -9,7 +9,7 @@ public class PublishProductCreated(IExternalPublisher integrationBusService) : I
 {
 	public async Task Handle(OutboxMessage<PatientCreated> notification, CancellationToken canellationToken)
 	{
-		PatientCreatedMessage message = new(
+		PacienteCreado message = new(
 			notification.Content.PatientId,
 			notification.Content.Name,
 			notification.Content.Phone,

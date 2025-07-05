@@ -32,11 +32,11 @@ public class PublishPatientCreatedTest
 		};
 
 		var cancellationToken = CancellationToken.None;
-		PatientCreatedMessage? publishedMessage = null;
+		PacienteCreado? publishedMessage = null;
 
 		_integrationBusService
-			.Setup(p => p.PublishAsync(It.IsAny<PatientCreatedMessage>(), It.IsAny<string?>(), It.IsAny<bool>()))
-			.Callback<PatientCreatedMessage, string?, bool>((msg, _, _) => publishedMessage = msg)
+			.Setup(p => p.PublishAsync(It.IsAny<PacienteCreado>(), It.IsAny<string?>(), It.IsAny<bool>()))
+			.Callback<PacienteCreado, string?, bool>((msg, _, _) => publishedMessage = msg)
 			.Returns(Task.CompletedTask);
 
 		await _handler.Handle(outboxMessage, cancellationToken);
