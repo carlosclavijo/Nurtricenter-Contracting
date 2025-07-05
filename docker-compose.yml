@@ -9,7 +9,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ContractingDatabaseConnectionString__ConnectionString=Host=postgres_db;Port=5432;Database=contracting;Username=postgres;Password=abc12345;Include Error Detail=true
-      - RabbitMqSettings__Host=host.docker.internal
+      - RabbitMqSettings__Host=rabbitmq
       - RabbitMqSettings__UserName=storeUser
       - RabbitMqSettings__Passwordt=storeUserPassword
       - RabbitMqSettings__VirtualHost=/
@@ -17,6 +17,7 @@ services:
       - db_service
     networks:
       - nur-network
+      - kong-net
 
   db_service:
     image: carlosclavijo/mipostgresql:latest
@@ -39,6 +40,8 @@ services:
 
 networks:
   nur-network:
-    driver: bridge
+    external: true
+  kong-net:
+    external: true
 volumes:
   postgres_data:
