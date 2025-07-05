@@ -1,8 +1,6 @@
 services:
   contracting-microservice:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: carlosclavijo/contracting-webapi
     container_name: contracting-microservice
     ports:
       - "5010:5000"
