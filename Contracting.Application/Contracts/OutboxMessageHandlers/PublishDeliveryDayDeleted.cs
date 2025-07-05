@@ -9,7 +9,7 @@ public class PublishDeliveryDayDeleted(IExternalPublisher integrationBusService)
 {
 	public async Task Handle(OutboxMessage<DeliveryDayDeleted> notification, CancellationToken cancellationToken)
 	{
-		DeliberyUpdate message = new(
+		DeliberyDelete message = new(
 			notification.Content.ContractId,
 			notification.Content.DeliveryDayId,
 			notification.CorrelationId,
